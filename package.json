@@ -1,0 +1,11 @@
+{
+  "name": "flightdeck-11ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ginfuru/flightdeck-11ty.git",
+  "author": "Ed Heltzel <ed@rainyday.media>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
