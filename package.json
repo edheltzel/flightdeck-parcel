@@ -1,0 +1,21 @@
+{
+  "name": "Flightdeck-11ty",
+  "version": "0.0.1",
+  "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
+  "scripts": {
+    "start": "",
+    "build": "",
+    "clean": "rm -rf node_modules package-lock.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edheltzel/Flightdeck-11ty.git"
+  },
+  "keywords": [],
+  "author": "Ed Heltzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edheltzel/Flightdeck-11ty/issues"
+  },
+  "homepage": "https://github.com/edheltzel/Flightdeck-11ty#readme"
+}
