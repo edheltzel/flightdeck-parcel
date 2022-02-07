@@ -1,7 +1,7 @@
 <div align="center">
 <p><img src="https://d.pr/free/i/FDUErn+" alt="Flightdeck Logo"></p>
 <h1>Flightdeck</h1>
-<h4>A starter project for <a href="https://www.11ty.dev/">Eleventy</a> using a minimal and opinionated front-end workflow.</h4>
+<h4>A starter project for <a href="https://www.11ty.dev/">Eleventy</a> using a minimal and opinionated frontend workflow.</h4>
 
 [![release](https://img.shields.io/github/release/ginfuru/Flightdeck.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/ginfuru/Flightdeck-11ty/releases/latest) [![jekyll](https://img.shields.io/badge/Jekyll-v3.36+-373277.svg?style=for-the-badge&logo=jekyll&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-MIT-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/ginfuru/Flightdeck/blob/master/LICENSE)
 
