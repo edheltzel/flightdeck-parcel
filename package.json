@@ -9,7 +9,7 @@
     "build": "npm-run-all build:*",
     "build:sass": "sass src/_scss:_site/assets/css",
     "build:11ty": "eleventy",
-    "clean": "run-p clean:*",
+    "clean": "npm run clean:node && npm run clean:site && echo \"\\033[32m🧹 All Clean ✨\"\"\\033[0m Run \"\"\\033[33mnpm install\"\"\\033[0m to start fresh 🤩\"",
     "clean:node": "rm -rf node_modules package-lock.json",
     "clean:site": "rm -rf _site"
   },
