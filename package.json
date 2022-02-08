@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "watch:sass": "sass --watch src/_scss:_site/assets/css",
+    "watch:11ty": "eleventy --serve",
+    "build": "npm-run-all build:*",
+    "build:sass": "sass src/_scss:_site/assets/css",
+    "build:11ty": "eleventy",
     "clean": "run-p clean:*",
     "clean:node": "rm -rf node_modules package-lock.json",
     "clean:site": "rm -rf _site"
