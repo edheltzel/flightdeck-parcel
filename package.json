@@ -5,7 +5,9 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rm -rf node_modules package-lock.json"
+    "clean": "run-p clean:*",
+    "clean:node": "rm -rf node_modules package-lock.json",
+    "clean:site": "rm -rf _site"
   },
   "repository": {
     "type": "git",
