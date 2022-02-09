@@ -1,4 +1,6 @@
 module.exports = function (eleventyConfig) {
+
+
   // workflow
   eleventyConfig.setBrowserSyncConfig({
     open: true,
