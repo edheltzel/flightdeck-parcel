@@ -1,5 +1,9 @@
 module.exports = function (eleventyConfig) {
+  // watch for changes
+  eleventyConfig.addWatchTarget('./src/_scss');
 
+  // copy stuff
+  eleventyConfig.addPassthroughCopy('./src/assets/css');
 
   // workflow
   eleventyConfig.setBrowserSyncConfig({
