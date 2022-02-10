@@ -1,5 +1,5 @@
 {
-  "name": "Flightdeck-11ty",
+  "name": "flightdeck-11ty",
   "version": "0.0.1",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
