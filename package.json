@@ -4,11 +4,18 @@
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
     "start": "npm-run-all build:sass --parallel watch:*",
-    "watch:sass": "sass --watch src/_scss:src/assets/css",
-    "watch:11ty": "eleventy --serve",
-    "build": "npm-run-all build:*",
-    "build:sass": "sass --no-source-map --style=compressed src/_scss:src/assets/css",
-    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
+    "dev:11ty": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "watch:parcel": "npm-run-all -p watch:sass watch:js watch:images",
+    "watch:images": "parcel watch ./src/assets/images/*",
+    "watch:js": "parcel watch ./src/assets/bundle.js --dist-dir ./_site/assets/js",
+    "watch:sass": "parcel watch ./src/_scss/app.scss --dist-dir ./_site/assets/css",
+    "build": "npm-run-all -s clean build:parcel build:11ty",
+    "build:11ty": "cross-env ELEVENTY_ENV=prod eleventy",
+    "build:parcel": "npm-run-all build:assets",
+    "build:assets": "npm-run-all -p build:sass build:js build:images",
+    "build:images": "parcel build ./src/assets/images/*",
+    "build:js": "parcel build ./src/assets/js/bundle.js --dist-dir ./_site/assets/js",
+    "build:sass": "parcel build ./src/_scss/app.scss --dist-dir ./_site/assets/css",
     "fresh": "npm run clean:node && npm run clean && echo \"\\033[32m🧹 All Clean ✨\"\"\\033[0m Run \"\"\\033[33mnpm install\"\"\\033[0m to start fresh 🤩\"",
     "clean:node": "rm -rf node_modules package-lock.json",
     "clean": "rm -rf _site"
@@ -27,9 +34,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-img": "^1.0.0",
+    "@parcel/transformer-sass": "^2.3.1",
+    "autoprefixer": "^10.4.2",
     "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
+    "parcel": "^2.3.1",
+    "postcss": "^8.4.6",
     "sass": "^1.49.7"
   }
 }

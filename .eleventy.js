@@ -1,18 +1,17 @@
 const fd = require('./flightdeck.manifest');
-const path = require('path');
-
 const htmlmin = require('html-minifier');
+
 module.exports = function (config) {
   // watch for changes
   config.addWatchTarget(fd.css.scss.src);
 
-  // copy stuff - see flightdeck.manifest.js
+  // copy stuff
   config.addPassthroughCopy(path.join(fd.input + fd.assets)); // copy everything in ./src/assets/
 
   // add collections
 
   //minify html
-  const isProd = process.env.ELEVENTY_ENV === 'production';
+  const isProd = process.env.ELEVENTY_ENV === 'prod';
   let htmlMinify = function (value, outputPath) {
     if (outputPath && outputPath.indexOf('.html') > -1) {
       return htmlmin.minify(value, {
