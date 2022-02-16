@@ -19,5 +19,6 @@
   },
   "files.associations": {
     "*.njk": "nunjucks"
-  }
+  },
+  "cSpell.words": ["mnpm"]
 }

@@ -20,6 +20,7 @@ module.exports = {
     src: './src/assets/fonts',
     dest: './src/assets/fonts', //11ty addPassthroughCopy will move this
   },
+  //browsersync config
   bs: {
     notify: true,
     open: true,

@@ -1,34 +1,34 @@
 const fd = require('./flightdeck.manifest');
 const htmlmin = require('html-minifier');
-module.exports = function (eleventyConfig) {
+
+module.exports = function (config) {
   // watch for changes
-  eleventyConfig.addWatchTarget(fd.sass.src);
+  config.addWatchTarget(fd.sass.src);
 
   // copy stuff
-  eleventyConfig.addPassthroughCopy(fd.sass.dest);
-  eleventyConfig.addPassthroughCopy(fd.js.dest);
-  eleventyConfig.addPassthroughCopy(fd.img.dest);
-  eleventyConfig.addPassthroughCopy(fd.fonts.dest);
+  config.addPassthroughCopy(fd.sass.dest);
+  config.addPassthroughCopy(fd.js.dest);
+  config.addPassthroughCopy(fd.img.dest);
+  config.addPassthroughCopy(fd.fonts.dest);
 
   // add collections
 
-  // workflow
   //minify html
-  if (fd.html.minify == true) {
-    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-      if (outputPath && outputPath.endsWith('.html')) {
-        let minified = htmlmin.minify(content, {
-          useShortDoctype: true,
-          removeComments: true,
-          collapseWhitespace: true,
-        });
-        return minified;
-      }
+  const isProd = process.env.ELEVENTY_ENV === 'production';
+  let htmlMinify = function (value, outputPath) {
+    if (outputPath && outputPath.indexOf('.html') > -1) {
+      return htmlmin.minify(value, {
+        userShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+      });
+    }
+  };
 
-      return content;
-    });
-  }
-  eleventyConfig.setBrowserSyncConfig(fd.bs);
+  // launch browser on start
+  config.setBrowserSyncConfig(fd.bs);
+
   return {
     dir: {
       input: 'src',
