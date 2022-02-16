@@ -1,28 +1,30 @@
-// const htmlmin = require('html-minifier');
+const path = require('path');
+const assetPath = '/assets/';
+const inputDest = './src';
+const buildDest = './_site';
 
 module.exports = {
-  html: {
-    minify: false,
-  },
-  sass: {
-    src: './src/_scss/**/*.scss',
-    dest: './_site/assets/css',
+  input: inputDest,
+  output: buildDest,
+  assets: assetPath,
+
+  css: {
+    scss: {
+      src: '_scss',
+    },
+    src: 'css',
+    dest: 'css',
   },
   js: {
-    src: './src/assets/js/',
-    dest: './_site/assets/js',
+    src: 'js',
+    dest: 'js',
   },
-  img: {
-    src: './src/assets/images',
-    dest: './src/assets/images', //11ty addPassthroughCopy will move this
+  images: {
+    src: 'images',
+    dest: 'images',
   },
   fonts: {
-    src: './src/assets/fonts',
-    dest: './src/assets/fonts', //11ty addPassthroughCopy will move this
-  },
-  //browsersync config
-  bs: {
-    notify: true,
-    open: true,
+    src: 'fonts',
+    dest: 'fonts',
   },
 };

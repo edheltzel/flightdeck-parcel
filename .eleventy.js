@@ -1,15 +1,13 @@
 const fd = require('./flightdeck.manifest');
-const htmlmin = require('html-minifier');
+const path = require('path');
 
+const htmlmin = require('html-minifier');
 module.exports = function (config) {
   // watch for changes
-  config.addWatchTarget(fd.sass.src);
+  config.addWatchTarget(fd.css.scss.src);
 
-  // copy stuff
-  config.addPassthroughCopy(fd.sass.dest);
-  config.addPassthroughCopy(fd.js.dest);
-  config.addPassthroughCopy(fd.img.dest);
-  config.addPassthroughCopy(fd.fonts.dest);
+  // copy stuff - see flightdeck.manifest.js
+  config.addPassthroughCopy(path.join(fd.input + fd.assets)); // copy everything in ./src/assets/
 
   // add collections
 
@@ -27,12 +25,12 @@ module.exports = function (config) {
   };
 
   // launch browser on start
-  config.setBrowserSyncConfig(fd.bs);
+  // config.setBrowserSyncConfig(fd.bs);
 
   return {
     dir: {
-      input: 'src',
-      output: '_site', // default
+      input: fd.input,
+      output: fd.output,
     },
   };
 };
