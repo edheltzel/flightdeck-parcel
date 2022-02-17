@@ -1,9 +1,11 @@
 ---
+layout: layouts/default.njk
 title: The Blog
-layout: 'layouts/base.njk'
 ---
 
 ## Recent Posts
+
+something goes here
 
 <ul>
 {% for post in collections.blog %}

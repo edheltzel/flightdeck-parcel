@@ -1,5 +1,4 @@
 ---
-layout: layouts/post
 title: Post 2
 description: ''
 feature_image: /assets/images/
