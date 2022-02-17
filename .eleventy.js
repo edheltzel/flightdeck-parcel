@@ -2,6 +2,9 @@ const fd = require('./flightdeck.manifest');
 const htmlmin = require('html-minifier');
 
 module.exports = function (config) {
+  // watch for changes
+  config.addWatchTarget(fd.assets.scss);
+
   // copy stuff
   config.addPassthroughCopy(fd.assets.images);
 
@@ -36,7 +39,7 @@ module.exports = function (config) {
   return {
     dir: {
       input: 'src',
-      output: '_site',
+      output: 'dist',
     },
   };
 };
