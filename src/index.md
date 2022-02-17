@@ -1,12 +1,15 @@
 ---
 layout: layouts/default.njk
-title: Hello World
+title: Flightdeck is coming!
 ---
 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore repellat, reprehenderit, suscipit, inventore id fugiat optio nemo esse libero asperiores ut ipsam? Quas cupiditate, ipsum perferendis dolorem eos temporibus placeat?
+>"That's one small step for man, one giant leap for mankind"<br>
+<small>– Neil Armstrong</small>
 
-![alt](https://source.unsplash.com/dZJ9i4MN794)
 
-Ex sed amet sint ullamco laborum.
+![remote image](https://source.unsplash.com/TV2gg2kZD1o)
 
-![test](assets/images/testing.jpg)
+## Blah Blah Blah
+
+![local image](assets/images/testing.jpg)
+

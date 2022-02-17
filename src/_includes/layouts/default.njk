@@ -4,10 +4,16 @@
 {% include "head.njk" %}
 
 <body>
+<main>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </nav>
   <h1>{{ title }}</h1>
 
   {{ content | safe }}
-<p><a href="/blog/">Blog</a></p>
+
+</main>
 </body>
 
 </html>
