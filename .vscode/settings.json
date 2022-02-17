@@ -18,10 +18,9 @@
     "titleBar.activeForeground": "#41f3fe",
     "titleBar.inactiveForeground": "#41f3fe5D"
   },
-  "files.associations": {
-    "*.md": "njk"
-  },
-  "html.suggest.html5": true,
+  // "files.associations": {
+  //   "*.md": "md, njk"
+  // },
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
