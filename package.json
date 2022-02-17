@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all -p dev:11ty dev:parcel",
     "dev:11ty": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "watch:parcel": "npm-run-all -p watch:sass watch:js watch:images",
+    "dev:parcel": "npm-run-all watch:assets",
+    "watch:assets": "npm-run-all -p watch:sass watch:js watch:images",
     "watch:images": "parcel watch ./src/assets/images/*",
     "watch:js": "parcel watch ./src/assets/bundle.js --dist-dir ./_site/assets/js",
     "watch:sass": "parcel watch ./src/_scss/app.scss --dist-dir ./_site/assets/css",

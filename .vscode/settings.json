@@ -11,14 +11,19 @@
     "*.lock": true,
     "**/.sass-cache/": true,
     "**/.publish/": true,
-    ".vscode/**": true
+    ".vscode/**": true,
+    "package-lock.json": true
   },
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#41f3fe",
     "titleBar.inactiveForeground": "#41f3fe5D"
   },
   "files.associations": {
-    "*.njk": "nunjucks"
+    "*.md": "njk"
+  },
+  "html.suggest.html5": true,
+  "emmet.includeLanguages": {
+    "*.njk": "html"
   },
   "cSpell.words": ["mnpm"]
 }

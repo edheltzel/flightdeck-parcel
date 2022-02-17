@@ -2,34 +2,41 @@ const fd = require('./flightdeck.manifest');
 const htmlmin = require('html-minifier');
 
 module.exports = function (config) {
-  // watch for changes
-  config.addWatchTarget(fd.css.scss.src);
-
   // copy stuff
-  config.addPassthroughCopy(path.join(fd.input + fd.assets)); // copy everything in ./src/assets/
+  config.addPassthroughCopy(fd.assets.images);
+
+  // layout aliases
+  config.addLayoutAlias('base', 'layouts/default.njk');
+  config.addLayoutAlias('post', 'layouts/post.njk'); // consider using nunjucks extend
+  config.addLayoutAlias('page', 'layouts/page.njk'); // consider using nunjucks extend
 
   // add collections
 
-  //minify html
+  //minify html only for in production
   const isProd = process.env.ELEVENTY_ENV === 'prod';
-  let htmlMinify = function (value, outputPath) {
+  const minifyHtml = function (value, outputPath) {
     if (outputPath && outputPath.indexOf('.html') > -1) {
       return htmlmin.minify(value, {
-        userShortDoctype: true,
-        removeComments: true,
         collapseWhitespace: true,
+        collapseInlineTagWhitespace: true,
         minifyCSS: true,
+        removeComments: true,
+        userShortDoctype: true,
       });
     }
   };
 
+  if (isProd) {
+    config.addTransform('htmlmin', minifyHtml);
+  }
+
   // launch browser on start
-  // config.setBrowserSyncConfig(fd.bs);
+  config.setBrowserSyncConfig(fd.workflow.bs);
 
   return {
     dir: {
-      input: fd.input,
-      output: fd.output,
+      input: 'src',
+      output: '_site',
     },
   };
 };
