@@ -37,6 +37,7 @@ module.exports = function (config) {
   config.setBrowserSyncConfig(fd.workflow.bs);
 
   return {
+    markdownTemplateEngine: 'njk',
     dir: {
       input: 'src',
       output: 'dist',
