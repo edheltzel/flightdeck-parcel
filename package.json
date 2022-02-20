@@ -2,6 +2,7 @@
   "name": "flightdeck-11ty",
   "version": "0.0.1",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
+  "browserslist": ">= 0.5%, last 2 major versions, not dead, Chrome >= 60, Firefox >= 60, Firefox ESR, iOS >= 12, Safari >= 12, not Explorer <= 11",
   "scripts": {
     "start": "npm-run-all -p dev:11ty dev:parcel",
     "dev:11ty": "cross-env ELEVENTY_ENV=dev eleventy --serve",
