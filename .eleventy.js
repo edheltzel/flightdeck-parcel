@@ -3,10 +3,10 @@ const htmlmin = require('html-minifier');
 
 module.exports = function (config) {
   // watch for changes
-  config.addWatchTarget(fd.assets.scss);
+  config.addWatchTarget(fd.assets.scss.src);
 
   // copy stuff
-  config.addPassthroughCopy(fd.assets.images);
+  // config.addPassthroughCopy(fd.assets.images);
 
   // layout aliases
   config.addLayoutAlias('default', 'layouts/default.njk');
@@ -40,7 +40,7 @@ module.exports = function (config) {
     markdownTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'dist',
+      output: '_site',
     },
   };
 };

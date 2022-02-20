@@ -1,7 +1,14 @@
 module.exports = {
   assets: {
-    scss: './src/_scss',
-    css: './dist/assets/css',
+    scss: {
+      src: './src/_scss/app.scss',
+      outputStyle: 'expanded', //"expanded" | "compressed" | "nested" | "compact"
+      sourceMap: true,
+      outFile: './_site/assets/css/app.css',
+    },
+    css: {
+      src: './_site/assets/css',
+    },
     images: './src/assets/images',
     fonts: 'fonts',
   },
