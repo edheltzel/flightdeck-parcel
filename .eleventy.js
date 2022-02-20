@@ -6,7 +6,7 @@ module.exports = function (config) {
   config.addWatchTarget(fd.assets.scss.src);
 
   // copy stuff
-  // config.addPassthroughCopy(fd.assets.images);
+  config.addPassthroughCopy(fd.assets.images);
 
   // layout aliases
   config.addLayoutAlias('default', 'layouts/default.njk');
@@ -40,7 +40,7 @@ module.exports = function (config) {
     markdownTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: '_site',
+      output: 'dist',
     },
   };
 };
