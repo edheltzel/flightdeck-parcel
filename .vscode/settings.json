@@ -18,11 +18,9 @@
     "titleBar.activeForeground": "#41f3fe",
     "titleBar.inactiveForeground": "#41f3fe5D"
   },
-  "files.associations": {
-    "*.njk": "njk"
-  },
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
-  "cSpell.words": ["mnpm"]
+  "cSpell.words": ["mnpm"],
+  "cSpell.ignoreWords": ["endregion"]
 }
