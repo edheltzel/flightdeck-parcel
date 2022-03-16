@@ -22,5 +22,10 @@
     "*.njk": "html"
   },
   "cSpell.words": ["mnpm"],
-  "cSpell.ignoreWords": ["endregion"]
+  "cSpell.ignoreWords": [
+    "ELEVENTY",
+    "endregion",
+    "flightdeck",
+    "shortcodes"
+  ]
 }

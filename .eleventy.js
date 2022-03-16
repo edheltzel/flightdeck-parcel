@@ -1,4 +1,13 @@
+// util
 const fd = require('./flightdeck.manifest');
+
+// plugins
+
+// flightdeck mods - shortcodes, filters, transforms
+const fdShortcodes = require('./src/__flightdeck/shortcodes');
+const fdFilters = require('./src/__flightdeck/filters');
+const fdTransforms = require('./src/__flightdeck/transforms');
+
 const htmlmin = require('html-minifier');
 
 module.exports = function (config) {
