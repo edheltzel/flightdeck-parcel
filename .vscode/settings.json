@@ -21,9 +21,14 @@
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
-  "cSpell.words": ["mnpm"],
+  "cSpell.words": [
+    "endset",
+    "mnpm"
+  ],
   "cSpell.ignoreWords": [
     "ELEVENTY",
+    "endfor",
+    "endmacro",
     "endregion",
     "flightdeck",
     "shortcodes"
