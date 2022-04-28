@@ -22,15 +22,11 @@
     "*.njk": "html"
   },
   "cSpell.words": [
-    "endset",
-    "mnpm"
-  ],
-  "cSpell.ignoreWords": [
     "ELEVENTY",
     "endfor",
     "endmacro",
     "endregion",
-    "flightdeck",
+    "endset",
     "shortcodes"
   ]
 }
