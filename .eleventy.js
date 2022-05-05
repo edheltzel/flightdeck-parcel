@@ -3,14 +3,18 @@ const fd = require('./flightdeck.manifest');
 
 // plugins
 
-// flightdeck mods - shortcodes, filters, transforms
-const fdShortcodes = require('./src/__flightdeck/shortcodes');
-const fdFilters = require('./src/__flightdeck/filters');
-const fdTransforms = require('./src/__flightdeck/transforms');
+// common and custom shortcodes, filters, transforms
+const addFilters = require('./src/__flightdeck/filters');
+const addShortcodes = require('./src/__flightdeck/shortcodes');
+const addTransforms = require('./src/__flightdeck/transforms');
 
 const htmlmin = require('html-minifier');
 
 module.exports = function (config) {
+  addFilters(config)
+  addTransforms(config)
+  addShortcodes(config)
+  //custom watch targets
   // watch for changes
   config.addWatchTarget(fd.assets.scss.src);
 
@@ -24,23 +28,23 @@ module.exports = function (config) {
 
   // add collections
 
-  //minify html only for in production
-  const isProd = process.env.ELEVENTY_ENV === 'prod';
-  const minifyHtml = function (value, outputPath) {
-    if (outputPath && outputPath.indexOf('.html') > -1) {
-      return htmlmin.minify(value, {
-        collapseWhitespace: true,
-        collapseInlineTagWhitespace: true,
-        minifyCSS: true,
-        removeComments: true,
-        userShortDoctype: true,
-      });
-    }
-  };
+  // //minify html only for in production
+  // const isProd = process.env.ELEVENTY_ENV === 'prod';
+  // const minifyHtml = function (value, outputPath) {
+  //   if (outputPath && outputPath.indexOf('.html') > -1) {
+  //     return htmlmin.minify(value, {
+  //       collapseWhitespace: true,
+  //       collapseInlineTagWhitespace: true,
+  //       minifyCSS: true,
+  //       removeComments: true,
+  //       userShortDoctype: true,
+  //     });
+  //   }
+  // };
 
-  if (isProd) {
-    config.addTransform('htmlmin', minifyHtml);
-  }
+  // if (isProd) {
+  //   config.addTransform('htmlmin', minifyHtml);
+  // }
 
   // launch browser on start
   config.setBrowserSyncConfig(fd.workflow.bs);
