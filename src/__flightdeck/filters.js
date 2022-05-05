@@ -1,3 +1,4 @@
+// new filters are added here so eleventy will see them.
 const date = require('./filter/date');
 
 module.exports = function (config) {
