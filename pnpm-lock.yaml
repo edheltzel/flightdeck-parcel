@@ -5,8 +5,7 @@ specifiers:
   '@11ty/eleventy-img': ^1.0.0
   autoprefixer: ^10.4.2
   cross-env: ^7.0.3
-  esbuild: ^0.14.38
-  esbuild-sass-plugin: ^2.2.6
+  esbuild: ^0.14.39
   html-minifier: ^4.0.0
   npm-run-all: ^4.1.5
   postcss: ^8.4.6
@@ -19,7 +18,6 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.13
   cross-env: 7.0.3
   esbuild: 0.14.39
-  esbuild-sass-plugin: 2.2.6
   html-minifier: 4.0.0
   npm-run-all: 4.1.5
   postcss: 8.4.13
@@ -811,8 +809,6 @@ packages:
       finalhandler: 1.1.0
       parseurl: 1.3.3
       utils-merge: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /console-control-strings/1.1.0:
@@ -915,11 +911,6 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -1303,13 +1294,6 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-sass-plugin/2.2.6:
-    resolution: {integrity: sha512-WVREJhOS6UlZNoS2FhkOA5980VVKjS6ocUK7YFghJt/94rWDNXxPI+XfkOKlSMbJF/n5wAotr37P8/9KhgkgPQ==}
-    dependencies:
-      esbuild: 0.14.39
-      sass: 1.51.0
-    dev: true
-
   /esbuild-sunos-64/0.14.39:
     resolution: {integrity: sha512-qHq0t5gePEDm2nqZLb+35p/qkaXVS7oIe32R0ECh2HOdiXXkj/1uQI9IRogGqKkK+QjDG+DhwiUw7QoHur/Rwg==}
     engines: {node: '>=12'}
@@ -1466,8 +1450,6 @@ packages:
       parseurl: 1.3.3
       statuses: 1.3.1
       unpipe: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /flat-cache/3.0.4:
@@ -3136,8 +3118,6 @@ packages:
     dependencies:
       debug: 2.6.9
       minimatch: 3.1.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /reusify/1.0.4:
@@ -3240,8 +3220,6 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.4.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /serve-index/1.9.1:
@@ -3255,8 +3233,6 @@ packages:
       http-errors: 1.6.3
       mime-types: 2.1.35
       parseurl: 1.3.3
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /serve-static/1.13.2:
@@ -3267,8 +3243,6 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.16.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /server-destroy/1.0.1:
