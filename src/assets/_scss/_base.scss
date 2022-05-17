@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  background-color: var(--color-gray8);
+  color: var(--color-gray1);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: papayawhip;
+  text-decoration: none;
+  transition: all 0.24s;
+  &:hover {
+    color: peru;
+  }
+}
+
+img {
+  width: 50rem;
+}
+
+h1 {
+  color: var(--color-brand4);
+  font-size: 5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100vw;
+  max-width: 75vw;
+}
