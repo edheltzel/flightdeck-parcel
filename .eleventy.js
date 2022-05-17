@@ -40,8 +40,6 @@ module.exports = (config) => {
   // watch for changes and copy stuff
   config.addWatchTarget("./src/assets/_scss/");
   config.addWatchTarget("./src/assets/_js/");
-  // config.addPassthroughCopy({ "./src/assets/_scss": "/assets/css" }); //moves styles to dist after esbuild
-  // config.addPassthroughCopy({ "./src/assets/_js": "/assets/js" }); //moves styles to dist after esbuild
   config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
   config.addPassthroughCopy("./src/assets/images"); // copies images
 
