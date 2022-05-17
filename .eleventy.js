@@ -1,5 +1,8 @@
 const esbuild = require("esbuild");
 const { sassPlugin } = require("esbuild-sass-plugin");
+const postcss = require("postcss");
+const autoprefixer = require("autoprefixer");
+const postcssPresetEnv = require("postcss-preset-env");
 
 // 11ty plugins
 
@@ -11,21 +14,36 @@ const { sassPlugin } = require("esbuild-sass-plugin");
 module.exports = (config) => {
   config.on("eleventy.after", () => {
     return esbuild.build({
-      entryPoints: ["./src/_js/app.js", "./src/_scss/app.scss"],
+      entryPoints: {
+        "assets/js/app": "./src/assets/_js/app.js",
+        "assets/css/app": "./src/assets/_scss/app.scss",
+      },
+      loader: { ".scss": "css" },
       bundle: true,
-      outdir: "./src/assets",
+      outdir: "./dist",
       minify: process.env.ELEVENTY_ENV === "production",
       sourcemap: process.env.ELEVENTY_ENV !== "production",
-      plugins: [sassPlugin()],
+      plugins: [
+        sassPlugin({
+          async transform(source, resolveDir) {
+            const { css } = await postcss([
+              autoprefixer,
+              postcssPresetEnv({ stage: 0 }),
+            ]).process(source);
+            return css;
+          },
+        }),
+      ],
     });
   });
 
   // watch for changes and copy stuff
-  config.addWatchTarget("./src/_scss/");
-  config.addWatchTarget("./src/_js/");
-  config.addPassthroughCopy({ "./src/assets/_scss": "/assets/css" }); //moves styles to dist after esbuild
-  config.addPassthroughCopy({ "./src/assets/_js": "/assets/js" }); //moves styles to dist after esbuild
-  // config.addPassthroughCopy("./src/assets/"); // copies all assets
+  config.addWatchTarget("./src/assets/_scss/");
+  config.addWatchTarget("./src/assets/_js/");
+  // config.addPassthroughCopy({ "./src/assets/_scss": "/assets/css" }); //moves styles to dist after esbuild
+  // config.addPassthroughCopy({ "./src/assets/_js": "/assets/js" }); //moves styles to dist after esbuild
+  config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
+  config.addPassthroughCopy("./src/assets/images"); // copies images
 
   // layout aliases
   config.addLayoutAlias("default", "layouts/default.njk");
