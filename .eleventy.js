@@ -10,11 +10,10 @@ const path = require("node:path");
 // const addTransforms = require("./src/__flightdeck/transforms");
 
 module.exports = (config) => {
+  // esbuild
   config.on("eleventy.after", () => {
     return esbuild.build({
-      entryPoints: {
-        "assets/js/app": "./src/assets/_js/app.js",
-      },
+      entryPoints: {"assets/js/app": "./src/assets/js/app.js"},
       bundle: true,
       outdir: "./dist",
       minify: process.env.ELEVENTY_ENV === "production",
@@ -26,28 +25,25 @@ module.exports = (config) => {
   config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
   config.addPassthroughCopy("./src/assets/images"); // copies images
 
-  // custom template format for scss
-  // add as a valid template language to process, e.g. this adds to --formats
+  // adds Sass templating
   config.addTemplateFormats("scss");
-
   config.addExtension("scss", {
-    outputFileExtension: "css", // optional, default: "html"
-
-    // can be an async function
+    outputFileExtension: "css",
     compile: function (loadStyles, inputPath) {
       let parsed = path.parse(inputPath);
-
+      if (parsed.name.startsWith("_")) {
+        return;
+      }
       let result = sass.compileString(loadStyles, {
         loadPaths: [parsed.dir || ".", this.config.dir.includes],
+        style: process.env.ELEVENTY_ENV === "production" ? "compressed" : "expanded",
       });
 
-      return (data) => {
-        return result.css;
-      };
+      return async () => result.css;
     },
   });
-  config.addWatchTarget("./src/assets/_scss/");
-  config.addWatchTarget("./src/assets/_js/");
+  // watch
+  config.addWatchTarget("./src/assets/");
 
   // layout aliases
   config.addLayoutAlias("default", "layouts/default.njk");
@@ -56,7 +52,7 @@ module.exports = (config) => {
 
   // launch browser on start
   config.setBrowserSyncConfig({
-    open: true,
+    open: false,
     notify: true,
   });
 
