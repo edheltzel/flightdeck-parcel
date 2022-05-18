@@ -1,8 +1,6 @@
 const esbuild = require("esbuild");
-const { sassPlugin } = require("esbuild-sass-plugin");
-const postcss = require("postcss");
-const autoprefixer = require("autoprefixer");
-const postcssPresetEnv = require("postcss-preset-env");
+const sass = require("sass");
+const path = require("node:path");
 
 // 11ty plugins
 
@@ -16,32 +14,40 @@ module.exports = (config) => {
     return esbuild.build({
       entryPoints: {
         "assets/js/app": "./src/assets/_js/app.js",
-        "assets/css/app": "./src/assets/_scss/app.scss",
       },
-      loader: { ".scss": "css" },
       bundle: true,
       outdir: "./dist",
       minify: process.env.ELEVENTY_ENV === "production",
       sourcemap: process.env.ELEVENTY_ENV !== "production",
-      plugins: [
-        sassPlugin({
-          async transform(source, resolveDir) {
-            const { css } = await postcss([
-              autoprefixer,
-              postcssPresetEnv({ stage: 0 }),
-            ]).process(source);
-            return css;
-          },
-        }),
-      ],
     });
   });
 
-  // watch for changes and copy stuff
-  config.addWatchTarget("./src/assets/_scss/");
-  config.addWatchTarget("./src/assets/_js/");
+  // copy stuff
   config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
   config.addPassthroughCopy("./src/assets/images"); // copies images
+
+  // custom template format for scss
+  // add as a valid template language to process, e.g. this adds to --formats
+  config.addTemplateFormats("scss");
+
+  config.addExtension("scss", {
+    outputFileExtension: "css", // optional, default: "html"
+
+    // can be an async function
+    compile: function (loadStyles, inputPath) {
+      let parsed = path.parse(inputPath);
+
+      let result = sass.compileString(loadStyles, {
+        loadPaths: [parsed.dir || ".", this.config.dir.includes],
+      });
+
+      return (data) => {
+        return result.css;
+      };
+    },
+  });
+  config.addWatchTarget("./src/assets/_scss/");
+  config.addWatchTarget("./src/assets/_js/");
 
   // layout aliases
   config.addLayoutAlias("default", "layouts/default.njk");

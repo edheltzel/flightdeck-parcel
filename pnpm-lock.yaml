@@ -1,16 +1,16 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@11ty/eleventy': ^1.0.0
-  '@11ty/eleventy-img': ^1.0.0
-  autoprefixer: ^10.4.2
+  '@11ty/eleventy': ^1.0.1
+  '@11ty/eleventy-img': ^1.1.0
+  autoprefixer: ^10.4.7
   cross-env: ^7.0.3
   esbuild: ^0.14.39
   html-minifier: ^4.0.0
   npm-run-all: ^4.1.5
-  postcss: ^8.4.6
+  postcss: ^8.4.13
   postcss-preset-env: ^7.5.0
-  sass: ^1.49.7
+  sass: ^1.51.0
 
 devDependencies:
   '@11ty/eleventy': 1.0.1
@@ -119,8 +119,6 @@ packages:
     resolution: {integrity: sha512-FLzHmN9V3AJIrWfOpvRlZCeVg/WLdicSnTMsLur6uDj9TT8ymUlG9XxURdW/XvuygK+2CW0poOJABdA4m/YKxA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-    dependencies:
-      '@babel/types': 7.17.12
     dev: true
 
   /@babel/types/7.17.12:
