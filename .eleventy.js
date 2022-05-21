@@ -1,45 +1,16 @@
-const esbuild = require("esbuild");
-const { sassPlugin } = require("esbuild-sass-plugin");
-const postcss = require("postcss");
-const autoprefixer = require("autoprefixer");
-const postcssPresetEnv = require("postcss-preset-env");
+const afterBuild = require("./src/__flightdeck/afterBuild");
 
-// 11ty plugins
 
-// shortcodes, filters, transforms
+
+// flightdeck partials
 // const addFilters = require("./src/__flightdeck/filters");
 // const addShortcodes = require("./src/__flightdeck/shortcodes");
 // const addTransforms = require("./src/__flightdeck/transforms");
 
 module.exports = (config) => {
-  config.on("eleventy.after", () => {
-    return esbuild.build({
-      entryPoints: {
-        "assets/js/app": "./src/assets/_js/app.js",
-        "assets/css/app": "./src/assets/_scss/app.scss",
-      },
-      loader: { ".scss": "css" },
-      bundle: true,
-      outdir: "./dist",
-      minify: process.env.ELEVENTY_ENV === "production",
-      sourcemap: process.env.ELEVENTY_ENV !== "production",
-      plugins: [
-        sassPlugin({
-          async transform(source, resolveDir) {
-            const { css } = await postcss([
-              autoprefixer,
-              postcssPresetEnv({ stage: 0 }),
-            ]).process(source);
-            return css;
-          },
-        }),
-      ],
-    });
-  });
-
+  config.addPlugin(afterBuild);
   // watch for changes and copy stuff
-  config.addWatchTarget("./src/assets/_scss/");
-  config.addWatchTarget("./src/assets/_js/");
+  config.addWatchTarget("./src/assets");
   config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
   config.addPassthroughCopy("./src/assets/images"); // copies images
 
@@ -50,7 +21,7 @@ module.exports = (config) => {
 
   // launch browser on start
   config.setBrowserSyncConfig({
-    open: true,
+    open: false,
     notify: true,
   });
 

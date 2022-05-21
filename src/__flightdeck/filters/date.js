@@ -1,4 +1,4 @@
-module.exports = function(theDate){
+module.exports = (theDate) => {
   const dateObj= new Date(theDate)
   const months = [
     'January',
