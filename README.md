@@ -25,7 +25,7 @@ git clone https://github.com/flight-deck/Flightdeck-11ty.git
 
 #### Install Dependencies
 
-> You can swap `pnpm` in favor of `yarn` or `npm` - but I would suggest enabling Node's corepack this way you do not need to manage your install a separate package manager for Node and all the `pnpm` commands work out-of-the-box.
+> You can swap `pnpm` in favor of `yarn` or `npm` - but I would suggest enabling Node's [corepack](https://nodejs.org/api/corepack.html) this way you do not need to manage or install a separate package manager for Node and all the `pnpm` commands work out-of-the-box.
 
 Read more about Corepack on Node's documentation site - [Node Docs](https://nodejs.org/api/corepack.html)
 
@@ -33,11 +33,20 @@ Read more about Corepack on Node's documentation site - [Node Docs](https://node
 
 ```shell
 npm list
-Flightdeck-11ty@0.0.1 /Users/ed/Projects/oss/fd-11ty
-├── @11ty/eleventy-img@1.0.0
-├── @11ty/eleventy@1.0.0
-├── npm-run-all@4.1.5
-└── sass@1.49.7
+flightdeck-11ty@0.0.2 /Users/ed/Projects/oss/flightdeck/fd-11ty
+├── @11ty/eleventy-img@1.1.0 -> ./node_modules/.pnpm/@11ty+eleventy-img@1.1.0/node_modules/@11ty/eleventy-img
+├── @11ty/eleventy@1.0.1 -> ./node_modules/.pnpm/@11ty+eleventy@1.0.1/node_modules/@11ty/eleventy
+├── autoprefixer@10.4.7 -> ./node_modules/.pnpm/autoprefixer@10.4.7_postcss@8.4.14/node_modules/autoprefixer
+├── cross-env@7.0.3 -> ./node_modules/.pnpm/cross-env@7.0.3/node_modules/cross-env
+├── esbuild-sass-plugin@2.2.6 -> ./node_modules/.pnpm/esbuild-sass-plugin@2.2.6/node_modules/esbuild-sass-plugin
+├── esbuild@0.14.39 -> ./node_modules/.pnpm/esbuild@0.14.39/node_modules/esbuild
+├── html-minifier@4.0.0 -> ./node_modules/.pnpm/html-minifier@4.0.0/node_modules/html-minifier
+├── npm-run-all@4.1.5 -> ./node_modules/.pnpm/npm-run-all@4.1.5/node_modules/npm-run-all
+├── postcss-preset-env@7.5.0 -> ./node_modules/.pnpm/postcss-preset-env@7.5.0_postcss@8.4.14/node_modules/postcss-preset-env
+├── postcss@8.4.14 -> ./node_modules/.pnpm/postcss@8.4.14/node_modules/postcss
+└── sass@1.51.0 -> ./node_modules/.pnpm/sass@1.51.0/node_modules/sass
+
+
 ```
 
 ```shell
