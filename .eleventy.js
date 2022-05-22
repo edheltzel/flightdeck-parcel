@@ -19,9 +19,9 @@ module.exports = (config) => {
   config.addPassthroughCopy("./src/assets/images"); // copies images
 
   // layout aliases
-  config.addLayoutAlias("default", "default.njk");
-  config.addLayoutAlias("post", "post.njk"); // consider using nunjucks extend
-  config.addLayoutAlias("page", "page.njk"); // consider using nunjucks extend
+  config.addLayoutAlias("default", "layouts/default.njk");
+  config.addLayoutAlias("post", "layouts/post.njk"); // consider using nunjucks extend
+  config.addLayoutAlias("page", "layouts/page.njk"); // consider using nunjucks extend
 
   /**
    * TODO: Remove BS once 2.0 is released.
