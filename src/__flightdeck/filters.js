@@ -1,3 +1,7 @@
+/**
+ * TODO: see if these are worth adding 👉 https://www.aleksandrhovhannisyan.com/blog/useful-11ty-filters/
+ *
+ */
 const moment = require("moment-timezone");
 
 module.exports = (config) => {
