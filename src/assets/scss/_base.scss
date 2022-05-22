@@ -11,17 +11,18 @@ a {
   text-decoration: none;
   transition: all 0.24s;
   &:hover {
-    color: peru;
+    color: crimson;
   }
 }
 
 img {
-  width: 50rem;
+  max-width: 50rem;
+  width: 100%;
 }
 
 h1 {
   color: var(--color-brand4);
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 main {
@@ -39,4 +40,8 @@ nav {
   padding: 1rem;
   width: 100vw;
   max-width: 75vw;
+}
+
+blockquote p{
+  text-transform: uppercase;
 }

@@ -1,24 +1,31 @@
-const afterBuild = require("./src/__flightdeck/afterBuild");
+const transforms = require("./src/__flightdeck/transforms");
+const filters = require("./src/__flightdeck/filters");
 
-
-
-// flightdeck partials
-// const addFilters = require("./src/__flightdeck/filters");
 // const addShortcodes = require("./src/__flightdeck/shortcodes");
-// const addTransforms = require("./src/__flightdeck/transforms");
 
 module.exports = (config) => {
-  config.addPlugin(afterBuild);
-  // watch for changes and copy stuff
+  // transforms - esbuild, sass, htmlmin
+  config.addPlugin(transforms);
+
+  // filters - human readable date & time
+  config.addPlugin(filters);
+
+  // shortcodes
+  // config.addPlugin(shortcodes);
+
+  // watch & copy stuff
   config.addWatchTarget("./src/assets");
   config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
   config.addPassthroughCopy("./src/assets/images"); // copies images
 
   // layout aliases
-  config.addLayoutAlias("default", "layouts/default.njk");
-  config.addLayoutAlias("post", "layouts/post.njk"); // consider using nunjucks extend
-  config.addLayoutAlias("page", "layouts/page.njk"); // consider using nunjucks extend
+  config.addLayoutAlias("default", "default.njk");
+  config.addLayoutAlias("post", "post.njk"); // consider using nunjucks extend
+  config.addLayoutAlias("page", "page.njk"); // consider using nunjucks extend
 
+  /**
+   * TODO: Remove BS once 2.0 is released.
+   */
   // launch browser on start
   config.setBrowserSyncConfig({
     open: false,

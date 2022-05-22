@@ -1,11 +1,12 @@
-// new filters are added here so eleventy will see them.
-const date = require('./filter/date');
+const moment = require("moment-timezone");
 
-module.exports = function (config) {
-  config.addFilter('date', date)
-
-  // JSON.stringify filter
-  config.addFilter('limit', function(array, limit) {
-    return array.slice(0, limit)
-  })
-}
+module.exports = (config) => {
+  config.addFilter("common", (date) => {
+    const utc = date.toUTCString();
+    return moment.utc(utc).format("MMM DD, YYYY");
+  });
+  config.addFilter("dateAndTime", (date) => {
+    const utc = Date.now();
+    return moment.utc(utc).tz("America/New_York").format("YYYY-MM-DD, HH:mm:ss z");
+  });
+};
