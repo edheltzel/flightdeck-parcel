@@ -5,7 +5,6 @@ feature_image: /assets/images/
 categories: ['']
 ---
 
-`{{ page.date | postDate }}`
 # {{ page.title }}
 
 this is a post example of the first kind.
