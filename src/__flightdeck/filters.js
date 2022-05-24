@@ -1,19 +1,15 @@
-const { DateTime } = require("luxon");
+const { DateTime } = require("luxon"); //bundled with 11ty
 const site = require("../_data/site");
 
 module.exports = (config) => {
-  // Human readable date & time
-  config.addFilter("basicDate", (date) => {
-    const utc = date.toUTCString();
-    return moment.utc(utc).format("MMM DD, YYYY");
+  // Human readable dates
+  config.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
-  config.addFilter("fullDate", (date) => {
-    const utc = Date.now();
-    return moment
-      .utc(utc)
-      .tz("America/New_York")
-      .format("MMM DD, YYYY - HH:mm:ss");
+  config.addFilter("postDateTime", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED);
   });
+
 
 // Prefixes the given URL with the site's base URL.
 
