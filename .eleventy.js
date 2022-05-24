@@ -1,7 +1,6 @@
 const transforms = require("./src/__flightdeck/transforms");
 const filters = require("./src/__flightdeck/filters");
-
-// const addShortcodes = require("./src/__flightdeck/shortcodes");
+const shortcodes = require("./src/__flightdeck/shortcodes");
 
 module.exports = (config) => {
   // transforms - esbuild, sass, htmlmin
@@ -11,7 +10,7 @@ module.exports = (config) => {
   config.addPlugin(filters);
 
   // shortcodes
-  // config.addPlugin(shortcodes);
+  config.addPlugin(shortcodes);
 
   // watch & copy stuff
   config.addWatchTarget("./src/assets");

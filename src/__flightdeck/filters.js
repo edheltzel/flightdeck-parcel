@@ -12,9 +12,10 @@ module.exports = (config) => {
 
 
 // Prefixes the given URL with the site's base URL.
-
-  const toAbsoluteUrl = (url) => {
+  const domain= (url) => {
     return new URL(url, site.baseUrl).href;
   };
-  config.addFilter('toAbsoluteUrl', toAbsoluteUrl);
+  config.addFilter('domain', domain);
 };
+
+// Prepend & Append
