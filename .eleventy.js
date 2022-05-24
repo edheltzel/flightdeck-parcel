@@ -7,7 +7,7 @@ module.exports = (config) => {
   // transforms - esbuild, sass, htmlmin
   config.addPlugin(transforms);
 
-  // filters - human readable date & time
+  // filters
   config.addPlugin(filters);
 
   // shortcodes
