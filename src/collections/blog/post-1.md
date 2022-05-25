@@ -1,7 +1,8 @@
 ---
 title: Post 1
-description: ''
-feature_image: /assets/images/
+description: '“Either you run the day or the day runs you.”
+'
+featured_image: /assets/images/adam-miller-dBaz0xhCkPY-unsplash.jpg
 categories: ['']
 ---
 

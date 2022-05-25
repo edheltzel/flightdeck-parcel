@@ -1,6 +1,5 @@
 const isDev = process.env.ELEVENTY_ENV === "development";
-const baseUrl = isDev ? `localhost:8080` : `https://rainyday.media`;
-const socialProfile = "edheltzel";
+const baseUrl = isDev ? `localhost:8080` : `https://google.com`;
 
 const site = {
   baseUrl,
@@ -8,11 +7,26 @@ const site = {
   description: "Your site descriptoin",
   authorName: "Ed Heltzel",
   social: [
-    { name: "Twitter", profile: socialProfile },
-    { name: "Github", profile: socialProfile },
-    { name: "Facebook", profile: socialProfile },
-    { name: "LinkedIn", profile: socialProfile },
-    { name: "Instagram", profile: socialProfile },
+    {
+      name: "Twitter",
+      profile: "edheltzel",
+    },
+    {
+      name: "Github",
+      profile: "edheltzel",
+    },
+    {
+      name: "Facebook",
+      profile: "edheltzel",
+    },
+    {
+      name: "LinkedIn",
+      profile: "edheltzel",
+    },
+    {
+      name: "Instagram",
+      profile: "edheltzel",
+    },
   ],
 };
 

@@ -1,7 +1,7 @@
 ---
 title: Post 2
 description: ''
-feature_image: /assets/images/
+featured_image: /assets/images/
 categories: ['']
 ---
 
