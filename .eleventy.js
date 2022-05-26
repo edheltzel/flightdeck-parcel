@@ -10,7 +10,7 @@ module.exports = (config) => {
   // transforms - esbuild, sass, htmlmin
   config.addPlugin(transforms);
 
-  // filters
+  // filters - universal filters
   config.addPlugin(filters);
 
   // shortcodes

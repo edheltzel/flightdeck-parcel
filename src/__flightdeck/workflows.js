@@ -1,4 +1,5 @@
 module.exports = (config) => {
+  config.setQuietMode(true); // reduce console
   /**
    * @todo remove once 2.0 is released
    */
