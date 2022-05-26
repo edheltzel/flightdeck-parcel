@@ -4,7 +4,7 @@ const baseUrl = isDev ? `localhost:8080` : `https://google.com`;
 const site = {
   baseUrl,
   title: "The Flightdeck Foundation",
-  description: "Your site descriptoin",
+  description: "Flightdeck is coming!",
   authorName: "Ed Heltzel",
   social: [
     {

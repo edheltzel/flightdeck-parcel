@@ -1,8 +1,12 @@
 const transforms = require("./src/__flightdeck/transforms");
 const filters = require("./src/__flightdeck/filters");
 const shortcodes = require("./src/__flightdeck/shortcodes");
+const workflows = require("./src/__flightdeck/workflows");
 
 module.exports = (config) => {
+  // workflow
+  config.addPlugin(workflows);
+
   // transforms - esbuild, sass, htmlmin
   config.addPlugin(transforms);
 
@@ -21,15 +25,6 @@ module.exports = (config) => {
   config.addLayoutAlias("default", "layouts/default.njk");
   config.addLayoutAlias("post", "layouts/post.njk"); // consider using nunjucks extend
   config.addLayoutAlias("page", "layouts/page.njk"); // consider using nunjucks extend
-
-  /**
-   * TODO: Remove BS once 2.0 is released.
-   */
-  // launch browser on start
-  config.setBrowserSyncConfig({
-    open: false,
-    notify: true,
-  });
 
   return {
     markdownTemplateEngine: "njk",

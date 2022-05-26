@@ -5,12 +5,13 @@
       {% if title %}
         {{ title }} |
       {% endif %}
-      {{ meta.siteName }}{% endset -%}
+      {{ site.title }}
+      {% endset -%}
       {%- set pageDescription %}
       {% if description %}
         {{ description }}
       {% else %}
-        {{ meta.siteDescription }}
+        {{ site.description }}
       {% endif %}
     {%- endset -%}
     <!-- endregion -->
