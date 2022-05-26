@@ -9,8 +9,8 @@ module.exports = (config) => {
 
   // watch & copy stuff
   config.addWatchTarget("./src/assets");
-  config.addPassthroughCopy("./src/assets/fonts");
-  config.addPassthroughCopy("./src/assets/images");
+  config.addPassthroughCopy("./src/assets/fonts"); // copies fonts
+  config.addPassthroughCopy("./src/assets/images"); // copies images
 
   // layout aliases
   config.addLayoutAlias("default", "layouts/default.njk");
