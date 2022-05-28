@@ -5,6 +5,7 @@ const workflows = require("./src/__flightdeck/workflows");
 
 module.exports = (config) => {
   // workflow - browsersync, layout aliases, watch, passthrough copy
+
   config.addPlugin(workflows);
 
   // transforms - esbuild, sass, htmlmin

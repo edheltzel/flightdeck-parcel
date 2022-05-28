@@ -22,12 +22,14 @@ module.exports = (config) => {
     },
   });
 
-  // watch & copy stuff
+  // Watch Targets
   config.addWatchTarget("./src/assets");
+
+  // Passthrough Copy
   config.addPassthroughCopy("./src/assets/fonts");
   config.addPassthroughCopy("./src/assets/images");
 
-  // layout aliases
+  // Layout Aliases
   config.addLayoutAlias("default", "layouts/default.njk");
   config.addLayoutAlias("post", "layouts/post.njk"); // consider using nunjucks extend
   config.addLayoutAlias("page", "layouts/page.njk"); // consider using nunjucks extend
