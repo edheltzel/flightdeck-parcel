@@ -22,11 +22,13 @@
     "*.njk": "html"
   },
   "cSpell.words": [
+    "browsersync",
     "ELEVENTY",
     "endfor",
     "endmacro",
     "endregion",
     "endset",
+    "esbuild",
     "shortcodes"
   ]
 }
