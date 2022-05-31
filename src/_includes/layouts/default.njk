@@ -1,48 +1,14 @@
 <!DOCTYPE html>
   <html lang="en">
-    <!-- #region -->
-    {%- set pageTitle -%}
-      {% if title %}
-        {{ title }} |
-      {% endif %}
-      {{ site.title }}
-      {% endset -%}
-      {%- set pageDescription %}
-      {% if description %}
-        {{ description }}
-      {% else %}
-        {{ site.description }}
-      {% endif %}
-    {%- endset -%}
-    <!-- endregion -->
-
-    <head>
-      <meta charset="UTF-8" />
-      <meta rel="canonical" href="{{ page.url | domain }}">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{{ pageTitle }}</title>
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
-            font-size=%2290%22>🚀</text></svg>">
-      <link rel="stylesheet" href="{{ '/assets/css/app.css' | url }}" />
-    </head>
+  {% include "head.njk" %}
 
     <body>
-      <main>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/blog/">Blog</a>
-        </nav>
-        <h1>{{ title }}</h1>
+      <main aria-label="Content">
+        {% include "components/navigation.njk" %}
+
         {{ content | safe }}
-      <footer>
-        <ul>
-          {% for social in site.social %}
-          <li><a href="http://{{ social.name | lower }}.com/{{ social.profile }}" target="_blank">{{ social.name }} - {{ social.profile }}</a></li>
-          {% endfor %}
-        </ul>
-        <span class="copyright">{% copyright %} {{ site.title }}&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved.</span>
-      </footer>
+
+        {% include "components/footer.njk" %}
       </main>
     </body>
 
