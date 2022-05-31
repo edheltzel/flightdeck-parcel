@@ -29,6 +29,7 @@
     "endregion",
     "endset",
     "esbuild",
+    "Shortcode",
     "shortcodes"
   ]
 }

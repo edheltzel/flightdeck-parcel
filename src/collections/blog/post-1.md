@@ -12,3 +12,11 @@ Tempor mollit excepteur incididunt labore commodo sit aliquip ipsum exercitation
 this is a post example of the first kind.
 
 ![remote image on post](https://source.unsplash.com/NC37HQXdpZ0)
+
+<!-- With title -->
+
+{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}
+
+<!-- Without title -->
+
+{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU" %}
