@@ -1,10 +1,7 @@
+const copyright = require("./shortcodes/copyright");
+const yt = require("./shortcodes/youtube");
+
 module.exports = (config) => {
-  /**
-   * Get the current year - copyright
-   * @example {% year %}
-   */
-  config.addShortcode(
-    "copyright",
-    () => `&copy; ${new Date().getFullYear()} &nbsp;`
-  );
+  config.addShortcode("copyright", copyright);
+  config.addShortcode("youtube", yt);
 };

@@ -12,7 +12,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem earum esse pa
 <li>
   <figure>
     <a href="{{ post.url }}">
-    <img src="{{ post.data.featured_image | default('/assets/images/testing.jpg', true) }}" alt="{{ post.data.title }} post featured_image">
+    <img class="featured__image" src="{{ post.data.featured_image | default('/assets/images/testing.jpg', true) }}" alt="{{ post.data.title }} post featured_image">
     <figcaption>
         <h2>{{ post.data.title }}</h2>
         <p>{% if post.data.description %}

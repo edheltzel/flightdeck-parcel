@@ -20,6 +20,9 @@ a {
 
 img {
   width: 100%;
+  &:not(.featured__image) {
+    width: auto;
+  }
 }
 
 h1 {
@@ -100,4 +103,11 @@ figure {
 
 figcaption {
   padding: 1rem;
+}
+
+iframe.yt-shortcode {
+  height: 50vw;
+  margin: 1rem 0;
+  max-height: 25rem;
+  width: 50vw;
 }
