@@ -1,6 +1,8 @@
+const fs = require("fs");
 const transforms = require("./src/__flightdeck/transforms");
 const filters = require("./src/__flightdeck/filters");
-const shortcodes = require("./src/__flightdeck/shortcodes");
+// const shortcodes = require("./src/__flightdeck/shortcodes");
+const addShortcodes = require("./src/__flightdeck/shortcodes");
 const workflows = require("./src/__flightdeck/workflows");
 
 module.exports = (config) => {
@@ -13,8 +15,8 @@ module.exports = (config) => {
   // filters - universal filters
   config.addPlugin(filters);
 
-  // shortcodes - youtube embeds, etc.
-  config.addPlugin(shortcodes);
+  // shortcodes - copyright year, youtube embeds, etc.
+  addShortcodes(config);
 
   return {
     dir: {
