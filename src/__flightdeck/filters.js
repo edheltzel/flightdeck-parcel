@@ -1,7 +1,9 @@
 const { DateTime } = require("luxon"); //bundled with 11ty
 const site = require("../_data/site");
+const baseUrl = require("./filters/base_url");
 
 module.exports = (config) => {
+  config.addFilter("baseUrl", baseUrl);
   /**
    * Human readable dates
    * @example {{ page.date | postDate }}
@@ -11,14 +13,6 @@ module.exports = (config) => {
   });
   config.addFilter("postDateTime", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED);
-  });
-
-  /**
-   * Prefixes the given URL with the site's base URL.
-   * @example {{ page.url | domain }}
-   */
-  config.addFilter("domain", (url) => {
-    return new URL(url, site.baseUrl).href;
   });
 
   /**
