@@ -1,6 +1,6 @@
 ---
 title: Post 4
-description: ""
+description: "some descriptions"
 featured_image:
 categories: [""]
 ---
