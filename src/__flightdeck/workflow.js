@@ -6,12 +6,12 @@ module.exports = (config) => {
    * @todo remove once 2.0 is released
    */
   config.setBrowserSyncConfig({
-    open: true,
+    open: false,
     notify: true,
     // 404
     callbacks: {
       ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync("dist/404.html");
+        const content_404 = fs.readFileSync("dist/404/index.html");
 
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.

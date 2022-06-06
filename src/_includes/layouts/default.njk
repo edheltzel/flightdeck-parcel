@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <html lang="en">
-  {% include "head.njk" %}
+  {% include "global/head.njk" %}
 
     <body>
       <main aria-label="Content">
@@ -8,7 +8,7 @@
 
         {{ content | safe }}
 
-        {% include "components/footer.njk" %}
+        {% include "global/footer.njk" %}
       </main>
     </body>
 
