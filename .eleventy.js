@@ -1,20 +1,17 @@
-const fs = require("fs");
 const transforms = require("./src/__flightdeck/transforms");
-const filters = require("./src/__flightdeck/filters");
-// const shortcodes = require("./src/__flightdeck/shortcodes");
+const workflow = require("./src/__flightdeck/workflow");
+
 const addShortcodes = require("./src/__flightdeck/shortcodes");
 const addFilters = require("./src/__flightdeck/filters");
-const workflows = require("./src/__flightdeck/workflows");
 
 module.exports = (config) => {
   // workflow - browsersync, layout aliases, watch, passthrough copy
-  config.addPlugin(workflows);
+  config.addPlugin(workflow);
 
   // transforms - esbuild, sass, htmlmin
   config.addPlugin(transforms);
 
   // filters - universal filters
-  // config.addPlugin(filters);
   addFilters(config);
 
   // shortcodes - copyright year, youtube embeds, etc.

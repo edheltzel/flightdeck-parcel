@@ -1,12 +1,8 @@
 ---
 title: Post 2
-description: "this is a post example of the second kind!"
-featured_image: /assets/images/taiki-ishikawa-lq1KA7HAdH0-unsplash.jpg
+featured_image: /assets/images/spacex-9dF7pCyaM9s-unsplash.jpg
 categories: [""]
 ---
 
-# {{ page.title }}
-
-this is a post example of the second kind.
-
-![remote image on post](https://source.unsplash.com/PdeP2ZxooVo)
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, laborum.
+{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}

@@ -2,8 +2,8 @@
  * YouTube Embeds
  * @param {string} videoURL - youtube url.
  * @param {string} title - optional: any custom title
- * @example {% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}
  * @returns {string} - title attribute is prepended with "YouTube video player" regardless
+ * @example {% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}
  *
  */
 module.exports = (videoURL, title) => {
