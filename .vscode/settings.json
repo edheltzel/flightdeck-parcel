@@ -30,6 +30,7 @@
     "endregion",
     "endset",
     "esbuild",
+    "htmlmin",
     "Shortcode",
     "shortcodes"
   ]
