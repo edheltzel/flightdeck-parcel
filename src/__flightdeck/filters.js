@@ -1,11 +1,13 @@
-// new filters are added here so eleventy will see them.
-const date = require('./filter/date');
+const baseUrl = require("./filters/baseUrl");
+const limit = require("./filters/limit");
+const date = require("./filters/date");
+const excerpt = require("./filters/excerpt");
 
-module.exports = function (config) {
-  config.addFilter('date', date)
-
-  // JSON.stringify filter
-  config.addFilter('limit', function(array, limit) {
-    return array.slice(0, limit)
-  })
-}
+module.exports = (config) => {
+  config.addFilter("limit", limit.postLimit);
+  config.addFilter("stripFilename", limit.stripFilename);
+  config.addFilter("baseUrl", baseUrl);
+  config.addFilter("postDate", date.postDate);
+  config.addFilter("postDateTime", date.postDateTime);
+  config.addFilter("excerpt", excerpt);
+};

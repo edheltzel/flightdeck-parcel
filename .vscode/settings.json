@@ -7,6 +7,7 @@
   "search.exclude": {
     "node_modules/": true,
     "_site/**": true,
+    "dist/**": true,
     "**/css/*": true,
     "*.lock": true,
     "**/.sass-cache/": true,
@@ -22,11 +23,15 @@
     "*.njk": "html"
   },
   "cSpell.words": [
+    "browsersync",
     "ELEVENTY",
     "endfor",
     "endmacro",
     "endregion",
     "endset",
+    "esbuild",
+    "htmlmin",
+    "Shortcode",
     "shortcodes"
   ]
 }
