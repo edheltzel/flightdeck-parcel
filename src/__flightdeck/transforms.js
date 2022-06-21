@@ -30,7 +30,7 @@ module.exports = (config) => {
           },
         }),
       ],
-      sourcemap: isProd,
+      sourcemap: !isProd,
     });
   });
 
