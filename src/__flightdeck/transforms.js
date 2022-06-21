@@ -25,12 +25,12 @@ module.exports = (config) => {
             const { css } = await postcss([
               autoprefixer,
               postcssPresetEnv({ stage: 0 }),
-            ]).process(source);
+            ]).process(source, { from: undefined });
             return css;
           },
         }),
       ],
-      sourcemap: isProd,
+      sourcemap: !isProd,
     });
   });
 

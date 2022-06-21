@@ -33,5 +33,6 @@
     "htmlmin",
     "Shortcode",
     "shortcodes"
-  ]
+  ],
+  "cSpell.ignoreWords": ["outdir"]
 }
