@@ -5,8 +5,10 @@ specifiers:
   '@11ty/eleventy-img': ^1.1.0
   '@parcel/css': ^1.10.1
   autoprefixer: ^10.4.7
+  browserlist: ^1.0.1
   cross-env: ^7.0.3
   esbuild: ^0.14.47
+  esbuild-sass-plugin: ^2.2.6
   html-minifier: ^4.0.0
   npm-run-all: ^4.1.5
   postcss: ^8.4.14
@@ -18,8 +20,10 @@ devDependencies:
   '@11ty/eleventy-img': 1.1.0
   '@parcel/css': 1.10.1
   autoprefixer: 10.4.7_postcss@8.4.14
+  browserlist: 1.0.1
   cross-env: 7.0.3
   esbuild: 0.14.47
+  esbuild-sass-plugin: 2.2.6
   html-minifier: 4.0.0
   npm-run-all: 4.1.5
   postcss: 8.4.14
@@ -702,6 +706,13 @@ packages:
       - utf-8-validate
     dev: true
 
+  /browserlist/1.0.1:
+    resolution: {integrity: sha512-nYq9jiWv+qXcgrJxQzivfEc7Wo2GvAKkeRViE5L3cUJpq4SZO6NZR710I/8T+OjE5BPECbzpm8rpUkwslE3nTg==}
+    hasBin: true
+    dependencies:
+      chalk: 2.4.2
+    dev: true
+
   /browserslist/4.21.0:
     resolution: {integrity: sha512-UQxE0DIhRB5z/zDz9iA03BOfxaN2+GQdBYH/2WrSIWEUrnpzTPJbhqt+umq6r3acaPRTW1FNTkrcp0PXgtFkvA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -1379,6 +1390,13 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-sass-plugin/2.2.6:
+    resolution: {integrity: sha512-WVREJhOS6UlZNoS2FhkOA5980VVKjS6ocUK7YFghJt/94rWDNXxPI+XfkOKlSMbJF/n5wAotr37P8/9KhgkgPQ==}
+    dependencies:
+      esbuild: 0.14.47
+      sass: 1.52.3
+    dev: true
 
   /esbuild-sunos-64/0.14.47:
     resolution: {integrity: sha512-uOeSgLUwukLioAJOiGYm3kNl+1wJjgJA8R671GYgcPgCx7QR73zfvYqXFFcIO93/nBdIbt5hd8RItqbbf3HtAQ==}
