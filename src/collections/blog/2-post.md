@@ -5,4 +5,7 @@ categories: [""]
 ---
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, laborum.
-{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}
+
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, laborum.
