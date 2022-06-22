@@ -1,7 +1,7 @@
 const copyright = require("./shortcodes/copyright");
-const youtube = require("./shortcodes/youtube");
+const codepen = require("./shortcodes/codepen");
 
 module.exports = (config) => {
   config.addShortcode("copyright", copyright);
-  config.addShortcode("youtube", youtube);
+  config.addShortcode("codepen", codepen);
 };
