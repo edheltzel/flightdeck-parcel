@@ -1,6 +1,6 @@
 {
   "name": "flightdeck-11ty",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
