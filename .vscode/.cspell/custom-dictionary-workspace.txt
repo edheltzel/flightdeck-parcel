@@ -1,0 +1,10 @@
+browserlist
+browserslist
+browsersync
+endfor
+endregion
+esbuild
+htmlmin
+mnpm
+mpnpm
+shortcodes

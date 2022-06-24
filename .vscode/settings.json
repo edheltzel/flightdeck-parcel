@@ -22,30 +22,12 @@
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
-<<<<<<< Updated upstream
-  "cSpell.words": [
-    "browsersync",
-    "ELEVENTY",
-    "endfor",
-    "endmacro",
-    "endregion",
-    "endset",
-    "esbuild",
-    "htmlmin",
-    "Shortcode",
-    "shortcodes"
-  ],
-  "cSpell.ignoreWords": ["browserlist", "codepen", "outdir"]
-=======
-  "cSpell.words": ["mnpm"],
-  "cSpell.ignoreWords": ["browserslist", "endregion"],
   "cSpell.customDictionaries": {
     "custom-dictionary-workspace": {
       "name": "custom-dictionary-workspace",
-      "path": "${workspaceFolder:fd-11ty}/.cspell/custom-dictionary-workspace.txt",
+      "path": "${workspaceFolder:fd-11ty}/.vscode/.cspell/custom-dictionary-workspace.txt",
       "addWords": true,
       "scope": "workspace"
     }
   }
->>>>>>> Stashed changes
 }
