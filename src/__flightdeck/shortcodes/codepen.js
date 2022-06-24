@@ -1,37 +1,24 @@
 /**
- * Codepen Embeds
- * @param {string} penUrl - codepen url.
- * @param {string} theme - optional: valid values Light, Dark, CustomThemeId -> pro feature - default: default
- * @param {string} tabs - optional: valid values html/html,result/css/css,result/js/js,result - default: result
- * @param {string} height - optional: default: 300
-
- * @example {% codepen 'url' %}
+ * Codepen Embeds - ref: https://blog.codepen.io/documentation/embedded-pens/
+ * @param {string} penUrl - codepen full url
+ * @param {number} height - optional: value in pixels
+ * @param {string} tabs - optional: values -> html/html,result/css/css,result/js/js,result
+ * @param {string} themeId - optional: values -> light, dark, default -> custom themes are a pro feature
+ * @example {% codepen "https://codepen.io/jacobberglund/pen/bwrGvx", 900, "css,result", "178" %}
  */
 
-// module.exports = (penUrl, theme, tabs, height) => {
-//   const urlSplit = penUrl.split("/");
+module.exports = (penUrl, penHeight = "300", tabs = "result", themeId = "") => {
+  const splitUrl = penUrl.split("/");
 
-//   const profileUrlSplit = urlSplit.filter((string, index) => {
-//     return index < urlSplit.length - 2 ? true : false;
-//   });
+  const splitProfileUrl = splitUrl.filter((string, index) => {
+    return index < splitUrl.length - 2 ? true : false;
+  });
 
-//   const userName = profileUrlSplit[profileUrlSplit.length - 1];
-//   const userProfile = profileUrlSplit.join("/");
-//   const dataSlugHash = urlSplit[urlSplit.length - 1];
+  const userProfile = splitProfileUrl.join("/");
+  const slugHash = splitUrl[splitUrl.length - 1];
+  const userName = splitProfileUrl[splitProfileUrl.length - 1];
 
-//   return `<p class="codepen" data-default-tab="${
-//     tabs ? `${tabs}` : "result"
-//   }" data-theme-id="${theme ? `${theme}` : "0"}  data-height="${
-//     height ? `${height}` : "300"
-//   }"  data-slug-hash="${dataSlugHash}" data-user="${userName}" style="height: 571px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-//     <span><a href="${penUrl}">See the pen</a> (<a href="${userProfile}">@${userName}</a>) on <a href="https://codepen.io">CodePen</a>.</span>
-//     </p>
-//     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>`;
-// };
-module.exports = (url, tabs = "result", height = "500", theme = "") => {
-  const path = new URL(url).pathname;
-  const id = path.split("/")[3];
-  return `<p class="codepen" data-height="${height}" data-theme-id="${theme}" data-default-tab="${tabs}" data-slug-hash="${id}">
-    <span><a href="${url}">See the Pen </a></p>
-  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>`;
+  return `<p class="codepen" data-height="${penHeight}" data-theme-id="${themeId}" data-default-tab="${tabs}" data-slug-hash="${slugHash}" data-user="${userName}">
+    <span><a href="${penUrl}">See the pen</a> (<a href="${userProfile}">@${userName}</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+    </p><script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>`;
 };
