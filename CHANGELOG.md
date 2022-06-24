@@ -63,6 +63,7 @@ Checkout branch `feature/parcel2`
     - ie: `addPassthroughCopy`
 - shortcodes
   - adds codepen shortcode see `/src/__flightdeck/shortcodes/codepen.js` for usage
+  - adds `.vscode/shortcode.code-snippets` to list out all available shortcodes for the project.
 - plugins
   - adds [eleventy-plugin-embed-everything](https://github.com/gfscott/eleventy-plugin-embed-everything) plugin - instead of creating shortcodes for media embeds - use the URL instead
 - filters
