@@ -35,7 +35,9 @@ Checkout branch `feature/parcel2`
 ### Adds
 
 - organized project scaffolded based on [webstoemp- Structuring Eleventy projects](https://www.webstoemp.com/blog/eleventy-projects-structure/)
-- adds esbuild for javscript and sass bundling/processing
+- adds esbuild for javascript and sass bundling/processing
+- - adds "common" shortcodes
+  - (ref: [11ty.rocks](https://11ty.rocks))
 
 ### Removes
 
@@ -59,11 +61,11 @@ Checkout branch `feature/parcel2`
 - adds transforms and workflow
   - workflows are items related to development and eleventy specific settings
     - ie: `addPassthroughCopy`
-- adds "common" shortcodes
-  - (ref: [11ty.rocks](https://11ty.rocks))
-  - includes [eleventy-plugin-embed-everything](https://github.com/gfscott/eleventy-plugin-embed-everything) plugin
-  - other configured shortcodes based on general use and other projects
-- adds "common" filters
+- shortcodes
+  - adds codepen shortcode see `/src/__flightdeck/shortcodes/codepen.js` for usage
+- plugins
+  - adds [eleventy-plugin-embed-everything](https://github.com/gfscott/eleventy-plugin-embed-everything) plugin - instead of creating shortcodes for media embeds - use the URL instead
+- filters
   - (ref: [11ty.rocks](https://11ty.rocks))
 
 ### Removes
