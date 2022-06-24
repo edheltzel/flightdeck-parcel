@@ -1,4 +1,5 @@
 const fs = require("fs");
+const isProd = process.env.ELEVENTY_ENV === "production";
 
 module.exports = (config) => {
   config.setQuietMode(true); // reduce console
@@ -27,7 +28,9 @@ module.exports = (config) => {
 
   // Passthrough Copy
   config.addPassthroughCopy("./src/assets/fonts");
-  config.addPassthroughCopy("./src/assets/images");
+  if (!isProd) {
+    config.addPassthroughCopy("./src/assets/images");
+  }
 
   // Layout Aliases
   config.addLayoutAlias("default", "layouts/default.njk");
