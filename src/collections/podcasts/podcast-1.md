@@ -15,10 +15,4 @@ this is a post example of the first kind.
 
 <img src="https://source.unsplash.com/NC37HQXdpZ0" alt="{{ title | safe }}" class="featured__image">
 
-<!-- With title -->
-
-{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU", "The Song That Doesn't End" %}
-
-<!-- Without title -->
-
-{% youtube "https://www.youtube.com/watch?v=1_47KVJV8DU" %}
+https://www.youtube.com/watch?v=1_47KVJV8DU
