@@ -3,8 +3,8 @@ const { sassPlugin } = require("esbuild-sass-plugin");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const postcssPresetEnv = require("postcss-preset-env");
-const htmlmin = require("html-minifier");
 
+const htmlmin = require("html-minifier");
 const isProd = process.env.ELEVENTY_ENV === "production";
 
 module.exports = (config) => {
@@ -19,6 +19,7 @@ module.exports = (config) => {
       loader: { ".scss": "css" },
       minify: isProd,
       outdir: "./dist",
+      sourcemap: !isProd,
       plugins: [
         sassPlugin({
           async transform(source, resolveDir) {
@@ -30,7 +31,6 @@ module.exports = (config) => {
           },
         }),
       ],
-      sourcemap: !isProd,
     });
   });
 

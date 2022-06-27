@@ -34,5 +34,5 @@
     "Shortcode",
     "shortcodes"
   ],
-  "cSpell.ignoreWords": ["codepen", "outdir"]
+  "cSpell.ignoreWords": ["browserlist", "browserslist", "codepen", "outdir"]
 }

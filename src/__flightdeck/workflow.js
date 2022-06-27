@@ -27,7 +27,6 @@ module.exports = (config) => {
 
   // Passthrough Copy
   config.addPassthroughCopy("./src/assets/fonts");
-  config.addPassthroughCopy("./src/assets/images");
 
   // Layout Aliases
   config.addLayoutAlias("default", "layouts/default.njk");
