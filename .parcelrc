@@ -1,9 +1,7 @@
 {
   "extends": "@parcel/config-default",
+  "transformers": {},
   "optimizers": {
-    "./src/assets/js/*.js": ["@parcel/optimizer-esbuild"]
-  },
-  "transformers": {
-    "webp:*.{jpg,jpeg,png,tiff,webp}": ["@parcel/transformer-webp"]
+    "./src/assets/js/*.js": ["@parcel/optimizer-esbuild", "..."]
   }
 }
