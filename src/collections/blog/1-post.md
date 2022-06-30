@@ -1,7 +1,7 @@
 ---
 title: Spotify Playlist embedded
 description: "this is a post example of the second kind!"
-featured_image: /assets/images/taiki-ishikawa-lq1KA7HAdH0-unsplash.jpg
+featured_image: /assets/images/taiki-ishikawa-lq1KA7HAdH0-unsplash.jpeg
 categories: [""]
 ---
 

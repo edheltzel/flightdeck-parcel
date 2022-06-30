@@ -12,4 +12,4 @@ description: "Huston ready for launch"
 
 ## Blah Blah Blah
 
-![local image](assets/images/testing.jpg)
+![local image](assets/images/testing.jpeg)

@@ -1,6 +1,6 @@
 ---
 title: Codepen Embedded
-featured_image: /assets/images/spacex-9dF7pCyaM9s-unsplash.jpg
+featured_image: /assets/images/spacex-9dF7pCyaM9s-unsplash.jpeg
 categories: [""]
 ---
 
