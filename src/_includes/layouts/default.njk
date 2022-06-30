@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- #region -->
-{%- set pageTitle -%}
-  {% if title %}
-    {{ title }} |
-  {% endif %}
-  {{ meta.siteName }}{% endset -%}
-  {%- set pageDescription %}
-  {% if description %}
-    {{ description }}
-  {% else %}
-    {{ meta.siteDescription }}
-  {% endif %}
-{%- endset -%}
-<!-- endregion -->
+  <html lang="en">
+  {% include "global/head.njk" %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ pageTitle }}</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
-        font-size=%2290%22>🚀</text></svg>">
-  <link rel="stylesheet" href="{{ '/assets/css/app.css' | url }}" />
-</head>
+    <body>
+      <main aria-label="Content">
+        {% include "components/navigation.njk" %}
 
-<body>
-  <main>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </main>
-</body>
+        {{ content | safe }}
 
-</html>
+        {% include "global/footer.njk" %}
+      </main>
+    </body>
+
+  </html>

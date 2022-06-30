@@ -1,46 +1,20 @@
-const fd = require('./flightdeck.manifest');
-const htmlmin = require('html-minifier');
+const addWorkflow = require("./src/__flightdeck/workflow");
+const addTransforms = require("./src/__flightdeck/transforms");
+const addFilters = require("./src/__flightdeck/filters");
+const addShortcodes = require("./src/__flightdeck/shortcodes");
+const addPlugins = require("./src/__flightdeck/plugins");
 
-module.exports = function (config) {
-  // watch for changes
-  config.addWatchTarget(fd.assets.scss.src);
-
-  // copy stuff
-  config.addPassthroughCopy(fd.assets.images);
-
-  // layout aliases
-  config.addLayoutAlias('default', 'layouts/default.njk');
-  config.addLayoutAlias('post', 'layouts/post.njk'); // consider using nunjucks extend
-  config.addLayoutAlias('page', 'layouts/page.njk'); // consider using nunjucks extend
-
-  // add collections
-
-  //minify html only for in production
-  const isProd = process.env.ELEVENTY_ENV === 'prod';
-  const minifyHtml = function (value, outputPath) {
-    if (outputPath && outputPath.indexOf('.html') > -1) {
-      return htmlmin.minify(value, {
-        collapseWhitespace: true,
-        collapseInlineTagWhitespace: true,
-        minifyCSS: true,
-        removeComments: true,
-        userShortDoctype: true,
-      });
-    }
-  };
-
-  if (isProd) {
-    config.addTransform('htmlmin', minifyHtml);
-  }
-
-  // launch browser on start
-  config.setBrowserSyncConfig(fd.workflow.bs);
-
+module.exports = (config) => {
+  addWorkflow(config); // workflow - browsersync, layout aliases, watch, passthrough copy
+  addTransforms(config); // transforms - htmlmin
+  addFilters(config); // filters - universal filters
+  addShortcodes(config); // shortcodes - copyright year, youtube embeds, etc.
+  addPlugins(config); // plugins - eleventy plugins
   return {
-    markdownTemplateEngine: 'njk',
     dir: {
-      input: 'src',
-      output: 'dist',
+      input: "src",
+      output: "dist",
     },
+    markdownTemplateEngine: "njk",
   };
 };

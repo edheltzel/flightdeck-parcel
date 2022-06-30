@@ -7,6 +7,7 @@
   "search.exclude": {
     "node_modules/": true,
     "_site/**": true,
+    "dist/**": true,
     "**/css/*": true,
     "*.lock": true,
     "**/.sass-cache/": true,
@@ -21,6 +22,12 @@
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
-  "cSpell.words": ["mnpm"],
-  "cSpell.ignoreWords": ["endregion"]
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:fd-11ty}/.vscode/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
 }

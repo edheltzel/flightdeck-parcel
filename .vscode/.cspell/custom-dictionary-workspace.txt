@@ -1,0 +1,12 @@
+browserlist
+browserslist
+browsersync
+endfor
+endregion
+esbuild
+gifsicle
+htmlmin
+mnpm
+mozjpeg
+mpnpm
+shortcodes
