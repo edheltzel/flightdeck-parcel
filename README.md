@@ -35,21 +35,19 @@ Read more about Corepack on Node's documentation site - [Node Docs](https://node
 
 ```shell
 npm list
-flightdeck-11ty@0.0.3 /Users/ed/Projects/oss/flightdeck/fd-11ty
-├── @11ty/eleventy-img@1.1.0 -> ./node_modules/.pnpm/@11ty+eleventy-img@1.1.0/node_modules/@11ty/eleventy-img
-├── @11ty/eleventy@1.0.1 -> ./node_modules/.pnpm/@11ty+eleventy@1.0.1/node_modules/@11ty/eleventy
-├── @parcel/css@1.10.1 -> ./node_modules/.pnpm/@parcel+css@1.10.1/node_modules/@parcel/css
-├── autoprefixer@10.4.7 -> ./node_modules/.pnpm/autoprefixer@10.4.7_postcss@8.4.14/node_modules/autoprefixer
-├── browserlist@1.0.1 -> ./node_modules/.pnpm/browserlist@1.0.1/node_modules/browserlist
-├── cross-env@7.0.3 -> ./node_modules/.pnpm/cross-env@7.0.3/node_modules/cross-env
-├── eleventy-plugin-embed-everything@1.14.0 -> ./node_modules/.pnpm/eleventy-plugin-embed-everything@1.14.0/node_modules/eleventy-plugin-embed-everything
-├── esbuild-sass-plugin@2.2.6 -> ./node_modules/.pnpm/esbuild-sass-plugin@2.2.6/node_modules/esbuild-sass-plugin
-├── esbuild@0.14.47 -> ./node_modules/.pnpm/esbuild@0.14.47/node_modules/esbuild
-├── html-minifier@4.0.0 -> ./node_modules/.pnpm/html-minifier@4.0.0/node_modules/html-minifier
-├── npm-run-all@4.1.5 -> ./node_modules/.pnpm/npm-run-all@4.1.5/node_modules/npm-run-all
-├── postcss-preset-env@7.7.1 -> ./node_modules/.pnpm/postcss-preset-env@7.7.1_postcss@8.4.14/node_modules/postcss-preset-env
-├── postcss@8.4.14 -> ./node_modules/.pnpm/postcss@8.4.14/node_modules/postcss
-└── sass@1.52.3 -> ./node_modules/.pnpm/sass@1.52.3/node_modules/sass
+flightdeck-11ty@0.0.4 /Users/ed/Projects/oss/flightdeck/fd-11ty
+├── @11ty/eleventy@1.0.1
+├── @parcel/transformer-sass@2.6.2
+├── browserlist@1.0.1
+├── cross-env@7.0.3
+├── eleventy-plugin-embed-everything@1.14.0
+├── html-minifier@4.0.0
+├── imagemin-cli@7.0.0
+├── imagemin-webp@7.0.0
+├── npm-run-all@4.1.5
+├── parcel@2.6.2
+├── sass@1.53.0
+└── sharp@0.30.7
 ```
 
 ```shell
@@ -63,9 +61,6 @@ npm install
 
 ```shell
 npm run
-```
-
-```shell
 Lifecycle scripts included in flightdeck-11ty@0.0.4:
   start
     npm-run-all -p dev:11ty dev:parcel
@@ -105,4 +100,4 @@ npm run build
 
 #### Image and SVG processing
 
-Lossless image compression is provided by [Parcel - Reference the docs](https://parceljs.org/recipes/image/) 
+Lossless image compression is provided by [Parcel - Reference the docs](https://parceljs.org/recipes/image/)
