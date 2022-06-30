@@ -25,7 +25,9 @@ git clone https://github.com/flight-deck/Flightdeck-11ty.git
 
 #### Install Dependencies
 
-> You can swap `pnpm` in favor of `yarn` or `npm` - but I would suggest enabling Node's [corepack](https://nodejs.org/api/corepack.html) this way you do not need to manage or install a separate package manager for Node and all the `pnpm` commands work out-of-the-box.
+> ~~You can swap `pnpm` in favor of `yarn` or `npm` - but I would suggest enabling Node's [corepack](https://nodejs.org/api/corepack.html) this way you do not need to manage or install a separate package manager for Node and all the `pnpm` commands work out-of-the-box~~
+>
+> `pnpm` brakes `parcel`
 
 Read more about Corepack on Node's documentation site - [Node Docs](https://nodejs.org/api/corepack.html)
 
@@ -52,7 +54,7 @@ flightdeck-11ty@0.0.3 /Users/ed/Projects/oss/flightdeck/fd-11ty
 
 ```shell
 cd flightdeck
-pnpm install
+npm install
 ```
 
 #### Available Scripts
@@ -60,21 +62,47 @@ pnpm install
 **List all NPM Scripts**
 
 ```shell
-
+npm run
 ```
 
-The start command executes npm scripts that include file watching, browser synchronisation, module hot reloading, CSS injecting etc.
+```shell
+Lifecycle scripts included in flightdeck-11ty@0.0.4:
+  start
+    npm-run-all -p dev:11ty dev:parcel
+
+available via `npm run-script`:
+  dev:11ty
+    eleventy --serve
+  dev:parcel
+    npm-run-all -p  watch:assets
+  watch:assets
+    parcel watch './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
+  build
+    npm-run-all -s clean build:parcel build:11ty
+  build:11ty
+    cross-env ELEVENTY_ENV=production eleventy
+  build:parcel
+    parcel build './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
+  clean:node
+    (rm -rf node_modules package-lock.json pnpm-lock.yaml || del node_modules package-lock.json pnpm-lock.yaml)
+  clean
+    (rm -rf dist/ .parcel-cache/ || del dist/ .parcel-cache)
+  purge
+    npm run clean:node && npm run clean && echo "\033[32m🧹 All Clean ✨""\033[0m Run ""\033[33mnpm install""\033[0m to start fresh 🤩"
+```
+
+The `start` command executes npm scripts that include file watching, browser synchronisation, module hot reloading, CSS injecting etc.
 
 ```shell
-pnpm start
+npm start
 ```
 
 #### Build
 
 ```shell
-pnpm run build
+npm run build
 ```
 
 #### Image and SVG processing
 
-Lossless image compression is provided by [Imagemin](https://github.com/imagemin/imagemin), while sprite generation is performed by [SVG Sprite Generator](https://github.com/frexy/svg-sprite-generator)
+Lossless image compression is provided by [Parcel - Reference the docs](https://parceljs.org/recipes/image/) 
