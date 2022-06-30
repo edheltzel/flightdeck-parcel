@@ -30,4 +30,17 @@
       "scope": "workspace"
     }
   }
+  "cSpell.words": [
+    "browsersync",
+    "ELEVENTY",
+    "endfor",
+    "endmacro",
+    "endregion",
+    "endset",
+    "esbuild",
+    "htmlmin",
+    "Shortcode",
+    "shortcodes"
+  ],
+  "cSpell.ignoreWords": ["browserlist", "browserslist", "codepen", "outdir"]
 }
