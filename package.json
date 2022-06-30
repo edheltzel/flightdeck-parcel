@@ -1,6 +1,6 @@
 {
   "name": "flightdeck-11ty",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
     "start": "npm-run-all -p dev:11ty dev:parcel",
