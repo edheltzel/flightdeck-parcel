@@ -22,6 +22,14 @@
   "emmet.includeLanguages": {
     "*.njk": "html"
   },
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:fd-11ty}/.vscode/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
   "cSpell.words": [
     "browsersync",
     "ELEVENTY",
