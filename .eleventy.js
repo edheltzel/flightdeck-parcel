@@ -1,8 +1,8 @@
-const addTransforms = require("./src/__flightdeck/transforms");
-const addWorkflow = require("./src/__flightdeck/workflow");
-const addShortcodes = require("./src/__flightdeck/shortcodes");
-const addFilters = require("./src/__flightdeck/filters");
-const addPlugins = require("./src/__flightdeck/plugins");
+const addTransforms = require("./src/_flightdeck/transforms");
+const addWorkflow = require("./src/_flightdeck/workflow");
+const addShortcodes = require("./src/_flightdeck/shortcodes");
+const addFilters = require("./src/_flightdeck/filters");
+const addPlugins = require("./src/_flightdeck/plugins");
 
 module.exports = (config) => {
   addWorkflow(config); // workflow - browsersync, layout aliases, watch, passthrough copy
@@ -14,6 +14,7 @@ module.exports = (config) => {
     dir: {
       input: "src",
       output: "dist",
+      data: "_includes/data",
     },
     markdownTemplateEngine: "njk",
   };
