@@ -1,11 +1,13 @@
 {
-  "name": "flightdeck-11ty",
+  "name": "flightdeck-eleventy",
   "version": "0.0.3",
-  "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
+  "description": "An opinionated starter project for Eleventy.",
   "scripts": {
-    "start": "npm-run-all -p dev:11ty dev:images",
-    "dev:11ty": "eleventy --serve",
+    "start": "run-p dev:11ty dev:images",
+    "dev:11ty": "ENVIRONMENT=dev eleventy --serve",
     "dev:images": "watch 'pnpm run build:images' ./src/assets/images",
+    "build": "run-s clean build:images build:11ty",
+    "build:11ty": "ENVIRONMENT=prod eleventy",
     "build:images": "imagemin src/assets/images/* --out-dir=dist/assets/images --plugin.webp.quality=0.5",
     "clean:node": "rm -rf node_modules package-lock.json pnpm-lock.yaml",
     "clean": "rm -rf dist/ .pnpm-debug.log",
@@ -17,7 +19,7 @@
   },
   "keywords": [],
   "author": "Ed Heltzel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/edheltzel/Flightdeck-11ty/issues"
   },
@@ -25,6 +27,7 @@
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-img": "^2.0.1",
     "autoprefixer": "^10.4.7",
     "browserlist": "^1.0.1",
     "cross-env": "^7.0.3",

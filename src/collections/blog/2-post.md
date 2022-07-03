@@ -1,6 +1,6 @@
 ---
 title: Post 2
-featured_image: /assets/images/spacex-9dF7pCyaM9s-unsplash.jpg
+featured_image: /assets/images/spacex-9dF7pCyaM9s-unsplash.webp
 categories: [""]
 ---
 

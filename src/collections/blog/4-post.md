@@ -1,7 +1,7 @@
 ---
 title: Post 4
 description: "Latest Auto Talk Episode"
-featured_image: /assets/images/adam-miller-dBaz0xhCkPY-unsplash.jpg
+featured_image: /assets/images/adam-miller-dBaz0xhCkPY-unsplash.webp
 ---
 
 # {{ title }}
