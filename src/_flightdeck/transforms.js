@@ -1,52 +1,14 @@
-const esbuild = require("esbuild");
-const { sassPlugin } = require("esbuild-sass-plugin");
-const postcss = require("postcss");
-const autoprefixer = require("autoprefixer");
-const postcssPresetEnv = require("postcss-preset-env");
+const esBundle = require("./transforms/esBundle");
+const minifyHtml = require("./transforms/minifyHtml");
+const buildImages = require("./transforms/buildImages");
 
-const htmlmin = require("html-minifier");
-const isProd = process.env.ELEVENTY_ENV === "production";
+const isProd = process.env.ENVIRONMENT === "prod";
 
 module.exports = (config) => {
-  // esbuild & sass + autoprefixer
-  config.on("eleventy.after", () => {
-    return esbuild.build({
-      bundle: true,
-      entryPoints: {
-        "assets/js/app": "./src/assets/js/app.js",
-        "assets/css/app": "./src/assets/scss/app.scss",
-      },
-      loader: { ".scss": "css" },
-      minify: isProd,
-      outdir: "./dist",
-      sourcemap: !isProd,
-      plugins: [
-        sassPlugin({
-          async transform(source, resolveDir) {
-            const { css } = await postcss([
-              autoprefixer,
-              postcssPresetEnv({ stage: 0 }),
-            ]).process(source, { from: undefined });
-            return css;
-          },
-        }),
-      ],
-    });
-  });
+  config.addPlugin(esBundle);
 
-  // minify HTML
   if (isProd) {
-    config.addTransform("htmlMin", async function (content, outputPath) {
-      if (outputPath && outputPath.endsWith(".html")) {
-        let minified = htmlmin.minify(content, {
-          collapseWhitespace: true,
-          minifyCSS: true,
-          removeComments: true,
-          useShortDoctype: true,
-        });
-        return minified;
-      }
-      return content;
-    });
+    config.addPlugin(buildImages);
+    config.addPlugin(minifyHtml);
   }
 };
