@@ -1,8 +1,9 @@
 const fs = require("fs");
+
 const isProd = process.env.ELEVENTY_ENV === "production";
 
 module.exports = (config) => {
-  config.setQuietMode(true); // reduce console
+  config.setQuietMode(true); // reduce console output
   /**
    * @todo remove once 2.0 is released
    */
