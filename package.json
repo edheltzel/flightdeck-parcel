@@ -1,7 +1,7 @@
 {
-  "name": "flightdeck-11ty",
+  "name": "flightdeck-for-eleventy-and-parcel",
   "version": "0.0.4",
-  "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
+  "description": "An opinionated Jamstack starter project for Eleventy with ParcelJS.",
   "scripts": {
     "start": "run-p dev:11ty dev:parcel",
     "dev:11ty": "eleventy --serve --config=.flightdeck.js",
@@ -13,20 +13,12 @@
     "clean": "./.scrub site",
     "purge": "./.scrub purge"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edheltzel/Flightdeck-11ty.git"
-  },
-  "keywords": [],
   "author": "Ed Heltzel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/edheltzel/Flightdeck-11ty/issues"
-  },
-  "homepage": "https://github.com/edheltzel/Flightdeck-11ty#readme",
-  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "license": "WTFPL",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@parcel/config-default": "^2.7.0",
     "@parcel/core": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
@@ -42,6 +34,6 @@
     "sharp": "^0.29.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0"
+    "list": "^2.0.19"
   }
 }

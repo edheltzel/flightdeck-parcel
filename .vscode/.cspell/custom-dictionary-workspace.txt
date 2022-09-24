@@ -10,3 +10,5 @@ mnpm
 mozjpeg
 mpnpm
 shortcodes
+Jamstack
+Heltzel
