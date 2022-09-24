@@ -3,16 +3,15 @@
   "version": "0.0.4",
   "description": "A starter project for Eleventy using an opinionated and minimal frontend workflow.",
   "scripts": {
-    "start": "npm-run-all -p dev:11ty dev:parcel",
-    "dev:11ty": "eleventy --serve",
-    "dev:parcel": "npm-run-all -p  watch:assets",
+    "start": "run-p dev:11ty dev:parcel",
+    "dev:11ty": "eleventy --serve --config=.flightdeck.js",
+    "dev:parcel": "run-p  watch:assets",
     "watch:assets": "parcel watch './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
-    "build": "npm-run-all -s clean build:parcel build:11ty",
+    "build": "run-s clean build:parcel build:11ty",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
     "build:parcel": "parcel build './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
-    "clean:node": "(rm -rf node_modules package-lock.json pnpm-lock.yaml || del node_modules package-lock.json pnpm-lock.yaml)",
-    "clean": "(rm -rf dist/ .parcel-cache/ || del dist/ .parcel-cache)",
-    "purge": "npm run clean:node && npm run clean && echo \"\\033[32m🧹 All Clean ✨\"\"\\033[0m Run \"\"\\033[33mnpm install\"\"\\033[0m to start fresh 🤩\""
+    "clean": "./.scrub site",
+    "purge": "./.scrub purge"
   },
   "repository": {
     "type": "git",
@@ -40,6 +39,9 @@
     "npm-run-all": "^4.1.5",
     "parcel": "^2.7.0",
     "sass": "^1.55.0",
-    "sharp": "0.29.1"
+    "sharp": "^0.29.3"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0"
   }
 }
