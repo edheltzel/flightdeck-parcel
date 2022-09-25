@@ -5,7 +5,7 @@
   <h4 style="padding-bottom: .5em">A starter project for <a href="https://www.11ty.dev/">Eleventy 🎈</a> using a minimal and opinionated workflow.</h4>
 <!-- PROJECT SHIELDS -->
 
-[![release](https://img.shields.io/github/release/flight-deck/flightdeck-for-eleventy-and-parcel.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-for-eleventy-and-parcel/releases/latest) [![eleventy](https://img.shields.io/badge/Eleventy-v1.0.0+-373277.svg?style=for-the-badge&logo=eleventy&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-MIT-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/flight-deck/flightdeck-for-eleventy-and-parcel/blob/master/LICENSE)
+[![release](https://img.shields.io/github/release/flight-deck/flightdeck-for-eleventy.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-for-eleventy/releases/latest) [![eleventy](https://img.shields.io/badge/Eleventy-v1.0.0+-373277.svg?style=for-the-badge&logo=eleventy&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-MIT-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/flight-deck/flightdeck-for-eleventy-and-parcel/blob/master/LICENSE)
 
 </div>
 
@@ -56,28 +56,28 @@ Jérôme Coupé's post [Structuring Eleventy Projects](https://www.webstoemp.com
 ### 👾 Tech Stack
 
 - [Eleventy](https://www.11ty.dev/)
-- [ESBuild](https://esbuild.github.io/)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Parcel](https://parceljs.org/)
 - [Sass](https://sass-lang.com/)
-- [Optimizt](https://github.com/funbox/optimizt)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 <details>
   <summary>see all dependencies</summary>
   <pre>
     ❯ npm list
-    flightdeck-for-eleventy@0.1.0
-    ├── @11ty/eleventy@1.0.1
-    ├── @funboxteam/optimizt@4.0.0
-    ├── autoprefixer@10.4.7
+    flightdeck-for-eleventy-and-parcel@0.1.0
+    ├── @11ty/eleventy-plugin-syntaxhighlight@4.1.0
+    ├── @11ty/eleventy@1.0.2
+    ├── @parcel/config-default@2.7.0
+    ├── @parcel/core@2.7.0
+    ├── @parcel/transformer-sass@2.7.0
     ├── browserlist@1.0.1
-    ├── eleventy-plugin-embed-everything@1.14.0
-    ├── esbuild-sass-plugin@2.2.6
-    ├── esbuild@0.14.48
+    ├── cross-env@7.0.3
+    ├── eleventy-plugin-embed-everything@1.14.1
     ├── html-minifier@4.0.0
     ├── npm-run-all@4.1.5
-    ├── postcss-preset-env@7.7.2
-    ├── postcss@8.4.14
-    └── sass@1.53.0
+    ├── parcel@2.7.0
+    ├── sass@1.55.0
+    └── sharp@0.29.3
   </pre>
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -97,13 +97,13 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
 #### 🤖 Dependencies
 
-> **Note:** Currently there is a bug inside of Parcel that does not allow pnpm to install packages correctly. So we are recommending that you use NPM or Yarn to install the dependencies - we will update this section once the bug is fixed.
+> **Note:** Currently there is a bug inside of Parcel that does not allow Parcel to use pnpm to install packages correctly. So we are recommending that you use NPM or Yarn to install the dependencies - we will update this section once the bug is fixed.
 
-`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands are work out-of-the-box.
+~~`pnpm` is our package manager of choice~~ – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the ~~`pnpm`~~ commands are work out-of-the-box.
 
-> Please be aware that this certainly won't be the most recent version of PNPM and as of this writing, PNPM is at version [7.5.0](https://github.com/pnpm/pnpm/releases).
+> Please be aware that this certainly won't be the most recent version of PNPM/Yarn and as of this writing, PNPM is at version [7.12.2](https://github.com/pnpm/pnpm/releases).
 
-Also, You can swap `pnpm` in favor of `yarn` or `npm` without any friction.
+**Also, You can swap `pnpm` in favor of `yarn` or `npm` without any friction.**
 
 - pnpm
 
@@ -121,55 +121,67 @@ git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
 
 ```shell
 cd flightdeck-for-eleventy
-pnpm install
+npm install
 ```
 
 <details>
 	<summary>See all NPM packages</summary>
-  <pre>pnpm list
-  Legend: production dependency, optional only, dev only
-  flightdeck-for-eleventy@0.1.0 ~/flightdeck-for-eleventy
-  devDependencies:
-  @11ty/eleventy 1.0.1 eleventy-plugin-embed-everything 1.14.0 npm-run-all 4.1.5
-  @funboxteam/optimizt 4.0.0 esbuild 0.14.48 postcss 8.4.14
-  autoprefixer 10.4.7 esbuild-sass-plugin 2.2.6 postcss-preset-env 7.7.2
-  browserlist 1.0.1 html-minifier 4.0.0 sass 1.53.0</pre>
+  <pre>npm list
+    flightdeck-for-eleventy-and-parcel@0.0.4 /Users/ed/Projects/oss/flightdeck/flighdeck-for-eleventy
+    ├── @11ty/eleventy-plugin-syntaxhighlight@4.1.0
+    ├── @11ty/eleventy@1.0.2
+    ├── @parcel/config-default@2.7.0
+    ├── @parcel/core@2.7.0
+    ├── @parcel/transformer-sass@2.7.0
+    ├── browserlist@1.0.1
+    ├── cross-env@7.0.3
+    ├── eleventy-plugin-embed-everything@1.14.1
+    ├── html-minifier@4.0.0
+    ├── npm-run-all@4.1.5
+    ├── parcel@2.7.0
+    ├── sass@1.55.0
+    └── sharp@0.29.3</pre>
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### 🏃‍♂️ Run Locally
 
-There are just a few npm-:150
-available, but the `start` command is where all the magic 🪄 happens – it will spin up the development server from Eleventy.
+There are just a few npm scripts available, but the `start` command is where all the magic 🪄✨ happens – it will spin up the development server from Eleventy.
 
-Again, the focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
+The focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
 
 ```shell
-pnpm start
+npm start
 ```
 
 <details>
   <summary>Available Run Commands</summary>
   <pre>pnpm run
+    Lifecycle scripts included in flightdeck-for-eleventy-and-parcel@0.1.0:
+      start
+        run-p dev:parcel dev:11ty
 
-Lifecycle scripts:
-start
-cross-env ENVIRONMENT=dev eleventy --serve
+    available via `npm run-script`:
+      dev:11ty
+        eleventy --serve --config=_flightdeck/.manifest.js
+      dev:parcel
+        run-p  watch:assets
+      watch:assets
+        parcel watch './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
+      build
+        run-s clean build:parcel build:11ty
+      build:11ty
+        cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js
+      build:parcel
+        parcel build './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
+      clean
+        ./.scrub site
+      purge
+        ./.scrub purge</pre>
 
-Commands available via "pnpm run":
-build
-cross-env ENVIRONMENT=prod eleventy
-images
-optimizt src/assets/images
-clean
-./.scrub site
-purge
-./.scrub purge</pre>
-
-Notice the funky `||` ? This is an attempt to provide cross platform compatibility for Linux/Unix, and Windows. If your terminal doesn’t know what it is, it will skip over it.
+~~Notice the funky `||` ? This is an attempt to provide cross platform compatibility for Linux/Unix, and Windows. If your terminal doesn’t know what it is, it will skip over it.~~
 
 - `build` command - executes the production build of your site with Eleventy, includes HTML minification, compressed Sass, optimized images, and bundled javascript.
-- `images` command - will optimize all image files inside of `/src/assets/images`, the files will be copied to `/dist/assets/images` with Eleventy's `addPassthroughCopy` but only when you run the development server.
 - `clean` command - scrubs/removes the `dist/` and `.cache` directories
 - `purge` command - scrubs/removes the `dist/`, `.cache`, `node_modules`, and any lock files from npm, yarn, or pnpm.
 
@@ -193,23 +205,48 @@ We really like Netlify but also enjoy using CI/CD tools or even using our [Lifto
 
 Flightdeck is a very opinionated starter kit, so the file structure is very specific to our needs. The Eleventy configuration file is located under `_flightdeck` and is called `.manifest.js`.
 
-All the Eleventy configuration is done in this file, and it is broken down into sections for easier navigation and maintain. The `.manifest.js` file is where you will find the `addPassthroughCopy` and `addWatchTarget` methods along with custom filters, shortcodes, and Eleventy Plugins. All Eleventy configuration options are available, see the [Eleventy Docs](https://www.11ty.dev/docs/config/) for more information.
+All the Eleventy configuration is done in this file, and it is broken down into sections for easier navigation and maintainability. The `.manifest.js` file is where you will find the `addPassthroughCopy` and `addWatchTarget` methods along with custom filters, shortcodes, and Eleventy Plugins. All Eleventy configuration options are available, see the [Eleventy Docs](https://www.11ty.dev/docs/config/) for more information.
 
+<details>
+  <summary>
+    <pre> .
+      ├──  components
+      │  └──  blockquote.js
+      ├──  components.js
+      ├──  filters
+      │  ├──  baseUrl.js
+      │  ├──  dates.js
+      │  ├──  excerpt.js
+      │  └──  limit.js
+      ├──  filters.js
+      ├──  plugins.js
+      ├──  shortcodes
+      │  ├──  codepen.js
+      │  └──  copyright.js
+      ├──  shortcodes.js
+      ├──  transforms
+      │  ├──  buildImages.js
+      │  └──  minifyHtml.js
+      ├──  transforms.js
+      └──  workflow.js</pre>
+  </summary>
+</details>
 
 <!-- USAGE -->
 
 ### 👀 Usage
 
-Flightdeck makes a lot of assumptions and is very opinionated - but having a good idea of how Eleventy's [data cascade](https://www.11ty.dev/docs/data-cascade/) works is always nice, as well as having some understanding on [template inherence](https://mozilla.github.io/nunjucks/templating.html#template-inheritance) works with Nunjucks will go a long way. **But is not needed**
+Flightdeck makes a lot of assumptions and is very opinionated - but having a good idea of how Eleventy's [data cascade](https://www.11ty.dev/docs/data-cascade/) works is always nice, as well as having some understanding on [template inherence](https://mozilla.github.io/nunjucks/templating.html#template-inheritance) when working with Nunjucks will go a long way. **But is not needed**
 
-**WIP** The Airframe CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. **Documentation coming soon**
+**WIP** The Airframe CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. Airframe is a classless CSS system that plays well with semantic markup. **Documentation coming soon**
 
-If you're looking to extend your project with other NPM modules, Eleventy plugins, or ESBuild Plugins, just reference the appropriate documentation.
+If you're looking to extend your project with other NPM modules, Eleventy plugins, or Parcel Plugins, just reference the appropriate documentation.
 
 - [Eleventy Docs](https://11ty.dev)
+- [Parcel Plugins](https://parceljs.org/features/plugins/)
+  - [Parcel Sass Docs](https://parceljs.org/languages/sass/)
+  - [Parcel Javascript Docs](https://parceljs.org/languages/javascript/)
 - [Nunjucks Docs](https://mozilla.github.io/nunjucks/templating.html)
-- [Sass Docs](https://sass-lang.com/documentation/)
-- [ESBuild Docs](https://esbuild.github.io/plugins/)
 - [NPM Package Docs](https://docs.npmjs.com/using-npm-packages-in-your-projects)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -219,6 +256,10 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
 
 - [ ] Create a theme using Airframe - Flightdeck's classless CSS system
 - [ ] Improve documentation
+- [ ] Add more examples
+- [ ] Expand on using Eleventy Plugins
+- [ ] Expand on using Parcel Plugins
+- [ ] Add more filters and shortcodes
 - [ ] Add Dockerfile
 - [ ] Include in NPM package
 
