@@ -1,4 +1,4 @@
-const site = require("../../src/_data/site");
+const site = require("../../src/_includes/data/site");
 
 /**
  * Prefixes the given URL with the site's base URL.
