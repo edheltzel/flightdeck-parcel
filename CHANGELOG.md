@@ -4,16 +4,32 @@ All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2022-09-25
+
+### Adds
+- includes an early version of Airframe CSS system
+- adds content to include sample collections
+- adds `.scrub` script through npm scripts to clean and purge
+
+### Removes
+- removes most `.keep` files from empty directories. (except for `src/assets/fonts`)
+
+### Changed
+- migrates all Flightdeck configuration to `_flightdeck` and `.manifest.js`
+   -  file splitting is more organized
+- updates license to WTFPL
+
+
 ## [0.0.4] - 2022-06-30
 
 ### Adds
 
 - **Re-adds Parcel2 as the primary asset bundler**
-- Sharp handles image compression through parcel
+- Sharp handles image compression via Parcel
 
 ### Removes
 
-- esbuild and esbuild-sass-plugin are removed - now use Parcel20o
+- esbuild and esbuild-sass-plugin are removed - now use [Parcel 2](https://parceljs.org/)
 
 ### Changed
 
