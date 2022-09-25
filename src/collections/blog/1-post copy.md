@@ -1,7 +1,7 @@
 ---
-title: Post 1
+title: Post Testing
 description: "this is a post example of the second kind!"
-featured_image: /assets/images/taiki-ishikawa-lq1KA7HAdH0-unsplash.jpeg
+featured_image: /assets/images/testing-anirudh-w_WZRYHb-D0-unsplash.jpeg
 categories: [""]
 ---
 
