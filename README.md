@@ -110,7 +110,7 @@ Also, You can swap `pnpm` in favor of `yarn` or `npm` without any friction.
   ```sh
   corepack enable
 
-  corepack prepare pnpm@7.5.0 --activate
+  corepack prepare pnpm@7.12.2 --activate
   ```
 
 ### ⚙️ Installation
