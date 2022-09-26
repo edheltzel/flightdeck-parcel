@@ -6,10 +6,10 @@
     "start": "run-p dev:parcel dev:11ty",
     "dev:11ty": "eleventy --serve --config=_flightdeck/.manifest.js",
     "dev:parcel": "run-p  watch:assets",
-    "watch:assets": "parcel watch './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
+    "watch:assets": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
     "build": "run-s clean build:parcel build:11ty",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js",
-    "build:parcel": "parcel build './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
+    "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets",
     "clean": "./.scrub site",
     "purge": "./.scrub purge"
   },
