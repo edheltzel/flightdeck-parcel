@@ -1,9 +1,3 @@
 {
-  "quality": 70,
-  "webp": {
-    "nearLossless": true
-  },
-  "png": {
-    "palette": true
-  }
+  "quality": 70
 }
