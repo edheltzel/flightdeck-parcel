@@ -18,4 +18,4 @@ title: Eleventy + Nunjucks = 🤯
 
 ## Blah Blah Blah
 
-<img src="/assets/images/testing.jpeg?as=webp&width=300" alt="test">
+<img src="/assets/images/spacex/testing.jpeg" alt="test">
