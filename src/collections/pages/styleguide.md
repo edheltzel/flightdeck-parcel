@@ -1,5 +1,5 @@
 ---
-title: Style Guide
+title: Style Guide 💅
 tagline: Semantic HTML with very minimal use of classes
 ---
 <!-- Typography-->
@@ -19,13 +19,33 @@ Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugi
   <summary>See Code Examples</summary>
 
 ```jinja2
-{% raw %}{# Markdown #}
+{% raw %}{# Using just Markdown #}
   > This is a blockquote in **markdown**
 
-{# Shortcode #}
+{# Using a 11ty Shortcode #}
 {% blockquote  "This is a blockquote using a <strong>shortcode</strong>", "This is a citation" %}{% endraw %}
 ```
 </details>
+
+<!-- Code & Pre -->
+### Code
+
+```js
+// function expression
+let x = function(x, y) {
+   return x * y;
+}
+
+// function expression using arrow function
+let x = (x, y) => x * y;
+```
+`const x = 1;`
+
+    foo=bar
+
+
+
+
 
 <!-- Lists-->
 
