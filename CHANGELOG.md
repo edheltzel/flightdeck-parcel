@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Adds
 - includes the 11ty Render plugin
 - includes `airframe.css` inside of `head.njk` - was `app.css`
+- adds `.npmrc` so that auto install of peer dependencies
 
 ### Changed
 - readme update
