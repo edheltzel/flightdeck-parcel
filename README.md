@@ -1,8 +1,8 @@
 <div id="top" align="center">
 <!-- PROJECT LOGO -->
   <a href="https://github.com/flight-deck"><img src="https://rdm.sfo2.digitaloceanspaces.com/flightdeck/v3-flightdeck__logo--purple-haze-600x528.png" alt="Flightdeck Logo" width="400"></a>
-  <h1>Flightdeck</h1>
-  <h4 style="padding-bottom: .5em">A starter project for <a href="https://www.11ty.dev/">Eleventy 🎈</a> using a minimal and opinionated workflow.</h4>
+  <h1>Flightdeck 🚀</h1>
+  <h4 style="padding-bottom: .5em">An opinionaated starter project for <a href="https://www.11ty.dev/">Eleventy 🎈</a></h4>
 <!-- PROJECT SHIELDS -->
 
 [![release](https://img.shields.io/github/release/flight-deck/flightdeck-for-eleventy.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-for-eleventy/releases/latest) [![eleventy](https://img.shields.io/badge/Eleventy-v1.0.0+-373277.svg?style=for-the-badge&logo=eleventy&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-MIT-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/flight-deck/flightdeck-for-eleventy-and-parcel/blob/master/LICENSE)
@@ -97,11 +97,11 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
 #### 🤖 Dependencies
 
-> **Note:** Currently there is a bug inside of Parcel that does not allow Parcel to use pnpm to install packages correctly. So we are recommending that you use NPM or Yarn to install the dependencies - we will update this section once the bug is fixed.
+`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `pnpm` or `yarn` separately. 
 
-~~`pnpm` is our package manager of choice~~ – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the ~~`pnpm`~~ commands are work out-of-the-box.
+> **Note:** Currently Parcel has an issue performing **auto install** when using pnpm. So if you'd like for Parcel to handle installation of dependancies, we'd recommend that you stick with NPM or Yarn. If you'd rather handle the install of dependancies manually, the PNPM is a great option.
 
-> Please be aware that this certainly won't be the most recent version of PNPM/Yarn and as of this writing, PNPM is at version [7.12.2](https://github.com/pnpm/pnpm/releases).
+> Please be aware that `pnpm` will not be the most recent version and as of this writing, PNPM is at version [7.12.2](https://github.com/pnpm/pnpm/releases).
 
 **Also, You can swap `pnpm` in favor of `yarn` or `npm` without any friction.**
 
@@ -109,8 +109,8 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
   ```sh
   corepack enable
-
-  corepack prepare pnpm@7.12.2 --activate
+  
+  corepack prepare pnpm@latest --activate
   ```
 
 ### ⚙️ Installation
