@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 {%- include "partials/head.njk" -%}
 
 <body>
@@ -11,6 +11,17 @@
 
     {% include "partials/footer.njk" %}
   </main><!-- End Main -->
+  <script>
+    ! function () {
+      const e = document.documentElement,
+        t = document.querySelector(".eclipse");
+      t.addEventListener("click", function () {
+        let t = e.getAttribute("data-theme");
+        null === t || "" === t || "light" === t ? (t = "dark", e.setAttribute("data-theme", "dark")) : (t = "light", e.setAttribute("data-theme", "light"));
+        "undefined" != typeof Storage && localStorage.setItem("theme", t);
+      });
+    }()
+  </script>
 </body>
 
 </html>
