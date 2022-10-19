@@ -1,6 +1,6 @@
 /**
  * Get the current year - copyright
- * @example {% year %}
+ * @example {% copyright %}
  */
 module.exports = (copyright) => {
   return `&copy; ${new Date().getFullYear()} &nbsp;`;
