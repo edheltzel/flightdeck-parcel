@@ -9,19 +9,10 @@
   <main class="container" aria-label="Content">
     {% block main %}{% endblock %}
 
+    {% include "components/button-themeSwitcher.njk" %}
     {% include "partials/footer.njk" %}
   </main><!-- End Main -->
-  <script>
-    ! function () {
-      const e = document.documentElement,
-        t = document.querySelector(".eclipse");
-      t.addEventListener("click", function () {
-        let t = e.getAttribute("data-theme");
-        null === t || "" === t || "light" === t ? (t = "dark", e.setAttribute("data-theme", "dark")) : (t = "light", e.setAttribute("data-theme", "light"));
-        "undefined" != typeof Storage && localStorage.setItem("theme", t);
-      });
-    }()
-  </script>
+
 </body>
 
 </html>
