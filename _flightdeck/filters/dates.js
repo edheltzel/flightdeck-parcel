@@ -3,7 +3,7 @@ const { DateTime } = require("luxon"); //bundled with 11ty
 /**
  * Human readable date format for date
  * @param {string} postDate
- * @returns {string} May 20, 1982
+ * @returns {string} July 20, 1699
  * @example {{ page.date | postDate }}
  */
 const postDate = (date) => {
@@ -13,7 +13,7 @@ const postDate = (date) => {
 /**
  * Human readable format for date with time
  * @param {string} postDateTime
- * @returns {string} May 20, 1982, 5:30 PM EDT
+ * @returns {string} July 20, 1969, 10:56 PM EDT
  * @example {{ page.date | postDateTime }}
  */
 const postDateTime = (date) => {
