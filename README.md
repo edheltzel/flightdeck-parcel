@@ -97,9 +97,9 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
 #### 🤖 Dependencies
 
-`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `pnpm` or `yarn` separately. 
+`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `pnpm` or `yarn` separately.
 
-> **Note:** Currently Parcel has an issue performing **auto install** when using pnpm. So if you'd like for Parcel to handle installation of dependancies, we'd recommend that you stick with NPM or Yarn. If you'd rather handle the install of dependancies manually, the PNPM is a great option.
+> **Note:** Currently Parcel has an issue performing **auto install** when using pnpm. So if you'd like for Parcel to handle installation of dependencies, we'd recommend that you **stick with NPM or Yarn**. If you'd rather handle the install of dependencies manually, the PNPM is a great option.
 
 > Please be aware that `pnpm` will not be the most recent version and as of this writing, PNPM is at version [7.12.2](https://github.com/pnpm/pnpm/releases).
 
@@ -109,7 +109,7 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
   ```sh
   corepack enable
-  
+
   corepack prepare pnpm@latest --activate
   ```
 
@@ -121,7 +121,7 @@ git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
 
 ```shell
 cd flightdeck-for-eleventy
-npm install
+yarn install
 ```
 
 <details>
@@ -151,7 +151,7 @@ There are just a few npm scripts available, but the `start` command is where all
 The focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
 
 ```shell
-npm start
+yarn start
 ```
 
 <details>
@@ -254,10 +254,10 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
 
 ## 🧭 Roadmap
 
+- [x] Expand on using Eleventy Plugins
 - [ ] Create a theme using Airframe - Flightdeck's classless CSS system
 - [ ] Improve documentation
 - [ ] Add more examples
-- [ ] Expand on using Eleventy Plugins
 - [ ] Expand on using Parcel Plugins
 - [ ] Add more filters and shortcodes
 - [ ] Add Dockerfile
