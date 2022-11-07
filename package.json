@@ -3,11 +3,11 @@
   "version": "0.1.4",
   "description": "An opinionated Jamstack starter project for Eleventy with ParcelJS.",
   "scripts": {
-    "start": "run-p dev:parcel dev:11ty",
+    "start": "run-p dev:11ty dev:parcel",
     "dev:11ty": "eleventy --serve --config=_flightdeck/.manifest.js",
     "dev:parcel": "run-p  watch:assets",
     "watch:assets": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/airframe.scss --dist-dir ./dist/assets",
-    "build": "run-s clean build:parcel build:11ty",
+    "build": "run-s clean build:11ty build:parcel",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js",
     "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/airframe.scss --dist-dir ./dist/assets",
     "clean": "./.scrub.sh site",
