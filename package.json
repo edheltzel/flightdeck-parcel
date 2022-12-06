@@ -30,8 +30,5 @@
     "parcel": "^2.7.0",
     "sass": "^1.55.0",
     "sharp": "^0.29.3"
-  },
-  "dependencies": {
-    "purge": "^1.0.0"
   }
 }
