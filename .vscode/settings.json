@@ -1,35 +1,14 @@
 {
-  "files.exclude": {
-    "**/.sass-cache/": true,
-    "**/_site/": false, // set to true if you do not want to see the build output dir.
-    "node_modules/": true
-  },
   "search.exclude": {
-    "node_modules/": true,
-    "_site/**": true,
     "dist/**": true,
-    "**/css/*": true,
     "*.lock": true,
-    "**/.sass-cache/": true,
-    "**/.publish/": true,
+    ".cache/": true,
     ".vscode/**": true,
-    "package-lock.json": true
   },
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#647690",
     "titleBar.activeBackground": "#1e293b",
     "titleBar.inactiveBackground": "#6476903D",
     "titleBar.inactiveForeground": "#1e293b",
-  },
-  "emmet.includeLanguages": {
-    "*.njk": "html"
-  },
-  "cSpell.customDictionaries": {
-    "custom-dictionary-workspace": {
-      "name": "custom-dictionary-workspace",
-      "path": "${workspaceFolder:fd-11ty}/.vscode/.cspell/custom-dictionary-workspace.txt",
-      "addWords": true,
-      "scope": "workspace"
-    }
   },
 }
