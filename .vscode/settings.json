@@ -6,9 +6,7 @@
     ".vscode/**": true,
   },
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#647690",
-    "titleBar.activeBackground": "#1e293b",
-    "titleBar.inactiveBackground": "#6476903D",
-    "titleBar.inactiveForeground": "#1e293b",
+    "titleBar.activeForeground": "#417bd3",
+    "titleBar.inactiveForeground": "#203c67",
   },
 }
