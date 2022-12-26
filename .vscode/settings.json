@@ -5,8 +5,4 @@
     ".cache/": true,
     ".vscode/**": true,
   },
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#417bd3",
-    "titleBar.inactiveForeground": "#203c67",
-  },
 }
