@@ -44,9 +44,22 @@ packages:
     dependencies:
       debug: 4.3.4
       flat-cache: 3.0.4
-      node-fetch: 2.6.7
+      node-fetch: 2.6.8
       p-queue: 6.6.2
       short-hash: 1.0.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@11ty/eleventy-fetch/3.0.0:
+    resolution: {integrity: sha512-qJvfb331rYQAmlCS71Ygg0/XHUdB4/qXBOLsG0DJ1m61WL5JNha52OtKVeQq34u2J2Nfzim+X4TIL/+QyesB7Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      debug: 4.3.4
+      flat-cache: 3.0.4
+      node-fetch: 2.6.8
+      p-queue: 6.6.2
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -1364,7 +1377,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001442
+      caniuse-lite: 1.0.30001445
       electron-to-chromium: 1.4.284
       node-releases: 2.0.8
       update-browserslist-db: 1.0.10_browserslist@4.21.4
@@ -1413,8 +1426,8 @@ packages:
       upper-case: 1.1.3
     dev: true
 
-  /caniuse-lite/1.0.30001442:
-    resolution: {integrity: sha512-239m03Pqy0hwxYPYR5JwOIxRJfLTWtle9FV8zosfV5pHg+/51uD4nxcUlM8+mWWGfwKtt8lJNHnD3cWw9VZ6ow==}
+  /caniuse-lite/1.0.30001445:
+    resolution: {integrity: sha512-8sdQIdMztYmzfTMO6KfLny878Ln9c2M0fc7EH60IjlP4Dc4PiCy7K2Vl3ITmWgOyPgVQKa5x+UP/KqFsxj4mBg==}
     dev: true
 
   /chalk/1.1.3:
@@ -1901,49 +1914,48 @@ packages:
     resolution: {integrity: sha512-zlBeQbvXt79Yflj7h7YA4rVnvvS3BNMKm8ghH5ryFOx3nHY7L3qxuBbq7yBD/xwqORxuUzf9nKvY2QqT7/7M5Q==}
     dependencies:
       deepmerge: 4.2.2
-      eleventy-plugin-embed-instagram: 1.2.4
-      eleventy-plugin-embed-soundcloud: 1.2.4
-      eleventy-plugin-embed-spotify: 1.2.4
-      eleventy-plugin-embed-tiktok: 1.1.4
-      eleventy-plugin-embed-twitch: 1.2.4
-      eleventy-plugin-embed-twitter: 1.3.4
-      eleventy-plugin-vimeo-embed: 1.3.4
-      eleventy-plugin-youtube-embed: 1.7.1
+      eleventy-plugin-embed-instagram: 1.2.5
+      eleventy-plugin-embed-soundcloud: 1.2.5
+      eleventy-plugin-embed-spotify: 1.2.5
+      eleventy-plugin-embed-tiktok: 1.1.5
+      eleventy-plugin-embed-twitch: 1.2.5
+      eleventy-plugin-embed-twitter: 1.3.5
+      eleventy-plugin-vimeo-embed: 1.3.5
+      eleventy-plugin-youtube-embed: 1.8.0
     transitivePeerDependencies:
       - encoding
       - supports-color
     dev: true
 
-  /eleventy-plugin-embed-instagram/1.2.4:
-    resolution: {integrity: sha512-BWT4RVtQAxJ3n22kEg5+Z2dCwyYJpUy3Fp//sIhAoow6w2SNh2AmMfKeTjrecQBYrgYoxF2g9GnV1IUL6jsqGA==}
+  /eleventy-plugin-embed-instagram/1.2.5:
+    resolution: {integrity: sha512-H6kBOuh7cvHOhdzSiG75cMFMPSszB9rizyNwU07WBV4sqKe0Lzm4M5CidQOf1GvwpHPQRwJUHcaYe/pQsub9KQ==}
     dev: true
 
-  /eleventy-plugin-embed-soundcloud/1.2.4:
-    resolution: {integrity: sha512-aRu+L5EbNdGwEMDNbXx2aEBz+M5kyfBHkMlKVC6ivpwJvA/T/H0efI6QmiwWx2Lcxzt62q9zSsNKr9MJVnmvIQ==}
+  /eleventy-plugin-embed-soundcloud/1.2.5:
+    resolution: {integrity: sha512-aKB6wEHcvUkLvPrrCz6gKkzg/hKcmn771CcpmfIozOpXp4/F+k2UcxctSt1KX73RdJJFn9dJDjz53fEO++GVvw==}
     dependencies:
-      '@11ty/eleventy-cache-assets': 2.3.0
-      parse-path: 5.0.0
+      '@11ty/eleventy-fetch': 3.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
     dev: true
 
-  /eleventy-plugin-embed-spotify/1.2.4:
-    resolution: {integrity: sha512-FKUe+JDDRQaxXlIlBV0w/QUiUbNpJzsTH/+V89ZbsXOZ8Ldv6OmYRTHrusEjabZPkG71mGxI83h5uncn41SrJw==}
+  /eleventy-plugin-embed-spotify/1.2.5:
+    resolution: {integrity: sha512-9FVfsjtfAObdSmiOxn+cUW7hcWkuHY/v+iXBKMk5wtJrpLpDcE8MCwz+/YW+Tpi57W5s3s0fJQlB++CkhKgmuw==}
     dev: true
 
-  /eleventy-plugin-embed-tiktok/1.1.4:
-    resolution: {integrity: sha512-qU75ID8Icyz/dqcacYZgOoByB3QZygW5SuTGRZ3Bab+Uoe2R/S3yXD81rbMNd6qq3o0SG/3JhTsFm60yIRHEZQ==}
+  /eleventy-plugin-embed-tiktok/1.1.5:
+    resolution: {integrity: sha512-BP8J67jMV73xbsaxb3w5yTqUElEliI46cyT4Fi9V56E5NOh9R+KhRPrKo1nj8oGK/FFB7MIQKQyi3omNNo9vGg==}
     dev: true
 
-  /eleventy-plugin-embed-twitch/1.2.4:
-    resolution: {integrity: sha512-jY+MrUipGno8tC/Do1ufm2eFOw8rHwE+UcTwxtH8zU9lZzzxfETEJz8/0iDKhSfUIqPYuLk6igT/NRGLctmqNQ==}
+  /eleventy-plugin-embed-twitch/1.2.5:
+    resolution: {integrity: sha512-xYuE22/qkN42QjtTc6uTyj4+1rvz+xuPj5uYSibbFBWTrBUvhRUFj9fe3u/TBrLw89AB++ppTrYx9/wca1ASpQ==}
     dependencies:
       chalk: 4.1.2
     dev: true
 
-  /eleventy-plugin-embed-twitter/1.3.4:
-    resolution: {integrity: sha512-D6s3RBGtHrVdsq7/40CH4mcQuTRlsCPUTlBu5jCz4jvkzkIBJID7UWZbVJ950ugdPHige7srPEIqlWepy6Sc3Q==}
+  /eleventy-plugin-embed-twitter/1.3.5:
+    resolution: {integrity: sha512-v0tyBGDuKASOCaZQVt3uT0vaOvLe4P+iTzpRYNbUXVDU6q4hHF1Sf71v8FmkhqMTnr0oJxsq2mVCTpilS8jkZQ==}
     dependencies:
       '@11ty/eleventy-cache-assets': 2.3.0
       deepmerge: 4.2.2
@@ -1952,12 +1964,12 @@ packages:
       - supports-color
     dev: true
 
-  /eleventy-plugin-vimeo-embed/1.3.4:
-    resolution: {integrity: sha512-xINV/BtdmuPlNtnNqj/T7roDkB38YdGC/FSIZdEPcmXupLr6YydI/SP3wxE7WyZsH+ImXkrYrvyTxJrooOJapw==}
+  /eleventy-plugin-vimeo-embed/1.3.5:
+    resolution: {integrity: sha512-E1DGHEeg+zT6xz1+6hGFDj6xw/jtH0p7hpxxOLNUQbAL13cUEq1FuRucT4UpkJkcC9QG0jpyBfbRd6eDxodSig==}
     dev: true
 
-  /eleventy-plugin-youtube-embed/1.7.1:
-    resolution: {integrity: sha512-KzK83RTkIfykxN3yAv7PaRVl/b4TocuHNz6mKKVM0z9cybwJReneRSisjZtMg703SOGKteTSM3M7S+nMTLRj/g==}
+  /eleventy-plugin-youtube-embed/1.8.0:
+    resolution: {integrity: sha512-k/k23hkba3C0KPp0QehTFhX826LFWKPr6qm9tsFMgRbBjnVj3gC5ps0AtIyj69dmFlzS6tdiIjNd1PcJqQ1Yyw==}
     dependencies:
       deepmerge: 4.2.2
       lite-youtube-embed: 0.2.0
@@ -1983,7 +1995,7 @@ packages:
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
-      engine.io-parser: 5.0.5
+      engine.io-parser: 5.0.6
       ws: 8.2.3
       xmlhttprequest-ssl: 2.0.0
     transitivePeerDependencies:
@@ -1992,8 +2004,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /engine.io-parser/5.0.5:
-    resolution: {integrity: sha512-mjEyaa4zhuuRhaSLOdjEb57X0XPP9JEsnXI4E+ivhwT0GgzUogARx4MqoY1jQyB+4Bkz3BUOmzL7t9RMKmlG3g==}
+  /engine.io-parser/5.0.6:
+    resolution: {integrity: sha512-tjuoZDMAdEhVnSFleYPCtdL2GXwVTGtNjoeJd9IhIG3C1xs9uwxqRNEu5WpnDZCaozwVlK/nuQhpodhXSIMaxw==}
     engines: {node: '>=10.0.0'}
     dev: true
 
@@ -2009,7 +2021,7 @@ packages:
       cookie: 0.4.2
       cors: 2.8.5
       debug: 4.3.4
-      engine.io-parser: 5.0.5
+      engine.io-parser: 5.0.6
       ws: 8.2.3
     transitivePeerDependencies:
       - bufferutil
@@ -2048,10 +2060,11 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /es-abstract/1.21.0:
-    resolution: {integrity: sha512-GUGtW7eXQay0c+PRq0sGIKSdaBorfVqsCMhGHo4elP7YVqZu9nCZS4UkK4gv71gOWNMra/PaSKD3ao1oWExO0g==}
+  /es-abstract/1.21.1:
+    resolution: {integrity: sha512-QudMsPOz86xYz/1dG1OuGBKOELjCh99IIWHLzy5znUB6j8xG2yMA7bfTV86VSqKF+Y/H08vQPR+9jyXpuC6hfg==}
     engines: {node: '>= 0.4'}
     dependencies:
+      available-typed-arrays: 1.0.5
       call-bind: 1.0.2
       es-set-tostringtag: 2.0.1
       es-to-primitive: 1.2.1
@@ -2074,7 +2087,7 @@ packages:
       is-string: 1.0.7
       is-typed-array: 1.1.10
       is-weakref: 1.0.2
-      object-inspect: 1.12.2
+      object-inspect: 1.12.3
       object-keys: 1.1.1
       object.assign: 4.1.4
       regexp.prototype.flags: 1.4.3
@@ -2175,7 +2188,7 @@ packages:
   /filelist/1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
     dependencies:
-      minimatch: 5.1.2
+      minimatch: 5.1.5
     dev: true
 
   /fill-range/7.0.1:
@@ -2269,7 +2282,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.21.0
+      es-abstract: 1.21.1
       functions-have-names: 1.2.3
     dev: true
 
@@ -2325,14 +2338,14 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
-  /glob/8.0.3:
-    resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
+  /glob/8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.1.2
+      minimatch: 5.1.5
       once: 1.4.0
     dev: true
 
@@ -2806,7 +2819,7 @@ packages:
     dependencies:
       config-chain: 1.1.13
       editorconfig: 0.15.3
-      glob: 8.0.3
+      glob: 8.1.0
       nopt: 6.0.0
     dev: true
 
@@ -3174,8 +3187,8 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch/5.1.2:
-    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==}
+  /minimatch/5.1.5:
+    resolution: {integrity: sha512-CI8wwdrll4ehjPAqs8TL8lBPyNnpZlQI02Wn8C1weNz/QbUbjh3OMxgMKSnvqfKFdLlks3EzHB9tO0BqGc3phQ==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -3288,12 +3301,12 @@ packages:
     resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
     dev: true
 
-  /node-addon-api/5.0.0:
-    resolution: {integrity: sha512-CvkDw2OEnme7ybCykJpVcKH+uAOLV2qLqiyla128dN9TkEWfrYmxG6C2boDe5KcNQqZF3orkqzGgOMvZ/JNekA==}
+  /node-addon-api/5.1.0:
+    resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
     dev: true
 
-  /node-fetch/2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+  /node-fetch/2.6.8:
+    resolution: {integrity: sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
@@ -3387,8 +3400,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /object-inspect/1.12.2:
-    resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
+  /object-inspect/1.12.3:
+    resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
     dev: true
 
   /object-keys/1.1.1:
@@ -3515,12 +3528,6 @@ packages:
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
-    dev: true
-
-  /parse-path/5.0.0:
-    resolution: {integrity: sha512-qOpH55/+ZJ4jUu/oLO+ifUKjFPNZGfnPJtzvGzKN/4oLMil5m9OH4VpOj6++9/ytJcfks4kzH2hhi87GL/OU9A==}
-    dependencies:
-      protocols: 2.0.1
     dev: true
 
   /parseurl/1.3.3:
@@ -3676,10 +3683,6 @@ packages:
 
   /proto-list/1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
-    dev: true
-
-  /protocols/2.0.1:
-    resolution: {integrity: sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==}
     dev: true
 
   /prr/1.0.1:
@@ -4077,7 +4080,7 @@ packages:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.1
-      node-addon-api: 5.0.0
+      node-addon-api: 5.1.0
       prebuild-install: 7.1.1
       semver: 7.3.8
       simple-get: 4.0.1
@@ -4124,7 +4127,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.3
-      object-inspect: 1.12.2
+      object-inspect: 1.12.3
     dev: true
 
   /sigmund/1.0.1:
@@ -4290,7 +4293,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.21.0
+      es-abstract: 1.21.1
     dev: true
 
   /string.prototype.trimend/1.0.6:
@@ -4298,7 +4301,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.21.0
+      es-abstract: 1.21.1
     dev: true
 
   /string.prototype.trimstart/1.0.6:
@@ -4306,7 +4309,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.21.0
+      es-abstract: 1.21.1
     dev: true
 
   /string_decoder/1.3.0:
