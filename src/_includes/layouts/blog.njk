@@ -1,6 +1,6 @@
 {% extends "./page.njk" %}
- {% block content %}
- {{ content | safe }}
+{% block content %}
+  {{ content | safe }}
 
   {% for post in collections.blog | limit(9) | reverse %}
     <article>
@@ -11,13 +11,15 @@
         </picture>
       </a>
       <h2>{{ post.data.title }}</h2>
-      <p>{% if post.data.description %}
+      <p>
+        {% if post.data.description %}
           {{ post.data.description }}
-          {% else %}{{ post.templateContent | excerpt }}{% endif %}</p>
+        {% else %}{{ post.templateContent | excerpt }}
+        {% endif %}
+      </p>
       <footer>
-        <a href="{{ post.url }}" role="button" aria-label="Read More about {{ post.data.title }}">Read More‍ 👉</a>
+        <a href="{{ post.url }}" role="button" aria-label="Read More about {{ post.data.title }}">Read More 👉</a>
       </footer>
     </article>
-   {% endfor %}
- {% endblock %}
-
+  {% endfor %}
+{% endblock %}
