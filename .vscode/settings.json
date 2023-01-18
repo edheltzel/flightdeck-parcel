@@ -2,6 +2,7 @@
   "search.exclude": {
     "dist/**": true,
     "*.lock": true,
+    ".parcel-cache": true,
     ".cache/": true,
     ".vscode/**": true,
   },
