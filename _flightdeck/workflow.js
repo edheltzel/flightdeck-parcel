@@ -11,6 +11,8 @@ module.exports = (config) => {
    *
    */
   config.setServerOptions({
+    showVersion: true, // prints eleventy dev server version on the command line
+    injectedScriptsFolder: ".flightdeck",
     watch: [],
   });
 

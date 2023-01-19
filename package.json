@@ -8,7 +8,7 @@
     "dev:parcel": "run-p  watch:assets",
     "watch:assets": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/airframe.scss --dist-dir ./dist/assets",
     "build": "run-s clean build:11ty build:parcel",
-    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js",
+    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js --incremental",
     "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/airframe.scss --dist-dir ./dist/assets",
     "clean": "./.scrub.sh site",
     "purge": "./.scrub.sh purge"
