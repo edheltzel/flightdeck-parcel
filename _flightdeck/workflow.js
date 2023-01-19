@@ -5,23 +5,13 @@ const isProd = process.env.ELEVENTY_ENV === "production";
 module.exports = (config) => {
   config.setQuietMode(true); // reduce console output
   /**
-   * @todo remove once 2.0 is released
+   * @TODO remove browseersync once 2.0 is released
+   * @see https://github.com/11ty/eleventy/issues/1305
+   * @TODO add watch targets for example purposes
+   *
    */
-  config.setBrowserSyncConfig({
-    open: false,
-    notify: true,
-    // 404
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync("dist/404/index.html");
-
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(content_404);
-          res.end();
-        });
-      },
-    },
+  config.setServerOptions({
+    watch: [],
   });
 
   // Watch Targets
