@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Eleventy + Nunjucks = 🤯
+title: Eleventy Beta 2.0 + Nunjucks = 🤯
 permalink: /
 ---
+
+[flightdeck.systems](https://flightdeck.systems)
 
 > "That's one small step for man, one giant leap for mankind
 >
@@ -17,6 +19,6 @@ permalink: /
 </div>
 ```
 
-## Blah Blah Blah
+## Blah Blah Blah 🫠
 
 <img src="/assets/images/spacex/testing.jpeg" alt="test">
