@@ -4,6 +4,7 @@
     "*.lock": true,
     ".parcel-cache": true,
     ".cache/": true,
-    ".vscode/**": true,
+    ".vscode/**": false,
+    "CHANGELOG.md": true
   },
 }
