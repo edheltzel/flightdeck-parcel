@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    document.getElementsByTagName("html")[0].className += " js";
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Cart | E-commerce template by CodyHouse</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header
+    class="mega-nav mega-nav--border-bottom mega-nav--mobile mega-nav--desktop@md bg position-relative hide-nav ie:bg js-mega-nav js-hide-nav js-hide-nav--main" data-nav-target-class="mega-nav--expanded">
+    <div class="mega-nav__container">
+      <!-- 👇 logo -->
+      <a href="index.html" class="mega-nav__logo">
+        <svg width="104" height="30" viewBox="0 0 104 30">
+          <title>Go to homepage</title>
+          <path fill="var(--color-contrast-higher)" d="M43.371 6.3v15.482c0 .567-.01 1.587.543 1.758a7.624 7.624 0 001.992.132c2.012 0 3.842-2.683 4.5-3.831a11.223 11.223 0 001.319-3.581h.689q-.087 1.069-.088 2.754 0 3.252.2 5.346c-6.586-.087-10.41-.111-17.373 0v-.6c2.34 0 2.139-1.266 2.139-2.578V6.3c0-2.091-.254-2.515-2.139-2.578v-.6q1.714.088 5.346.088 3.457 0 5.3-.088v.6c-2.299-.001-2.428.794-2.428 2.578zM69.446 16.6c0 4.278-1.508 8.188-7.7 8.188-4.324 0-7.72-1.827-7.72-8.188 0-6.18 3.187-8.233 7.72-8.233 5.525-.003 7.7 3.05 7.7 8.233zm-9.814 0c0 2.558.243 7.588 2.109 7.588s2.095-5.03 2.095-7.588-.211-7.632-2.095-7.632c-1.866-.003-2.109 5.06-2.109 7.632zM103.532 16.6c0 4.278-1.509 8.188-7.7 8.188-4.324 0-7.72-1.827-7.72-8.188 0-6.18 3.187-8.233 7.72-8.233 5.525-.003 7.7 3.05 7.7 8.233zm-9.814 0c0 2.558.243 7.588 2.109 7.588s2.095-5.03 2.095-7.588-.211-7.632-2.095-7.632c-1.866-.003-2.109 5.06-2.109 7.632zM86.907 23.672c0 3.175-2.654 4.813-3.991 5.413-3.269 1.468-8 .795-9.053.557s-2.879-.783-2.879-2.132c0-1.4 1.721-1.421 2.791-1.538a3.138 3.138 0 002.146-.835c-.568.011-2.734.223-3.97-1.208a3.606 3.606 0 01-.226-3.656c.249-.5.922-1.555 3.507-2.739a4.58 4.58 0 01-3.647-4.365 4.469 4.469 0 013.384-4.277 12.818 12.818 0 015.464-.411 4.849 4.849 0 01.813-3.493A3.007 3.007 0 0183.787 3.9c1.672 0 2.593.9 2.593 2.007a1.937 1.937 0 01-1.216 1.703 3.4 3.4 0 01-2.893-.132A2.929 2.929 0 0181.238 6.3a5.74 5.74 0 00-.161 2.27c4.2.843 4.6 3.35 4.6 4.6 0 2.866-2.348 4.805-7.046 4.805a12.73 12.73 0 01-2.842-.293c-.536.348-1.172.715-1.172 1.494q0 .981 1.07.981H82.5c1.316-.001 4.407.219 4.407 3.515zm-10.766 3.413c0 2.19 1.821 2.4 2.71 2.4a3.723 3.723 0 003.405-1.619 3.206 3.206 0 00.491-1.764c0-.484-.155-.967-1.377-.967h-4.849a4.312 4.312 0 00-.38 1.95zm.966-13.916c0 1.543.058 4.263 1.524 4.263 1.487 0 1.538-2.72 1.538-4.263s-.075-4.263-1.538-4.263c-1.443 0-1.524 2.73-1.524 4.263z"/>
+          <path fill="var(--color-primary)" d="M14 14V1H1v26h27V14H14z"/>
+          <path fill="var(--color-primary)" d="M14 1h14v13L14 1z"/>
+        </svg>
+      </a>
+
+      <!-- 👇 icon buttons --mobile -->
+      <div class="mega-nav__icon-btns mega-nav__icon-btns--mobile">
+        <a href="cart.html" class="mega-nav__icon-btn">
+          <svg class="icon" viewBox="0 0 24 24">
+            <title>Go to cart page</title>
+            <g class="icon__group" fill="none" stroke-linecap="square" stroke-linejoin="miter" stroke="currentColor">
+              <polyline points="4,4 22,4 19,14 4,14 "></polyline>
+              <circle cx="4" cy="22" r="2" fill="currentColor" stroke="none"></circle>
+              <circle cx="20" cy="22" r="2" fill="currentColor" stroke="none"></circle>
+              <polyline points="1,1 4,4 4,14 2,18 23,18 " stroke-linecap="butt"></polyline>
+            </g>
+          </svg>
+        </a>
+
+        <button class="reset mega-nav__icon-btn mega-nav__icon-btn--search js-tab-focus" aria-label="Toggle search"
+          aria-controls="mega-nav-search">
+          <svg class="icon" viewBox="0 0 24 24">
+            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+              <path d="M4.222 4.222l15.556 15.556" />
+              <path d="M19.778 4.222L4.222 19.778" />
+              <circle cx="9.5" cy="9.5" r="6.5" />
+            </g>
+          </svg>
+        </button>
+
+        <button class="reset mega-nav__icon-btn mega-nav__icon-btn--menu js-mega-nav-trigger js-tab-focus"
+          aria-label="Toggle menu" aria-controls="mega-nav-navigation">
+          <svg class="icon" viewBox="0 0 24 24">
+            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+              <path d="M1 6h22" />
+              <path d="M1 12h22" />
+              <path d="M1 18h22" />
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mega-nav__nav js-mega-nav__nav" id="mega-nav-navigation" role="navigation" aria-label="Main">
+        <div class="mega-nav__nav-inner">
+          <ul class="mega-nav__items">
+            <li class="mega-nav__label">Menu</li>
+
+            <!-- 👇 layout 1 -> tabbed content -->
+            <li class="mega-nav__item js-mega-nav__item">
+              <button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
+                Products
+                <i class="mega-nav__arrow-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 16 16">
+                    <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                      stroke-miterlimit="10">
+                      <path d="M2 2l12 12" />
+                      <path d="M14 2L2 14" />
+                    </g>
+                  </svg>
+                </i>
+              </button>
+
+              <div class="mega-nav__sub-nav-wrapper">
+                <div class="mega-nav__sub-nav mega-nav__sub-nav--layout-1">
+                  <!-- 👇 links - visible on mobile -->
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__sub-item">
+                      <a href="product-v1.html" class="mega-nav__sub-link">
+                        <span class="flex items-center gap-xs">
+                          <img class="block width-lg height-lg radius-50% object-cover"
+                            src="assets/img/mega-site-nav-img-1.jpg" alt="Image description">
+                          <i>Product One</i>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="mega-nav__sub-item">
+                      <a href="product-v2.html" class="mega-nav__sub-link">
+                        <span class="flex items-center gap-xs">
+                          <img class="block width-lg height-lg radius-50% object-cover"
+                            src="assets/img/mega-site-nav-img-2.jpg" alt="Image description">
+                          <i>Product Two</i>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="mega-nav__sub-item">
+                      <a href="product-v1.html" class="mega-nav__sub-link">
+                        <span class="flex items-center gap-xs">
+                          <img class="block width-lg height-lg radius-50% object-cover"
+                            src="assets/img/mega-site-nav-img-3.jpg" alt="Image description">
+                          <i>Product Three</i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- 👇 tabs - visible on desktop -->
+                  <div class="mega-nav__tabs grid gap-lg js-tabs">
+                    <ul class="col-4 mega-nav__tabs-controls js-tabs__controls" aria-label="Select a product">
+                      <li>
+                        <a href="#tabProduct1" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
+                          <span class="flex items-center gap-xs">
+                            <img class="block width-lg height-lg radius-50% object-cover"
+                              src="assets/img/mega-site-nav-img-1.jpg" alt="Image description">
+
+                            <i class="margin-right-xxxs">Product One</i>
+
+                            <svg class="icon icon--xs margin-left-auto" viewBox="0 0 16 16" aria-hidden="true">
+                              <path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square"
+                                stroke-miterlimit="10" stroke-width="1" /></svg>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#tabProduct2" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
+                          <span class="flex items-center gap-xs">
+                            <img class="block width-lg height-lg radius-50% object-cover"
+                              src="assets/img/mega-site-nav-img-2.jpg" alt="Image description">
+
+                            <i class="margin-right-xxxs">Product Two</i>
+
+                            <svg class="icon icon--xs margin-left-auto" viewBox="0 0 16 16" aria-hidden="true">
+                              <path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square"
+                                stroke-miterlimit="10" stroke-width="1" /></svg>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#tabProduct3" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
+                          <span class="flex items-center gap-xs">
+                            <img class="block width-lg height-lg radius-50% object-cover"
+                              src="assets/img/mega-site-nav-img-3.jpg" alt="Image description">
+
+                            <i class="margin-right-xxxs">Product Three</i>
+
+                            <svg class="icon icon--xs margin-left-auto" viewBox="0 0 16 16" aria-hidden="true">
+                              <path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square"
+                                stroke-miterlimit="10" stroke-width="1" /></svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="col-8 js-tabs__panels">
+                      <section id="tabProduct1" class="mega-nav__tabs-panel js-tabs__panel">
+                        <a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
+                          <img class="block width-100%" src="assets/img/mega-site-nav-img-1.jpg"
+                            alt="Image description">
+                        </a>
+
+                        <div class="text-component">
+                          <h1 class="text-xl">Product One</h1>
+                          <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Amet, quaerat.</p>
+                          <p><a href="product-v1.html" class="btn btn--subtle">Shop Now</a></p>
+                        </div>
+                      </section>
+
+                      <section id="tabProduct2" class="mega-nav__tabs-panel js-tabs__panel">
+                        <a href="product-v2.html" class="mega-nav__tabs-img margin-bottom-md">
+                          <img class="block width-100%" src="assets/img/mega-site-nav-img-2.jpg"
+                            alt="Image description">
+                        </a>
+
+                        <div class="text-component">
+                          <h1 class="text-xl">Product Two</h1>
+                          <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Amet, quaerat.</p>
+                          <p><a href="product-v2.html" class="btn btn--subtle">Shop Now</a></p>
+                        </div>
+                      </section>
+
+                      <section id="tabProduct3" class="mega-nav__tabs-panel js-tabs__panel">
+                        <a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
+                          <img class="block width-100%" src="assets/img/mega-site-nav-img-3.jpg"
+                            alt="Image description">
+                        </a>
+
+                        <div class="text-component">
+                          <h1 class="text-xl">Product Three</h1>
+                          <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Amet, quaerat.</p>
+                          <p><a href="product-v1.html" class="btn btn--subtle">Shop Now</a></p>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 👇 layout 2 -> multiple lists -->
+            <li class="mega-nav__item js-mega-nav__item">
+              <button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
+                Pages
+                <i class="mega-nav__arrow-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 16 16">
+                    <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                      stroke-miterlimit="10">
+                      <path d="M2 2l12 12" />
+                      <path d="M14 2L2 14" />
+                    </g>
+                  </svg>
+                </i>
+              </button>
+
+              <div class="mega-nav__sub-nav-wrapper">
+                <div class="mega-nav__sub-nav mega-nav__sub-nav--layout-2">
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__label">Shop</li>
+                    <li class="mega-nav__sub-item"><a href="shop.html" class="mega-nav__sub-link">All Products</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="shop-categories.html"
+                        class="mega-nav__sub-link">Categories</a></li>
+                    <li class="mega-nav__sub-item"><a href="shop-category.html" class="mega-nav__sub-link">Category</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="product-v1.html" class="mega-nav__sub-link">Product v1</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="product-v2.html" class="mega-nav__sub-link">Product v2</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="cart.html" class="mega-nav__sub-link">Cart</a></li>
+                    <li class="mega-nav__sub-item"><a href="checkout.html" class="mega-nav__sub-link">Checkout</a>
+                    </li>
+                  </ul>
+
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__label">Extra Pages</li>
+                    <li class="mega-nav__sub-item"><a href="index.html" class="mega-nav__sub-link">Home v1</a></li>
+                    <li class="mega-nav__sub-item"><a href="home-v2.html" class="mega-nav__sub-link">Home v2</a></li>
+                    <li class="mega-nav__sub-item"><a href="about-us.html" class="mega-nav__sub-link">About Us</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="404.html" class="mega-nav__sub-link">404</a></li>
+                    <li class="mega-nav__sub-item"><a href="thank-you.html" class="mega-nav__sub-link">Thank You</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="basic-page.html" class="mega-nav__sub-link">Basic Page</a>
+                    </li>
+                  </ul>
+
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__label">Blog</li>
+                    <li class="mega-nav__sub-item"><a href="blog.html" class="mega-nav__sub-link">Blog Gallery v1</a>
+                    </li>
+                    <li class="mega-nav__sub-item"><a href="blog-v2.html" class="mega-nav__sub-link">Blog Gallery
+                        v2</a></li>
+                    <li class="mega-nav__sub-item"><a href="blog-post.html" class="mega-nav__sub-link">Blog Post</a>
+                    </li>
+                  </ul>
+
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__label">Account</li>
+                    <li class="mega-nav__sub-item"><a href="log-in.html" class="mega-nav__sub-link">Log In</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-settings.html"
+                        class="mega-nav__sub-link">Settings</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-addresses.html"
+                        class="mega-nav__sub-link">Addresses</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-order-history.html" class="mega-nav__sub-link">Order
+                        History</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-order-details.html" class="mega-nav__sub-link">Order
+                        Details</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-wishlist.html"
+                        class="mega-nav__sub-link">Wishlist</a></li>
+                    <li class="mega-nav__sub-item"><a href="account-payment-methods.html"
+                        class="mega-nav__sub-link">Payment Methods</a></li>
+                  </ul>
+
+                  <div class="mega-nav__card width-100% max-width-xs margin-x-auto">
+                    <a href="shop.html" class="block overflow-hidden">
+                      <figure class="aspect-ratio-4:3">
+                        <img class="block width-100%" src="assets/img/mega-site-nav-img-1.jpg" alt="Image description">
+                      </figure>
+                    </a>
+
+                    <div class="margin-top-sm">
+                      <h3 class="text-base"><a href="shop.html" class="mega-nav__card-title">Browse all →</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 👇 layout 3 -> gallery -->
+            <li class="mega-nav__item js-mega-nav__item">
+              <button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
+                Gallery
+                <i class="mega-nav__arrow-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 16 16">
+                    <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                      stroke-miterlimit="10">
+                      <path d="M2 2l12 12" />
+                      <path d="M14 2L2 14" />
+                    </g>
+                  </svg>
+                </i>
+              </button>
+
+              <div class="mega-nav__sub-nav-wrapper">
+                <div class="mega-nav__sub-nav mega-nav__sub-nav--layout-3">
+                  <div class="mega-nav__card">
+                    <a href="shop-category.html" class="block overflow-hidden">
+                      <figure class="aspect-ratio-4:3">
+                        <img class="block width-100%" src="assets/img/mega-site-nav-img-4.jpg" alt="Image description">
+                      </figure>
+                    </a>
+
+                    <div class="margin-top-sm">
+                      <h3 class="text-base"><a href="shop-category.html" class="mega-nav__card-title">Clothing</a></h3>
+                    </div>
+                  </div>
+
+                  <div class="mega-nav__card">
+                    <a href="shop-category.html" class="block overflow-hidden">
+                      <figure class="aspect-ratio-4:3">
+                        <img class="block width-100%" src="assets/img/mega-site-nav-img-5.jpg" alt="Image description">
+                      </figure>
+                    </a>
+
+                    <div class="margin-top-sm">
+                      <h3 class="text-base"><a href="shop-category.html" class="mega-nav__card-title">Shoes</a></h3>
+                    </div>
+                  </div>
+
+                  <div class="mega-nav__card">
+                    <a href="shop-category.html" class="block overflow-hidden">
+                      <figure class="aspect-ratio-4:3">
+                        <img class="block width-100%" src="assets/img/mega-site-nav-img-6.jpg" alt="Image description">
+                      </figure>
+                    </a>
+
+                    <div class="margin-top-sm">
+                      <h3 class="text-base"><a href="shop-category.html" class="mega-nav__card-title">Home</a></h3>
+                    </div>
+                  </div>
+
+                  <div class="mega-nav__card">
+                    <a href="shop-category.html" class="block overflow-hidden">
+                      <figure class="aspect-ratio-4:3">
+                        <img class="block width-100%" src="assets/img/mega-site-nav-img-7.jpg" alt="Image description">
+                      </figure>
+                    </a>
+
+                    <div class="margin-top-sm">
+                      <h3 class="text-base"><a href="shop-category.html" class="mega-nav__card-title">Accessories</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 👇 layout 4 -> single list -->
+            <li class="mega-nav__item js-mega-nav__item">
+              <button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
+                Support
+                <i class="mega-nav__arrow-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 16 16">
+                    <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                      stroke-miterlimit="10">
+                      <path d="M2 2l12 12" />
+                      <path d="M14 2L2 14" />
+                    </g>
+                  </svg>
+                </i>
+              </button>
+
+              <div class="mega-nav__sub-nav-wrapper">
+                <div class="mega-nav__sub-nav mega-nav__sub-nav--layout-4">
+                  <ul class="mega-nav__sub-items">
+                    <li class="mega-nav__label">Help &amp; Support</li>
+                    <li class="mega-nav__sub-item"><a href="help-center.html" class="mega-nav__sub-link">Help
+                        Center</a></li>
+                    <li class="mega-nav__sub-item"><a href="faq.html" class="mega-nav__sub-link">Frequently Asked
+                        Questions</a></li>
+                    <li class="mega-nav__sub-item"><a href="contact.html" class="mega-nav__sub-link">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="mega-nav__label">Other</li>
+
+            <!-- 👇 link -->
+            <li class="mega-nav__item">
+              <a href="https://codyhouse.co/ds/docs/templates" class="mega-nav__control" target="_blank"
+                rel="noopener">Docs</a>
+            </li>
+
+            <!-- 👇 Account link --mobile -->
+            <li class="mega-nav__item hide@md">
+              <a href="account-settings.html" class="mega-nav__control">Account</a>
+            </li>
+          </ul>
+
+          <ul class="mega-nav__items">
+            <!-- 👇 icon buttons --desktop -->
+            <li class="mega-nav__icon-btns mega-nav__icon-btns--desktop">
+              <a href="cart.html" class="mega-nav__icon-btn" aria-controls="cart-drawer">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <title>Go to cart page</title>
+                  <g class="icon__group" fill="none" stroke-linecap="square" stroke-linejoin="miter"
+                    stroke="currentColor">
+                    <polyline points="4,4 22,4 19,14 4,14 "></polyline>
+                    <circle cx="4" cy="22" r="2" fill="currentColor" stroke="none"></circle>
+                    <circle cx="20" cy="22" r="2" fill="currentColor" stroke="none"></circle>
+                    <polyline points="1,1 4,4 4,14 2,18 23,18 " stroke-linecap="butt"></polyline>
+                  </g>
+                </svg>
+
+                <span class="counter counter--critical">2 <i class="sr-only">items in cart</i></span>
+              </a>
+
+              <div class="dropdown js-dropdown">
+                <div class="mega-nav__icon-btn dropdown__wrapper inline-block">
+                  <a href="account-settings.html"
+                    class="color-inherit flex height-100% width-100% flex-center dropdown__trigger">
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <title>Go to account settings</title>
+                      <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                        stroke-miterlimit="10">
+                        <circle cx="12" cy="6" r="4" />
+                        <path d="M12 13a8 8 0 00-8 8h16a8 8 0 00-8-8z" />
+                      </g>
+                    </svg>
+                  </a>
+
+                  <ul class="dropdown__menu" aria-label="submenu" data-theme="default">
+                    <li><a href="account-order-history.html" class="dropdown__item">Orders</a></li>
+                    <li><a href="account-wishlist.html" class="dropdown__item">Wishlist</a></li>
+                    <li><a href="account-addresses.html" class="dropdown__item">Addresses</a></li>
+                    <li class="dropdown__separator" role="separator"></li>
+                    <li><a href="account-settings.html" class="dropdown__item">Account Settings</a></li>
+                    <li><a href="#0" class="dropdown__item">Log out</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <button class="reset mega-nav__icon-btn mega-nav__icon-btn--search js-tab-focus"
+                aria-label="Toggle search" aria-controls="mega-nav-search">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square"
+                    stroke-miterlimit="10">
+                    <path d="M4.222 4.222l15.556 15.556" />
+                    <path d="M19.778 4.222L4.222 19.778" />
+                    <circle cx="9.5" cy="9.5" r="6.5" />
+                  </g>
+                </svg>
+              </button>
+            </li>
+
+            <!-- 👇 button -->
+            <li class="mega-nav__item">
+              <a href="log-in.html" class="btn btn--contrast mega-nav__btn">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 👇 search -->
+      <div class="mega-nav__search js-mega-nav__search" id="mega-nav-search">
+        <div class="mega-nav__search-inner">
+          <input class="form-control width-100%" type="reset search" name="megasite-search" id="megasite-search"
+            placeholder="Search..." aria-label="Search">
+
+          <div class="margin-top-lg">
+            <p class="mega-nav__label">Quick Links</p>
+
+            <ul>
+              <li><a href="help-center.html" class="mega-nav__quick-link">Help Center</a></li>
+              <li><a href="account-order-history.html" class="mega-nav__quick-link">Your Orders</a></li>
+              <li><a href="account-wishlist.html" class="mega-nav__quick-link">Wishlist</a></li>
+              <li><a href="faq.html" class="mega-nav__quick-link">Frequently Asked
+                  Questions</a></li>
+              <li><a href="contact.html" class="mega-nav__quick-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- cart -->
+  <section class="cart container max-width-adaptive-lg padding-top-xl padding-bottom-xxl">
+    <div class="margin-bottom-lg text-center">
+      <h1>Your Cart</h1>
+    </div>
+
+    <div class="grid gap-md gap-lg@md">
+      <div class="col-8@md">
+        <ol class="margin-bottom-md" aria-label="Products in your cart">
+          <li class="cart__product flex padding-y-sm">
+            <div class="cart__product-img margin-right-sm">
+              <a href="#0" class="radius-md shadow-md"><img src="assets/img/cart-img-1.jpg" alt="Image description"></a>
+            </div>
+
+            <div class="cart__product-info">
+              <div class="text-component text-space-y-sm">
+                <h2 class="text-md"><a href="#0" class="color-inherit">Product One</a></h2>
+                <p class="text-sm color-contrast-medium">Color: Black, Size: M</p>
+              </div>
+
+              <div class="cart__product-tot">
+                <div class="select cart__select">
+                  <select class="select__input form-control" name="selectProductQty1" id="selectProductQty1"
+                    data-label="Select product quantity">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                  </select>
+
+                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                    <g stroke-width="1" stroke="currentColor">
+                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                    </g>
+                  </svg>
+                </div>
+
+                <div>
+                  <p class="text-md"><span class="sr-only">Price:</span>$49.00</p>
+
+                  <button class="cart__remove-btn margin-top-xxs">Remove</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cart__product flex padding-y-sm">
+            <div class="cart__product-img margin-right-sm">
+              <a href="#0" class="radius-md shadow-md"><img src="assets/img/cart-img-2.jpg" alt="Image description"></a>
+            </div>
+
+            <div class="cart__product-info">
+              <div class="text-component text-space-y-sm">
+                <h2 class="text-md"><a href="#0" class="color-inherit">Product Two</a></h2>
+                <p class="text-sm color-contrast-medium">Color: Black, Size: M</p>
+              </div>
+
+              <div class="cart__product-tot">
+                <div class="select cart__select">
+                  <select class="select__input form-control" name="selectProductQty2" id="selectProductQty2"
+                    data-label="Select product quantity">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                  </select>
+
+                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                    <g stroke-width="1" stroke="currentColor">
+                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                    </g>
+                  </svg>
+                </div>
+
+                <div>
+                  <p class="text-md"><span class="sr-only">Price:</span>$49.00</p>
+
+                  <button class="cart__remove-btn margin-top-xxs">Remove</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="cart__gift bg-light shadow-sm inner-glow radius-md padding-md">
+          <h2 class="text-md">
+            <span class="flex items-center">
+              <svg class="icon icon--sm margin-right-xxxs" viewBox="0 0 24 24" aria-hidden="true">
+                <g fill="none" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor">
+                  <path d="M4,3.5A2.587,2.587,0,0,1,6.667,1C10.611,1,12,6,12,6H6.667A2.587,2.587,0,0,1,4,3.5Z"></path>
+                  <path d="M17.333,6H12s1.389-5,5.333-5A2.587,2.587,0,0,1,20,3.5,2.587,2.587,0,0,1,17.333,6Z"></path>
+                  <path d="M21,13v8a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V13"></path>
+                  <rect x="1" y="6" width="22" height="4"></rect>
+                  <line x1="12" y1="6" x2="12" y2="23"></line>
+                </g>
+              </svg>
+              <span>Gift options</span>
+            </span>
+          </h2>
+
+          <div class="margin-top-sm padding-left-md">
+            <ul class="flex flex-column gap-xxxs">
+              <li>
+                <input class="radio" type="radio" name="giftOptions" id="giftOptionNone" checked>
+                <label for="giftOptionNone">None</label>
+              </li>
+
+              <li class="flex-wrap">
+                <input class="radio" type="radio" name="giftOptions" id="giftOptionMessage">
+                <label for="giftOptionMessage">Gift Card (Free)</label>
+
+                <div class="cart__gift-message">
+                  <label class="form-label margin-bottom-xxs" for="giftMessageFree">Message:</label>
+                  <textarea class="form-control width-100%" name="giftMessageFree" id="giftMessageFree"></textarea>
+                </div>
+              </li>
+
+              <li class="flex-wrap">
+                <input class="radio" type="radio" name="giftOptions" id="giftOptionWrap">
+                <label for="giftOptionWrap">Gift Wrapping and Card ($5)</label>
+
+                <div class="cart__gift-message">
+                  <label class="form-label margin-bottom-xxs" for="giftMessagePremium">Message:</label>
+                  <textarea class="form-control width-100%" name="giftMessagePremium"
+                    id="giftMessagePremium"></textarea>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4@md">
+        <div class="cart__subtotal">
+          <p class="flex justify-between"><span>Subtotal:</span> <span>$98.00</span></p>
+          <a href="checkout.html" class="btn btn--primary btn--md width-100% margin-y-xs">Checkout &rarr;</a>
+          <p class="color-contrast-medium text-sm text-center display@md">Shipping &amp; taxes calculated at checkout
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="main-footer bg-contrast-lower bg-opacity-30% padding-top-xl padding-bottom-md">
+    <div class="container max-width-lg reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="50">
+      <div class="grid gap-lg">
+        <div class="col-3@lg order-2@lg flex@lg justify-end@lg">
+          <a href="index.html" class="main-footer__logo">
+            <svg width="104" height="30" viewBox="0 0 104 30">
+              <title>Go to homepage</title>
+              <path fill="var(--color-contrast-higher)" d="M43.371 6.3v15.482c0 .567-.01 1.587.543 1.758a7.624 7.624 0 001.992.132c2.012 0 3.842-2.683 4.5-3.831a11.223 11.223 0 001.319-3.581h.689q-.087 1.069-.088 2.754 0 3.252.2 5.346c-6.586-.087-10.41-.111-17.373 0v-.6c2.34 0 2.139-1.266 2.139-2.578V6.3c0-2.091-.254-2.515-2.139-2.578v-.6q1.714.088 5.346.088 3.457 0 5.3-.088v.6c-2.299-.001-2.428.794-2.428 2.578zM69.446 16.6c0 4.278-1.508 8.188-7.7 8.188-4.324 0-7.72-1.827-7.72-8.188 0-6.18 3.187-8.233 7.72-8.233 5.525-.003 7.7 3.05 7.7 8.233zm-9.814 0c0 2.558.243 7.588 2.109 7.588s2.095-5.03 2.095-7.588-.211-7.632-2.095-7.632c-1.866-.003-2.109 5.06-2.109 7.632zM103.532 16.6c0 4.278-1.509 8.188-7.7 8.188-4.324 0-7.72-1.827-7.72-8.188 0-6.18 3.187-8.233 7.72-8.233 5.525-.003 7.7 3.05 7.7 8.233zm-9.814 0c0 2.558.243 7.588 2.109 7.588s2.095-5.03 2.095-7.588-.211-7.632-2.095-7.632c-1.866-.003-2.109 5.06-2.109 7.632zM86.907 23.672c0 3.175-2.654 4.813-3.991 5.413-3.269 1.468-8 .795-9.053.557s-2.879-.783-2.879-2.132c0-1.4 1.721-1.421 2.791-1.538a3.138 3.138 0 002.146-.835c-.568.011-2.734.223-3.97-1.208a3.606 3.606 0 01-.226-3.656c.249-.5.922-1.555 3.507-2.739a4.58 4.58 0 01-3.647-4.365 4.469 4.469 0 013.384-4.277 12.818 12.818 0 015.464-.411 4.849 4.849 0 01.813-3.493A3.007 3.007 0 0183.787 3.9c1.672 0 2.593.9 2.593 2.007a1.937 1.937 0 01-1.216 1.703 3.4 3.4 0 01-2.893-.132A2.929 2.929 0 0181.238 6.3a5.74 5.74 0 00-.161 2.27c4.2.843 4.6 3.35 4.6 4.6 0 2.866-2.348 4.805-7.046 4.805a12.73 12.73 0 01-2.842-.293c-.536.348-1.172.715-1.172 1.494q0 .981 1.07.981H82.5c1.316-.001 4.407.219 4.407 3.515zm-10.766 3.413c0 2.19 1.821 2.4 2.71 2.4a3.723 3.723 0 003.405-1.619 3.206 3.206 0 00.491-1.764c0-.484-.155-.967-1.377-.967h-4.849a4.312 4.312 0 00-.38 1.95zm.966-13.916c0 1.543.058 4.263 1.524 4.263 1.487 0 1.538-2.72 1.538-4.263s-.075-4.263-1.538-4.263c-1.443 0-1.524 2.73-1.524 4.263z"/>
+              <path fill="var(--color-primary)" d="M14 14V1H1v26h27V14H14z"/>
+              <path fill="var(--color-primary)" d="M14 1h14v13L14 1z"/>
+            </svg>
+          </a>
+        </div>
+
+        <nav class="col-9@lg order-1@lg">
+          <ul class="grid gap-lg">
+            <li class="col-6@sm col-3@md">
+              <div class="main-footer__items">
+                <h4 class="font-primary">Shop</h4>
+                <div class="main-footer__item"><a href="shop.html" class="main-footer__link">All Products</a></div>
+                <div class="main-footer__item"><a href="shop-categories.html" class="main-footer__link">Categories</a>
+                </div>
+                <div class="main-footer__item"><a href="product-v1.html" class="main-footer__link">Product v1</a></div>
+                <div class="main-footer__item"><a href="product-v2.html" class="main-footer__link">Product v2</a></div>
+                <div class="main-footer__item"><a href="cart.html" class="main-footer__link">Cart</a></div>
+                <div class="main-footer__item"><a href="checkout.html" class="main-footer__link">Checkout</a></div>
+              </div>
+            </li>
+
+            <li class="col-6@sm col-3@md">
+              <div class="main-footer__items">
+                <h4 class="font-primary">Pages</h4>
+                <div class="main-footer__item"><a href="index.html" class="main-footer__link">Home v1</a></div>
+                <div class="main-footer__item"><a href="home-v2.html" class="main-footer__link">Home v2</a></div>
+                <div class="main-footer__item"><a href="about-us.html" class="main-footer__link">About Us</a></div>
+                <div class="main-footer__item"><a href="404.html" class="main-footer__link">404</a></div>
+                <div class="main-footer__item"><a href="thank-you.html" class="main-footer__link">Thank You</a></div>
+                <div class="main-footer__item"><a href="basic-page.html" class="main-footer__link">Basic Page</a></div>
+              </div>
+            </li>
+
+            <li class="col-6@sm col-3@md">
+              <div class="main-footer__items">
+                <h4 class="font-primary">Blog</h4>
+                <div class="main-footer__item"><a href="blog.html" class="main-footer__link">Blog Gallery v1</a></div>
+                <div class="main-footer__item"><a href="blog-v2.html" class="main-footer__link">Blog Gallery v2</a>
+                </div>
+                <div class="main-footer__item"><a href="blog-post.html" class="main-footer__link">Blog Post</a></div>
+              </div>
+            </li>
+
+            <li class="col-6@sm col-3@md">
+              <div class="main-footer__items">
+                <h4 class="font-primary">Account</h4>
+                <div class="main-footer__item"><a href="account-settings.html" class="main-footer__link">Settings</a>
+                </div>
+                <div class="main-footer__item"><a href="account-addresses.html" class="main-footer__link">Addresses</a>
+                </div>
+                <div class="main-footer__item"><a href="account-order-history.html" class="main-footer__link">Order
+                    History</a></div>
+                <div class="main-footer__item"><a href="account-order-details.html" class="main-footer__link">Order
+                    Details</a></div>
+                <div class="main-footer__item"><a href="account-wishlist.html" class="main-footer__link">Wishlist</a>
+                </div>
+                <div class="main-footer__item"><a href="account-payment-methods.html" class="main-footer__link">Payment
+                    Methods</a></div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main-footer__colophon border-top padding-top-xs margin-top-lg">
+        <div class="text-sm text-xs@md color-contrast-medium flex gap-xs">
+          <span>&copy; myWebsite</span>
+          <a href="basic-page.html" class="color-contrast-high">Terms</a>
+          <a href="basic-page.html" class="color-contrast-high">Privacy</a>
+        </div>
+
+        <div class="flex items-center gap-xs">
+          <a href="#0" class="main-footer__social">
+            <svg class="icon" viewBox="0 0 16 16">
+              <title>Follow us on Twitter</title>
+              <g>
+                <path
+                  d="M16,3c-0.6,0.3-1.2,0.4-1.9,0.5c0.7-0.4,1.2-1,1.4-1.8c-0.6,0.4-1.3,0.6-2.1,0.8c-0.6-0.6-1.5-1-2.4-1 C9.3,1.5,7.8,3,7.8,4.8c0,0.3,0,0.5,0.1,0.7C5.2,5.4,2.7,4.1,1.1,2.1c-0.3,0.5-0.4,1-0.4,1.7c0,1.1,0.6,2.1,1.5,2.7 c-0.5,0-1-0.2-1.5-0.4c0,0,0,0,0,0c0,1.6,1.1,2.9,2.6,3.2C3,9.4,2.7,9.4,2.4,9.4c-0.2,0-0.4,0-0.6-0.1c0.4,1.3,1.6,2.3,3.1,2.3 c-1.1,0.9-2.5,1.4-4.1,1.4c-0.3,0-0.5,0-0.8,0c1.5,0.9,3.2,1.5,5,1.5c6,0,9.3-5,9.3-9.3c0-0.1,0-0.3,0-0.4C15,4.3,15.6,3.7,16,3z">
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a href="#0" class="main-footer__social">
+            <svg class="icon" viewBox="0 0 16 16">
+              <title>Follow us on Youtube</title>
+              <g>
+                <path
+                  d="M15.8,4.8c-0.2-1.3-0.8-2.2-2.2-2.4C11.4,2,8,2,8,2S4.6,2,2.4,2.4C1,2.6,0.3,3.5,0.2,4.8C0,6.1,0,8,0,8 s0,1.9,0.2,3.2c0.2,1.3,0.8,2.2,2.2,2.4C4.6,14,8,14,8,14s3.4,0,5.6-0.4c1.4-0.3,2-1.1,2.2-2.4C16,9.9,16,8,16,8S16,6.1,15.8,4.8z M6,11V5l5,3L6,11z">
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a href="#0" class="main-footer__social">
+            <svg class="icon" viewBox="0 0 16 16">
+              <title>Find us on Facebook</title>
+              <g>
+                <path
+                  d="M16,8.048a8,8,0,1,0-9.25,7.9V10.36H4.719V8.048H6.75V6.285A2.822,2.822,0,0,1,9.771,3.173a12.2,12.2,0,0,1,1.791.156V5.3H10.554a1.155,1.155,0,0,0-1.3,1.25v1.5h2.219l-.355,2.312H9.25v5.591A8,8,0,0,0,16,8.048Z">
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a href="#0" class="main-footer__social">
+            <svg class="icon" viewBox="0 0 16 16">
+              <title>Follow us on Instagram</title>
+              <g>
+                <circle cx="12.145" cy="3.892" r="0.96"></circle>
+                <path
+                  d="M8,12c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S10.206,12,8,12z M8,6C6.897,6,6,6.897,6,8 s0.897,2,2,2s2-0.897,2-2S9.103,6,8,6z">
+                </path>
+                <path
+                  d="M12,16H4c-2.056,0-4-1.944-4-4V4c0-2.056,1.944-4,4-4h8c2.056,0,4,1.944,4,4v8C16,14.056,14.056,16,12,16z M4,2C3.065,2,2,3.065,2,4v8c0,0.953,1.047,2,2,2h8c0.935,0,2-1.065,2-2V4c0-0.935-1.065-2-2-2H4z">
+                </path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- cart drawer -->
+  <div class="modal modal--animate-slide-left flex justify-end bg-contrast-higher bg-opacity-90% js-modal"
+    id="cart-drawer">
+    <div class="modal__content dr-cart bg shadow-md flex flex-column width-100% max-width-xxs js-tab-focus" role="alertdialog"
+      tabindex="-1" aria-labelledby="cart-drawer-title" aria-describedby="cart-drawer-description">
+      <div class="padding-top-sm padding-x-md flex-grow overflow-auto momentum-scrolling overscroll-contain">
+        <button
+          class="reset modal__close-btn modal__close-btn--inner float-right position-sticky top-0 js-modal__close js-tab-focus">
+          <svg class="icon" viewBox="0 0 20 20">
+            <title>Close modal window</title>
+            <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+              <line x1="3" y1="3" x2="17" y2="17" />
+              <line x1="17" y1="3" x2="3" y2="17" />
+            </g>
+          </svg>
+        </button>
+
+        <h2 id="cart-drawer-title">Your Cart</h2>
+
+        <ol class="margin-top-md">
+          <li class="dr-cart__product flex padding-y-sm">
+            <a href="#0" class="dr-cart__img"><img src="assets/img/cart-drawer-img-1.jpg" alt="Image description"></a>
+
+            <div>
+              <h2 class="text-base"><a href="#0" class="color-inherit">Product One</a></h2>
+              <p class="text-sm color-contrast-medium margin-top-xxxs">Color: Black, Size: M</p>
+
+              <div class="margin-top-xxxxs">
+                <div class="select dr-cart__select">
+                  <select class="select__input form-control" name="selectProductQty1" id="selectProductQty1"
+                    data-label="Select product quantity">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                  </select>
+
+                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                    <g stroke-width="1" stroke="currentColor">
+                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <p class="color-contrast-higher">$49.00</p>
+              <button class="dr-cart__remove-btn margin-top-xxxs">Remove</button>
+            </div>
+          </li>
+
+          <li class="dr-cart__product flex padding-y-sm">
+            <a href="#0" class="dr-cart__img"><img src="assets/img/cart-drawer-img-2.jpg" alt="Image description"></a>
+
+            <div>
+              <h2 class="text-base"><a href="#0" class="color-inherit">Product Two</a></h2>
+              <p class="text-sm color-contrast-medium margin-top-xxxs">Color: Black, Size: M</p>
+
+              <div class="margin-top-xxxxs">
+                <div class="select dr-cart__select">
+                  <select class="select__input form-control" name="selectProductQty2" id="selectProductQty2"
+                    data-label="Select product quantity">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                  </select>
+
+                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                    <g stroke-width="1" stroke="currentColor">
+                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <p class="color-contrast-higher">$49.00</p>
+              <button class="dr-cart__remove-btn margin-top-xxxs">Remove</button>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <footer class="bg-contrast-lower bg-opacity-30% padding-x-md padding-y-sm flex-shrink-0">
+        <p class="flex justify-between"><span>Subtotal:</span> <span>$98.00</span></p>
+        <a href="#0" class="btn btn--primary btn--md width-100% margin-y-xs">Checkout &rarr;</a>
+      </footer>
+    </div>
+  </div>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
