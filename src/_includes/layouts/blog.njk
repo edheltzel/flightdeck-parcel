@@ -3,6 +3,7 @@
   {{ content | safe }}
 
   {% for post in collections.blog | limit(9) | reverse %}
+    {# TODO: use pagination instead of the limit() filter #}
     <article>
       <a href="{{ post.url }}">
         <picture>
