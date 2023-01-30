@@ -57,7 +57,7 @@ $enable-important: true !default;
 /// xl: Extra large (large desktops)
 
 /// PLEASE NOTE:
-/// The following at-rules are NOT used by the Airframe System.
+/// The following at-rules are NOT used by the Autopilot System.
 /// This is to keep the styling process for each breakpoint as simple as possible.
 /// In other words, you'll need to edit each file to add the breakpoint you want.
 
@@ -68,7 +68,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-) !default;
+  ) !default;
 
 // Viewports
 $viewports: (
@@ -76,4 +76,4 @@ $viewports: (
   md: 700px,
   lg: 920px,
   xl: 1130px,
-) !default;
+  ) !default;

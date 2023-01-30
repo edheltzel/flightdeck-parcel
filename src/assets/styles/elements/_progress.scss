@@ -9,7 +9,7 @@ progress {
   vertical-align: baseline; // 2
 }
 
-// Airframe system
+// Autopilot system
 // ––––––––––––––––––––
 
 progress {
@@ -37,9 +37,11 @@ progress {
     border-radius: var(--border-radius);
     background: none;
   }
+
   &[value]::-webkit-progress-value {
     background-color: var(--progress-color);
   }
+
   &::-moz-progress-bar {
     background-color: var(--progress-color);
   }
@@ -47,18 +49,15 @@ progress {
   // Indeterminate state
   @media (prefers-reduced-motion: no-preference) {
     &:indeterminate {
-      background: var(--progress-background-color)
-        linear-gradient(
-          to right,
+      background: var(--progress-background-color) linear-gradient(to right,
           var(--progress-color) 30%,
-          var(--progress-background-color) 30%
-        )
-        top left / 150% 150% no-repeat;
+          var(--progress-background-color) 30%) top left / 150% 150% no-repeat;
       animation: progressIndeterminate 1s linear infinite;
 
       &[value]::-webkit-progress-value {
         background-color: transparent;
       }
+
       &::-moz-progress-bar {
         background-color: transparent;
       }
@@ -78,6 +77,7 @@ progress {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }

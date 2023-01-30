@@ -238,7 +238,7 @@ All the Eleventy configuration is done in this file, and it is broken down into 
 
 Flightdeck makes a lot of assumptions and is very opinionated - but having a good idea of how Eleventy's [data cascade](https://www.11ty.dev/docs/data-cascade/) works is always nice, as well as having some understanding on [template inherence](https://mozilla.github.io/nunjucks/templating.html#template-inheritance) when working with Nunjucks will go a long way. **But is not needed**
 
-**WIP** The Airframe CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. Airframe is a classless CSS system that plays well with semantic markup. **Documentation coming soon**
+**WIP** The Autopilot CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. Autopilot is a classless CSS system that plays well with semantic markup. **Documentation coming soon**
 
 If you're looking to extend your project with other NPM modules, Eleventy plugins, or Parcel Plugins, just reference the appropriate documentation.
 
@@ -255,7 +255,7 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
 ## 🧭 Roadmap
 
 - [x] Expand on using Eleventy Plugins
-- [ ] Create a theme using Airframe - Flightdeck's classless CSS system
+- [ ] Create a theme using Autopilot - Flightdeck's classless CSS system
 - [ ] Improve documentation
 - [ ] Add more examples
 - [ ] Expand on using Parcel Plugins
