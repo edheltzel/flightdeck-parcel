@@ -7,22 +7,22 @@ module.exports = (config) => {
   /**
    * @todo remove once 2.0 is released
    */
-  config.setBrowserSyncConfig({
-    open: false,
-    notify: true,
-    // 404
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync("dist/404/index.html");
+  // config.setBrowserSyncConfig({
+  //   open: false,
+  //   notify: true,
+  //   // 404
+  //   callbacks: {
+  //     ready: function (err, browserSync) {
+  //       const content_404 = fs.readFileSync("dist/404/index.html");
 
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(content_404);
-          res.end();
-        });
-      },
-    },
-  });
+  //       browserSync.addMiddleware("*", (req, res) => {
+  //         // Provides the 404 content without redirect.
+  //         res.write(content_404);
+  //         res.end();
+  //       });
+  //     },
+  //   },
+  // });
 
   // Watch Targets
   config.addWatchTarget("./src/assets");
