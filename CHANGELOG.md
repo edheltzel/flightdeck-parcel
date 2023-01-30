@@ -4,6 +4,24 @@ All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.6] - 2023-01-19
+
+### Changed
+- `airframe.css` is now `style.css`, only to keep things universally consistent
+- Airframe has been renamed to Autopilot
+- updates `head.njk` to reflect new style.css
+## [0.1.5] - 2023-01-19
+
+### Changed
+- updates Eleventy 2.0 Beta
+- updates Parcel to latest
+
+### Adds
+- adds `.node-version` with `16.15.0` due to Cloudflare Pages defaulting to version 12
+- adds Eleventy Dev Server to Flightdeck `workflow.js`
+### Removes
+- removes `.npmrc` no longer needed, Parcel handles this natively
+- removes browsersync from Flightdeck `workflow.js`
 ## [0.1.4] - 2022-10-19
 ### Changed
 - usage for copyright
@@ -22,9 +40,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 - readme update
-- readme now suggests using pnpm again, if preinstalling all dependancies
+- readme now suggests using pnpm again, if preinstalled all dependencies
 - parcel watch/build for images now works for any image format supported by sharpJS.
-  - images stored in subdirectory are not optimzed also.
+  - images stored in subdirectory are not optimized also.
   - removed passthrough so parcel watch/build doesn't cause an endless loop
   - sharp config includes only quality option
 - `.scrub` is now `.scrub.sh`
