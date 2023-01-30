@@ -121,26 +121,23 @@ git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
 
 ```shell
 cd flightdeck-for-eleventy
-yarn install
+pnpm install
 ```
 
 <details>
 	<summary>See all NPM packages</summary>
-  <pre>npm list
-    flightdeck-for-eleventy-and-parcel@0.0.4 /Users/ed/Projects/oss/flightdeck/flighdeck-for-eleventy
-    ├── @11ty/eleventy-plugin-syntaxhighlight@4.1.0
-    ├── @11ty/eleventy@1.0.2
-    ├── @parcel/config-default@2.7.0
-    ├── @parcel/core@2.7.0
-    ├── @parcel/transformer-sass@2.7.0
-    ├── browserlist@1.0.1
-    ├── cross-env@7.0.3
-    ├── eleventy-plugin-embed-everything@1.14.1
-    ├── html-minifier@4.0.0
-    ├── npm-run-all@4.1.5
-    ├── parcel@2.7.0
-    ├── sass@1.55.0
-    └── sharp@0.29.3</pre>
+  <pre>pnpm list
+    Legend: production dependency, optional only, dev only
+    flightdeck-for-eleventy-and-parcel@0.1.8 /Users/ed/Projects/oss/flightdeck/for-eleventy
+    devDependencies:
+    @11ty/eleventy 2.0.0-beta.2                  eleventy-plugin-embed-everything 1.15.0
+    @11ty/eleventy-plugin-syntaxhighlight 4.2.0  html-minifier 4.0.0
+    @parcel/config-default 2.8.3                 markdown-it-attrs 4.1.6
+    @parcel/core 2.8.3                           npm-run-all 4.1.5
+    @parcel/transformer-sass 2.8.3               parcel 2.8.3
+    browserlist 1.0.1                            sass 1.57.1
+    cross-env 7.0.3                              sharp 0.31.3
+  </pre>
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -151,41 +148,40 @@ There are just a few npm scripts available, but the `start` command is where all
 The focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
 
 ```shell
-yarn start
+pnpm start
 ```
 
 <details>
   <summary>Available Run Commands</summary>
-  <pre>pnpm run
-    Lifecycle scripts included in flightdeck-for-eleventy-and-parcel@0.1.0:
-      start
-        run-p dev:parcel dev:11ty
-
-    available via `npm run-script`:
-      dev:11ty
-        eleventy --serve --config=_flightdeck/.manifest.js
-      dev:parcel
-        run-p  watch:assets
-      watch:assets
-        parcel watch './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
-      build
-        run-s clean build:parcel build:11ty
-      build:11ty
-        cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js
-      build:parcel
-        parcel build './src/assets/images/*' ./src/assets/js/app.js ./src/assets/styles/app.scss --dist-dir ./dist/assets
-      clean
-        ./.scrub site
-      purge
-        ./.scrub purge</pre>
+  <pre>Lifecycle scripts:
+  start
+    run-p dev:11ty dev:parcel
+  Commands available via "pnpm run":
+    dev:11ty
+      eleventy --serve --config=_flightdeck/.manifest.js
+    dev:parcel
+      run-p  watch:assets
+    watch:assets
+      parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets
+    build
+      run-s clean build:11ty build:parcel
+    build:11ty
+      cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js
+    build:parcel
+      parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets
+    clean
+      ./.scrub.sh site
+    purge
+      ./.scrub.sh purge
+  </pre>
 
 ~~Notice the funky `||` ? This is an attempt to provide cross platform compatibility for Linux/Unix, and Windows. If your terminal doesn’t know what it is, it will skip over it.~~
 
-- `build` command - executes the production build of your site with Eleventy, includes HTML minification, compressed Sass, optimized images, and bundled javascript.
-- `clean` command - scrubs/removes the `dist/` and `.cache` directories
-- `purge` command - scrubs/removes the `dist/`, `.cache`, `node_modules`, and any lock files from npm, yarn, or pnpm.
+  - `build` command - executes the production build of your site with Eleventy, includes HTML minification, compressed Sass, optimized images, and bundled javascript.
+  - `clean` command - scrubs/removes the `dist/` and `.cache` directories
+  - `purge` command - scrubs/removes the `dist/`, `.cache`, `node_modules`, and any lock files from npm, yarn, or pnpm.
 
-Both `clean` and `purge` are executed from a bash script keep the `package.json` as clean as possible.
+  Both `clean` and `purge` are executed from a bash script keep the `package.json` as clean as possible.
 
 </details>
 
@@ -210,25 +206,25 @@ All the Eleventy configuration is done in this file, and it is broken down into 
 <details>
   <summary>
     <pre> .
-      ├──  components
-      │  └──  blockquote.js
-      ├──  components.js
-      ├──  filters
-      │  ├──  baseUrl.js
-      │  ├──  dates.js
-      │  ├──  excerpt.js
-      │  └──  limit.js
-      ├──  filters.js
-      ├──  plugins.js
-      ├──  shortcodes
-      │  ├──  codepen.js
-      │  └──  copyright.js
-      ├──  shortcodes.js
-      ├──  transforms
-      │  ├──  buildImages.js
-      │  └──  minifyHtml.js
-      ├──  transforms.js
-      └──  workflow.js</pre>
+          ├──  components
+          │  └──  blockquote.js
+          ├──  components.js
+          ├──  filters
+          │  ├──  baseUrl.js
+          │  ├──  dates.js
+          │  ├──  excerpt.js
+          │  └──  limit.js
+          ├──  filters.js
+          ├──  plugins.js
+          ├──  shortcodes
+          │  ├──  codepen.js
+          │  ├──  copyright.js
+          │  └──  version.js
+          ├──  shortcodes.js
+          ├──  transforms
+          │  └──  minifyHtml.js
+          ├──  transforms.js
+          └──  workflow.js</pre>
   </summary>
 </details>
 
@@ -238,7 +234,7 @@ All the Eleventy configuration is done in this file, and it is broken down into 
 
 Flightdeck makes a lot of assumptions and is very opinionated - but having a good idea of how Eleventy's [data cascade](https://www.11ty.dev/docs/data-cascade/) works is always nice, as well as having some understanding on [template inherence](https://mozilla.github.io/nunjucks/templating.html#template-inheritance) when working with Nunjucks will go a long way. **But is not needed**
 
-**WIP** The Airframe CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. Airframe is a classless CSS system that plays well with semantic markup. **Documentation coming soon**
+**WIP** The Autopilot CSS System uses a modified version of the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern), but we combined a couple of concepts regarding naming conventions that fit our workflow. Autopilot is a classless CSS system that plays well with semantic markup. **Documentation coming soon**
 
 If you're looking to extend your project with other NPM modules, Eleventy plugins, or Parcel Plugins, just reference the appropriate documentation.
 
@@ -255,7 +251,7 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
 ## 🧭 Roadmap
 
 - [x] Expand on using Eleventy Plugins
-- [ ] Create a theme using Airframe - Flightdeck's classless CSS system
+- [ ] Create a theme using Autopilot - Flightdeck's classless CSS system
 - [ ] Improve documentation
 - [ ] Add more examples
 - [ ] Expand on using Parcel Plugins

@@ -100,15 +100,12 @@ textarea {
   border-width: 0;
 }
 
-// Airframe
+// Autopilot
 // ––––––––––––––––––––
 
 // Force height for alternatives input types
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
-  height: calc(
-    (1rem * var(--line-height)) + (var(--form-element-spacing-vertical) * 2) +
-      (var(--border-width) * 2)
-  );
+  height: calc((1rem * var(--line-height)) + (var(--form-element-spacing-vertical) * 2) + (var(--border-width) * 2));
 }
 
 // Fieldset
@@ -139,8 +136,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
 select,
 textarea {
   appearance: none;
-  padding: var(--form-element-spacing-vertical)
-    var(--form-element-spacing-horizontal);
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
 }
 
 // Commons styles
@@ -195,8 +191,7 @@ textarea {
 input:not([type="submit"]):not([type="button"]):not([type="reset"])[disabled],
 select[disabled],
 textarea[disabled],
-:where(fieldset[disabled])
-  :is(input:not([type="submit"]):not([type="button"]):not([type="reset"]), select, textarea) {
+:where(fieldset[disabled]) :is(input:not([type="submit"]):not([type="button"]):not([type="reset"]), select, textarea) {
   --background-color: var(--form-element-disabled-background-color);
   --border-color: var(--form-element-disabled-border-color);
   opacity: var(--form-element-disabled-opacity);
@@ -208,22 +203,19 @@ textarea[disabled],
   &:not([type="checkbox"]):not([type="radio"]) {
     &[aria-invalid] {
       @if $enable-important {
-        padding-right: calc(
-          var(--form-element-spacing-horizontal) + 1.5rem
-        ) !important;
+        padding-right: calc(var(--form-element-spacing-horizontal) + 1.5rem) !important;
         padding-left: var(--form-element-spacing-horizontal);
         padding-inline-start: var(--form-element-spacing-horizontal) !important;
-        padding-inline-end: calc(
-          var(--form-element-spacing-horizontal) + 1.5rem
-        ) !important;
-      } @else {
+        padding-inline-end: calc(var(--form-element-spacing-horizontal) + 1.5rem) !important;
+      }
+
+      @else {
         padding-right: calc(var(--form-element-spacing-horizontal) + 1.5rem);
         padding-left: var(--form-element-spacing-horizontal);
         padding-inline-start: var(--form-element-spacing-horizontal);
-        padding-inline-end: calc(
-          var(--form-element-spacing-horizontal) + 1.5rem
-        );
+        padding-inline-end: calc(var(--form-element-spacing-horizontal) + 1.5rem);
       }
+
       background-position: center right 0.75rem;
       background-size: 1rem auto;
       background-repeat: no-repeat;
@@ -243,21 +235,13 @@ textarea[disabled],
 
     &:is(:active, :focus) {
       @if $enable-important {
-        --border-color: var(
-          --form-element-valid-active-border-color
-        ) !important;
-        --box-shadow: 0
-          0
-          0
-          var(--outline-width)
-          var(--form-element-valid-focus-color) !important;
-      } @else {
+        --border-color: var(--form-element-valid-active-border-color) !important;
+        --box-shadow: 0 0 0 var(--outline-width) var(--form-element-valid-focus-color) !important;
+      }
+
+      @else {
         --border-color: var(--form-element-valid-active-border-color);
-        --box-shadow: 0
-          0
-          0
-          var(--outline-width)
-          var(--form-element-valid-focus-color);
+        --box-shadow: 0 0 0 var(--outline-width) var(--form-element-valid-focus-color);
       }
     }
   }
@@ -267,21 +251,13 @@ textarea[disabled],
 
     &:is(:active, :focus) {
       @if $enable-important {
-        --border-color: var(
-          --form-element-invalid-active-border-color
-        ) !important;
-        --box-shadow: 0
-          0
-          0
-          var(--outline-width)
-          var(--form-element-invalid-focus-color) !important;
-      } @else {
+        --border-color: var(--form-element-invalid-active-border-color) !important;
+        --box-shadow: 0 0 0 var(--outline-width) var(--form-element-invalid-focus-color) !important;
+      }
+
+      @else {
         --border-color: var(--form-element-invalid-active-border-color);
-        --box-shadow: 0
-          0
-          0
-          var(--outline-width)
-          var(--form-element-invalid-focus-color);
+        --box-shadow: 0 0 0 var(--outline-width) var(--form-element-invalid-focus-color);
       }
     }
   }
@@ -290,6 +266,7 @@ textarea[disabled],
 [dir="rtl"] {
   :where(input, select, textarea) {
     &:not([type="checkbox"]):not([type="radio"]) {
+
       &[aria-invalid],
       &[aria-invalid="true"],
       &[aria-invalid="false"] {
@@ -318,6 +295,7 @@ textarea {
 
 // Select
 select {
+
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     border: 0;
@@ -346,7 +324,7 @@ select {
 
 // Helper
 :where(input, select, textarea) {
-  + small {
+  +small {
     display: block;
     width: 100%;
     margin-top: calc(var(--spacing) * -0.75);

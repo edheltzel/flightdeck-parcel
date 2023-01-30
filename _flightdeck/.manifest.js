@@ -11,7 +11,7 @@ module.exports = (config) => {
   addTransforms(config); // htmlmin
   addShortcodes(config); // copyright year, youtube embeds, etc.
   addPlugins(config); // eleventy plugins
-  addComponents(config); // custom components for Flightdeck Airframe
+  addComponents(config); // custom components for Flightdeck Autopilot
   return {
     dir: {
       input: "src",
