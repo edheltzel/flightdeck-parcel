@@ -6,4 +6,7 @@
     ".cache/": true,
     ".vscode/**": true,
   },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#E50A69",
+  }
 }
