@@ -12,39 +12,40 @@
 <!-- TABLE OF CONTENTS -->
 <details open>
   <summary>📔 Table of Contents</summary>
-
-- [About the Project](#about-the-project)
-  * [Screenshots](#screenshots)
-  * [Tech Stack](#tech-stack)
-  * [Features](#features)
-  * [Color Reference](#reference)
-  * [Environment Variables](#variables)
-- [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Running Tests](#running-tests)
-  * [Run Locally](#run-locally)
-  * [Deployment](#deployment)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-  * [Code of Conduct](#code-of-conduct)
-- [FAQ](#faq)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <ul><li><a href="#dependencies">Dependencies</a></li></ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project 🌟
+## 🌟 About The Project
 
 The Flightdeck objective is to provide a unified starting point for all your Jamstack websites, by leveraging popular static-site-generators _(SSG)_.
 
 This flavor of Flightdeck uses [Eleventy](https://www.11ty.dev/) with an opinionated workflow, keeping Eleventy in control of the entire development and build processes.
 
-### Inspiration 💡
+### 💡 Inspiration
 
 Like other versions of Flightdeck, this is just an adaptation of the original [Flightdeck](https://github.com/flight-deck/Flightdeck-Jekyll) project that uses [Jekyll](https://jekyllrb.com/) for its static site generation and [Gulp](https://gulpjs.com/) for all assets bundling. (The [Hugo](https://github.com/flight-deck/Flightdeck-Hugo) version, takes full advantage of Hugo's asset pipeline.)
 
@@ -52,7 +53,7 @@ Jérôme Coupé's post [Structuring Eleventy Projects](https://www.webstoemp.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Tech Stack 👾
+### 👾 Tech Stack
 
 - [Eleventy](https://www.11ty.dev/)
 - [Parcel](https://parceljs.org/)
@@ -83,18 +84,18 @@ Jérôme Coupé's post [Structuring Eleventy Projects](https://www.webstoemp.com
 
 <!-- GETTING STARTED -->
 
-## Getting Started 🧰
+## 🧰 Getting Started
 
 All version of Flightdeck use NodeJS. So a very minimal and basic knowledge of Node and Git should be had when using Flightdeck as your launchpad.
 
 > In the future, we plan to include Docker and make all Flightdeck starters available as a Yeoman and/or NPM package.
 
-### Prerequisites 🧯
+### 🧯 Prerequisites
 
 We are assuming that you already have Node with NPM and Git installed on your system – it is also ideal that you have the latest [LTS](https://nodejs.org/en/download/) release of Node.
 **As of this writing the current LTS release is `16.16.0`**
 
-#### Dependencies 🤖
+#### 🤖 Dependencies
 
 `pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `pnpm` or `yarn` separately.
 
@@ -112,7 +113,7 @@ We are assuming that you already have Node with NPM and Git installed on your sy
   corepack prepare pnpm@latest --activate
   ```
 
-### Installation ⚙️
+### ⚙️ Installation
 
 ```shell
 git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
@@ -140,7 +141,7 @@ pnpm install
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Run Locally 🏃‍♂️
+### 🏃‍♂️ Run Locally
 
 There are just a few npm scripts available, but the `start` command is where all the magic 🪄✨ happens – it will spin up the development server from Eleventy.
 
@@ -186,7 +187,7 @@ pnpm start
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Deployment 🚀
+### ‍🚀 Deployments
 
 Deployments for this project are completely up you and your needs.
 
@@ -196,7 +197,7 @@ We really like Netlify but also enjoy using CI/CD tools or even using our [Lifto
 
 <!-- File Structure -->
 
-### File Structure 📁
+### 📁 File Structure
 
 Flightdeck is a very opinionated starter kit, so the file structure is very specific to our needs. The Eleventy configuration file is located under `_flightdeck` and is called `.manifest.js`.
 
@@ -229,7 +230,7 @@ All the Eleventy configuration is done in this file, and it is broken down into 
 
 <!-- USAGE -->
 
-### Usage 👀
+### 👀 Usage
 
 Flightdeck makes a lot of assumptions and is very opinionated - but having a good idea of how Eleventy's [data cascade](https://www.11ty.dev/docs/data-cascade/) works is always nice, as well as having some understanding on [template inherence](https://mozilla.github.io/nunjucks/templating.html#template-inheritance) when working with Nunjucks will go a long way. **But is not needed**
 
@@ -247,7 +248,7 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
 
 <!-- ROADMAP -->
 
-## Roadmap 🧭
+## 🧭 Roadmap
 
 - [x] Expand on using Eleventy Plugins
 - [ ] Create a theme using Autopilot - Flightdeck's classless CSS system
@@ -264,7 +265,7 @@ See the [open issues](https://github.com/flight-deck/flightdeck-for-eleventy/iss
 
 <!-- CONTRIBUTING -->
 
-## Contributing 👋
+## 👋 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -281,14 +282,8 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- LICENSE -->
 
-## License ⚠️
+## ⚠️ License
 
 Distributed under the WTFPL License. See `LICENSE` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Acknowledgments 💎
-
-There are a lot of starter projects for Eleventy which can be found at [Eleventy Starters](https://www.11ty.dev/docs/starter/). Filters and shortcode inspiration are from, [11ty.rocks](https://11ty.rocks), [Eleventy Recipes](https://11ty.recipes/), and [webstoemp.com](https://www.webstoemp.com/).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
