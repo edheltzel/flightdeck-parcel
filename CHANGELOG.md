@@ -3,9 +3,26 @@
 All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.1.10] - 2023-02-04
+### Changed
+- Autopilot update and revert to original SMACSS scaffold
 
+### TODO:
+- better introduce the 7-1 patteren for easier theming
+## [0.1.9] - 2023-02-04
+### Changed
+- fixes all the issues introduced with v0.1.6, v0.1.7, and v0.1.8
+
+### Adds
+- adds Collections back
+- removes Views directory: clone of FD and push to master in new project caused issues with the releases and fudged up the template.
+
+## [0.1.8] - 2023-01-19
+- Removed  see v0.1.9
+
+## [0.1.7] - 2023-01-19
+- Removed  see v0.1.9
 ## [0.1.6] - 2023-01-19
-
 ### Changed
 - `airframe.css` is now `style.css`, only to keep things universally consistent
 - Airframe has been renamed to Autopilot
