@@ -4,36 +4,16 @@ const isProd = process.env.ELEVENTY_ENV === "production";
 
 module.exports = (config) => {
   config.setQuietMode(true); // reduce console output
-
-  /**
-   * @todo remove once 2.0 is released
-   */
-  // config.setBrowserSyncConfig({
-  //   open: false,
-  //   notify: true,
-  //   // 404
-  //   callbacks: {
-  //     ready: function (err, browserSync) {
-  //       const content_404 = fs.readFileSync("dist/404/index.html");
-
-  //       browserSync.addMiddleware("*", (req, res) => {
-  //         // Provides the 404 content without redirect.
-  //         res.write(content_404);
-  //         res.end();
-  //       });
-  //     },
-  //   },
-  // });
-
   config.setServerOptions({
     /**
      * @link https://github.com/11ty/eleventy/issues/1305
      * @see https://www.11ty.dev/docs/dev-server/
      * @description local dev server runs on port 8080 by default-> http://localhost:8080
     */
-    // port: 8080,
-    showVersion: true, // prints eleventy dev server version on the command line
+    showVersion: true, // show the server version number on the command line
+    showAllHosts: true, // show local network IP address for device testing
     injectedScriptsFolder: ".flightdeck",
+
   });
 
   // Watch Targets
