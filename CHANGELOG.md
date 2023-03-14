@@ -4,9 +4,22 @@ All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.13] - 2023-03-14
+
+### Changed
+- package.json update
+### Adds
+Includes the following packages as dependencies:
+- adds luxon
+- adds markdown-it
+## [0.1.12] - 2023-03-07
+### Changed
+
+- Packages upgraded
+  - includes custom 404 page for 11ty Dev Server.
 ## [0.1.11] - 2023-02-09
 ### Changed
-- includes 11ty 2.0 
+- includes 11ty 2.0
 
 ## [0.1.10] - 2023-02-04
 ### Changed
