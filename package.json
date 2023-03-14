@@ -1,6 +1,6 @@
 {
   "name": "flightdeck-for-eleventy-and-parcel",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "An opinionated Jamstack starter project for Eleventy with ParcelJS.",
   "scripts": {
     "start": "run-p dev:11ty dev:parcel",
@@ -26,6 +26,8 @@
     "cross-env": "^7.0.3",
     "eleventy-plugin-embed-everything": "^1.15.1",
     "html-minifier": "^4.0.0",
+    "luxon": "^3.3.0",
+    "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.8.3",
