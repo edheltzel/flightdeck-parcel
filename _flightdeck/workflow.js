@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const isProd = process.env.ELEVENTY_ENV === "production";
+const isProd = process.env.ENV === "production";
 
 module.exports = (config) => {
   config.setQuietMode(true); // reduce console output

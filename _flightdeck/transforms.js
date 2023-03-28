@@ -1,5 +1,5 @@
 const minifyHtml = require("./transforms/minifyHtml");
-const isProd = process.env.ELEVENTY_ENV === "production";
+const isProd = process.env.ENV === "production";
 
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
