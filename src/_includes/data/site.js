@@ -1,4 +1,4 @@
-const isDev = process.env.ELEVENTY_ENV === "development";
+const isDev = process.env.ENV === "development";
 
 const baseUrl = isDev ? `localhost:8080` : `https://google.com/`;
 const site = {
