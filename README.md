@@ -97,20 +97,20 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
 #### 🤖 Dependencies
 
-`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `pnpm` or `yarn` separately.
+`yarn` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `yarn` commands work out-of-the-box, without having to install `yarn` or `pnpm` separately.
 
 > **Note:** Currently Parcel has an issue performing **auto install** when using pnpm. So if you'd like for Parcel to handle installation of dependencies, we'd recommend that you **stick with NPM or Yarn**. If you'd rather handle the install of dependencies manually, the PNPM is a great option.
 
-> Please be aware that `pnpm` will not be the most recent version and as of this writing, PNPM is at version [7.12.2](https://github.com/pnpm/pnpm/releases).
+> Please be aware that `yarn` will not be the most recent version and as of this writing, Yarn is at version [3.5.0](https://github.com/yarnpkg/berry/releases).
 
-**Also, You can swap `pnpm` in favor of `yarn` or `npm` without any friction.**
+**Also, You can swap `yarn` in favor of `npm` or `pnpm` without any friction.**
 
-- pnpm
+- yarn
 
   ```sh
   corepack enable
 
-  corepack prepare pnpm@latest --activate
+  corepack prepare yarn@latest --activate
   ```
 
 ### ⚙️ Installation
@@ -121,22 +121,29 @@ git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
 
 ```shell
 cd flightdeck-for-eleventy
-pnpm install
+yarn install
 ```
 
 <details>
 	<summary>See all NPM packages</summary>
-  <pre>pnpm list
-    Legend: production dependency, optional only, dev only
-    flightdeck-for-eleventy-and-parcel@0.1.8 /Users/ed/Projects/oss/flightdeck/for-eleventy
-    devDependencies:
-    @11ty/eleventy 2.0.0-beta.2                  eleventy-plugin-embed-everything 1.15.0
-    @11ty/eleventy-plugin-syntaxhighlight 4.2.0  html-minifier 4.0.0
-    @parcel/config-default 2.8.3                 markdown-it-attrs 4.1.6
-    @parcel/core 2.8.3                           npm-run-all 4.1.5
-    @parcel/transformer-sass 2.8.3               parcel 2.8.3
-    browserlist 1.0.1                            sass 1.57.1
-    cross-env 7.0.3                              sharp 0.31.3
+  <pre>yarn info --name-only
+      ├─ @11ty/eleventy-plugin-syntaxhighlight@npm:4.2.0
+      ├─ @11ty/eleventy@npm:2.0.0
+      ├─ @parcel/config-default@npm:2.8.3
+      ├─ @parcel/core@npm:2.8.3
+      ├─ @parcel/transformer-sass@npm:2.8.3
+      ├─ browserlist@npm:1.0.1
+      ├─ cross-env@npm:7.0.3
+      ├─ eleventy-plugin-embed-everything@npm:1.15.1
+      ├─ flightdeck-for-eleventy-and-parcel@workspace:.
+      ├─ html-minifier@npm:4.0.0
+      ├─ luxon@npm:3.3.0
+      ├─ markdown-it-attrs@npm:4.1.6
+      ├─ markdown-it@npm:13.0.1
+      ├─ npm-run-all@npm:4.1.5
+      ├─ parcel@npm:2.8.3
+      ├─ sass@npm:1.60.0
+      └─ sharp@npm:0.31.3
   </pre>
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -148,7 +155,7 @@ There are just a few npm scripts available, but the `start` command is where all
 The focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
 
 ```shell
-pnpm start
+yarn start
 ```
 
 <details>
@@ -156,7 +163,7 @@ pnpm start
   <pre>Lifecycle scripts:
   start
     run-p dev:11ty dev:parcel
-  Commands available via "pnpm run":
+  Commands available via "yarn run":
     dev:11ty
       eleventy --serve --config=_flightdeck/.manifest.js
     dev:parcel
@@ -166,7 +173,7 @@ pnpm start
     build
       run-s clean build:11ty build:parcel
     build:11ty
-      cross-env ELEVENTY_ENV=production eleventy --config=_flightdeck/.manifest.js
+      cross-env ENV=production eleventy --config=_flightdeck/.manifest.js
     build:parcel
       parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets
     clean
