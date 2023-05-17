@@ -208,6 +208,31 @@ Flightdeck is a very opinionated starter kit, so the file structure is very spec
 
 All the Eleventy configuration is done in this file, and it is broken down into sections for easier navigation and maintainability. The `.flightdeck.config.js` file is where you will find the `addPassthroughCopy` and `addWatchTarget` methods along with custom filters, shortcodes, and Eleventy Plugins. All Eleventy configuration options are available, see the [Eleventy Docs](https://www.11ty.dev/docs/config/) for more information.
 
+<details>
+  <summary>
+    <pre> .
+          ├──  components
+          │  └──  blockquote.js
+          ├──  components.js
+          ├──  filters
+          │  ├──  baseUrl.js
+          │  ├──  dates.js
+          │  ├──  excerpt.js
+          │  └──  limit.js
+          ├──  filters.js
+          ├──  plugins.js
+          ├──  shortcodes
+          │  ├──  codepen.js
+          │  ├──  copyright.js
+          │  └──  version.js
+          ├──  shortcodes.js
+          ├──  transforms
+          │  └──  minifyHtml.js
+          ├──  transforms.js
+          └──  workflow.js</pre>
+  </summary>
+</details>
+
 <!-- USAGE -->
 ### 👀 Usage
 
