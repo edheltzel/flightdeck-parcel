@@ -97,20 +97,20 @@ We are assuming that you already have Node with NPM and Git installed on your sy
 
 #### 🤖 Dependencies
 
-`yarn` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `yarn` commands work out-of-the-box, without having to install `yarn` or `pnpm` separately.
+`pnpm` is our package manager of choice – we highly recommend you enable Node's [corepack](https://nodejs.org/api/corepack.html), this way all the `pnpm` commands work out-of-the-box, without having to install `yarn` or `pnpm` separately.
 
-> **Note:** Currently Parcel has an issue performing **auto install** when using pnpm. So if you'd like for Parcel to handle installation of dependencies, we'd recommend that you **stick with NPM or Yarn**. If you'd rather handle the install of dependencies manually, the PNPM is a great option.
+> **Note:** Currently Parcel has an issue performing **auto install** when using pnpm, even through the docs state otherwise. So if you'd like for Parcel to handle installation of dependencies, we'd recommend that you **stick with NPM**. If you'd rather handle the install of dependencies manually, then PNPM is a great option.
 
-> Please be aware that `yarn` will not be the most recent version and as of this writing, Yarn is at version [3.5.0](https://github.com/yarnpkg/berry/releases).
+> Please be aware that `pnpm` will not be the most recent version and as of this writing, Pnpm is at version [8.5.1](https://github.com/pnpm/pnpm/releases).
 
 **Also, You can swap `yarn` in favor of `npm` or `pnpm` without any friction.**
 
-- yarn
+- pnpm
 
   ```sh
   corepack enable
 
-  corepack prepare yarn@latest --activate
+  corepack prepare pnpm@latest --activate
   ```
 
 ### ⚙️ Installation
@@ -121,29 +121,28 @@ git clone https://github.com/flight-deck/flightdeck-for-eleventy.git
 
 ```shell
 cd flightdeck-for-eleventy
-yarn install
+pnpm install
 ```
 
 <details>
 	<summary>See all NPM packages</summary>
-  <pre>yarn info --name-only
-      ├─ @11ty/eleventy-plugin-syntaxhighlight@npm:4.2.0
-      ├─ @11ty/eleventy@npm:2.0.0
-      ├─ @parcel/config-default@npm:2.8.3
-      ├─ @parcel/core@npm:2.8.3
-      ├─ @parcel/transformer-sass@npm:2.8.3
-      ├─ browserlist@npm:1.0.1
-      ├─ cross-env@npm:7.0.3
-      ├─ eleventy-plugin-embed-everything@npm:1.15.1
-      ├─ flightdeck-for-eleventy-and-parcel@workspace:.
-      ├─ html-minifier@npm:4.0.0
-      ├─ luxon@npm:3.3.0
-      ├─ markdown-it-attrs@npm:4.1.6
-      ├─ markdown-it@npm:13.0.1
-      ├─ npm-run-all@npm:4.1.5
-      ├─ parcel@npm:2.8.3
-      ├─ sass@npm:1.60.0
-      └─ sharp@npm:0.31.3
+  <pre>devDependencies:
+@11ty/eleventy 2.0.1
+@11ty/eleventy-plugin-syntaxhighlight 5.0.0
+@parcel/config-default 2.8.3
+@parcel/core 2.8.3
+@parcel/transformer-sass 2.8.3
+browserlist 1.0.1
+cross-env 7.0.3
+eleventy-plugin-embed-everything 1.16.0
+html-minifier 4.0.0
+luxon 3.3.0
+markdown-it 13.0.1
+markdown-it-attrs 4.1.6
+npm-run-all 4.1.5
+parcel 2.8.3
+sass 1.62.1
+sharp 0.31.3
   </pre>
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -155,25 +154,30 @@ There are just a few npm scripts available, but the `start` command is where all
 The focus here is to keep Eleventy in control of the entire development and build processes, to keep things simple.
 
 ```shell
-yarn start
+pnpm start
 ```
+  - `build` command - executes the production build of your site with Eleventy, includes HTML minification, compressed Sass, optimized images, and bundled javascript.
+  - `clean` command - scrubs/removes the `dist/` and `.cache` directories
+  - `purge` command - scrubs/removes the `dist/`, `.cache`, `node_modules`, and any lock files from npm, yarn, or pnpm.
+
+  Both `clean` and `purge` are executed from a bash script to keep the `package.json` as clean as possible.
 
 <details>
-  <summary>Available Run Commands</summary>
+  <summary>All Available Run Commands</summary>
   <pre>Lifecycle scripts:
   start
     run-p dev:11ty dev:parcel
-  Commands available via "yarn run":
+  Commands available via "pnpm run":
     dev:11ty
-      eleventy --serve --config=_flightdeck/.manifest.js
+      eleventy --serve --config=_flightdeck/flightdeck.config.js
     dev:parcel
-      run-p  watch:assets
+      run-p watch:assets
     watch:assets
       parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets
     build
       run-s clean build:11ty build:parcel
     build:11ty
-      cross-env ENV=production eleventy --config=_flightdeck/.manifest.js
+      cross-env ENV=production eleventy --config=_flightdeck/flightdeck.config.js --incremental
     build:parcel
       parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets
     clean
@@ -181,16 +185,8 @@ yarn start
     purge
       ./.scrub.sh purge
   </pre>
-
-~~Notice the funky `||` ? This is an attempt to provide cross platform compatibility for Linux/Unix, and Windows. If your terminal doesn’t know what it is, it will skip over it.~~
-
-  - `build` command - executes the production build of your site with Eleventy, includes HTML minification, compressed Sass, optimized images, and bundled javascript.
-  - `clean` command - scrubs/removes the `dist/` and `.cache` directories
-  - `purge` command - scrubs/removes the `dist/`, `.cache`, `node_modules`, and any lock files from npm, yarn, or pnpm.
-
-  Both `clean` and `purge` are executed from a bash script keep the `package.json` as clean as possible.
-
 </details>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -206,9 +202,9 @@ We really like Netlify but also enjoy using CI/CD tools or even using our [Lifto
 
 ### 📁 File Structure
 
-Flightdeck is a very opinionated starter kit, so the file structure is very specific to our needs. The Eleventy configuration file is located under `_flightdeck` and is called `.manifest.js`.
+Flightdeck is a very opinionated starter kit, so the file structure is very specific to our needs. The Eleventy configuration file is located under `_flightdeck` and is called `.flightdeck.config.js`.
 
-All the Eleventy configuration is done in this file, and it is broken down into sections for easier navigation and maintainability. The `.manifest.js` file is where you will find the `addPassthroughCopy` and `addWatchTarget` methods along with custom filters, shortcodes, and Eleventy Plugins. All Eleventy configuration options are available, see the [Eleventy Docs](https://www.11ty.dev/docs/config/) for more information.
+All the Eleventy configuration is done in this file, and it is broken down into sections for easier navigation and maintainability. The `.flightdeck.config.js` file is where you will find the `addPassthroughCopy` and `addWatchTarget` methods along with custom filters, shortcodes, and Eleventy Plugins. All Eleventy configuration options are available, see the [Eleventy Docs](https://www.11ty.dev/docs/config/) for more information.
 
 <details>
   <summary>
@@ -251,6 +247,8 @@ If you're looking to extend your project with other NPM modules, Eleventy plugin
   - [Parcel Javascript Docs](https://parceljs.org/languages/javascript/)
 - [Nunjucks Docs](https://mozilla.github.io/nunjucks/templating.html)
 - [NPM Package Docs](https://docs.npmjs.com/using-npm-packages-in-your-projects)
+
+If you're a VSCode user then I highly suggest using [Better Nunjucks for VSCode](https://marketplace.visualstudio.com/items?itemName=ginfuru.better-nunjucks), enable it for at the workspace level.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
