@@ -194,7 +194,9 @@ pnpm start
 
 Deployments for this project are completely up you and your needs.
 
-We really like Netlify but also enjoy using CI/CD tools or even using our [Liftoff Deployment Script](https://github.com/flight-deck/Lifftoff-Deploy-Script)
+We really like Netlify but we also manage servers and enjoy using our [Liftoff Deployment Script](https://github.com/flight-deck/Lifftoff-Deploy-Script).
+
+If you use Netlify, you can use the `netlify.toml` file to configure your build and deployment settings.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

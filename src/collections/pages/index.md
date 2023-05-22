@@ -19,4 +19,13 @@ permalink: /
 
 ## Blah Blah Blah
 
-<img src="/assets/images/spacex/testing.jpeg" alt="test">
+<figure>
+  <img
+    src="/assets/images/spacex/testing.jpeg"
+    alt="rocket landing"
+  />
+  <figcaption>
+    Image from
+    <a href="https://unsplash.com/photos/MEW1f-yu2KI" target="_blank">unsplash.com</a>
+  </figcaption>
+</figure>
