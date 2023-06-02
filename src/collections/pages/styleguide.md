@@ -119,7 +119,7 @@ A reference to the [image](#image).
 <!-- Buttons-->
 <section id="buttons">
   <h2>Buttons</h2>
-  <div class="grid">
+  <div class="grid" style="margin-top: 1rem">
     <button>Primary</button>
     <button class="secondary">Secondary</button>
     <button class="contrast">Contrast</button>
@@ -129,6 +129,13 @@ A reference to the [image](#image).
     <button class="outline secondary">Secondary outline</button>
     <button class="outline contrast">Contrast outline</button>
   </div>
+  <h4>Button Links</h4>
+  <div class="grid">
+    {% button "#", "Link Button" %}
+    {% button "https://google.com", "Go To Google.com 👉" %}
+  </div>
+</section><!-- End Buttons -->
+
 </section><!-- End Buttons -->
 
 <!-- Form elements-->
