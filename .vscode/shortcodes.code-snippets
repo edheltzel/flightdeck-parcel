@@ -28,4 +28,22 @@
     ],
     "description": "adds the package.json version number"
   },
+  "Component: Blockquote with citation": {
+    "prefix": [
+      "blockquote"
+    ],
+    "body": [
+      "{% blockquote \"${1:Quote}\", \"${2:source}\" %}"
+    ],
+    "description": "adds a blockquote with citation using the {% blockquote %} shortcode"
+  },
+  "Component: Button for links": {
+    "prefix": [
+      "button"
+    ],
+    "body": [
+      "{% button \"${1:url}\", \"${2:label}\" %}"
+    ],
+    "description": "adds a button that links to internal/external urls using the {% button %} shortcode"
+  },
 }

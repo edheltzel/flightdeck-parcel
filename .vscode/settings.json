@@ -8,6 +8,12 @@
     "CHANGELOG.md": true
   },
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#E50A69",
-  }
+    "titleBar.activeForeground": "#46f6f0",
+  },
+  "cSpell.words": [
+    "awsm",
+    "endraw",
+    "jeromecoupe",
+    "sakura"
+  ]
 }
