@@ -8,7 +8,8 @@
     "body": [
       "{% codepen \"${1:Url}\", ${2:Height}, \"${3:Tabs}\", \"${4:ThemeID}\" %}"
     ],
-    "description": "Eleventy Shortcode to embed Codepens by URL. Url is required – Optional: Height (must be a number), Tabs, ThemeID"
+    "description": "Eleventy Shortcode to embed Codepens by URL. Url is required – Optional: Height (must be a number), Tabs, ThemeID",
+    "scope": "markdown,html,liquid,nunjucks,webc"
   },
   "Add Copyright Year": {
     "prefix": [
@@ -26,7 +27,9 @@
     "body": [
       "{% version %}"
     ],
-    "description": "adds the package.json version number"
+    "description": "adds the package.json version number",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
   },
   "Component: Blockquote with citation": {
     "prefix": [
@@ -35,7 +38,9 @@
     "body": [
       "{% blockquote \"${1:Quote}\", \"${2:source}\" %}"
     ],
-    "description": "adds a blockquote with citation using the {% blockquote %} shortcode"
+    "description": "adds a blockquote with citation using the {% blockquote %} shortcode",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
   },
   "Component: Button for links": {
     "prefix": [
@@ -44,6 +49,8 @@
     "body": [
       "{% button \"${1:url}\", \"${2:label}\" %}"
     ],
-    "description": "adds a button that links to internal/external urls using the {% button %} shortcode"
+    "description": "adds a button that links to internal/external urls using the {% button %} shortcode",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
   },
 }

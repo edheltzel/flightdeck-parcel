@@ -7,9 +7,6 @@
     ".vscode/**": false,
     "CHANGELOG.md": true
   },
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#46f6f0",
-  },
   "cSpell.words": [
     "awsm",
     "endraw",
