@@ -1,9 +1,9 @@
-const addWorkflow = require("./workflow");
-const addFilters = require("./filters");
-const addTransforms = require("./transforms");
-const addShortcodes = require("./shortcodes");
-const addPlugins = require("./plugins");
-const addComponents = require("./components");
+const addWorkflow = require("./_flightdeck/workflow");
+const addFilters = require("./_flightdeck/filters");
+const addTransforms = require("./_flightdeck/transforms");
+const addShortcodes = require("./_flightdeck/shortcodes");
+const addPlugins = require("./_flightdeck/plugins");
+const addComponents = require("./_flightdeck/components");
 
 module.exports = (config) => {
   addWorkflow(config); // browsersync, layout aliases, watch, passthrough copy
