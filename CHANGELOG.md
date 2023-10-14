@@ -4,7 +4,18 @@ All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.18] - 2023-06-02
+## [0.2.0] - 2023-10-14
+
+### Added
+- bun as a package manager support
+
+### Changed
+- Updated node to version 18.17.1 LTS
+- Updated dependencies
+- To keep things simple 11ty config uses default `.eleventy.js`
+- `sharp` added a `trustedDependancies` so Bun will work as a package manager
+- npm script: `purge` updated to include `bun.lockb`
+- includes `bun.lockb` and `pnpm-lock.yaml`
 
 ### Changed
 
