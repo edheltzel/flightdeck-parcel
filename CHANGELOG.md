@@ -13,9 +13,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated node to version 18.17.1 LTS
 - Updated dependencies
 - To keep things simple 11ty config uses default `.eleventy.js`
-- `sharp` added a `trustedDependancies` so Bun will work as a package manager
 - npm script: `purge` updated to include `bun.lockb`
 - includes `bun.lockb` and `pnpm-lock.yaml`
+- `sharp` added a `trustedDependancies` so Bun will work as a package manager
+  - [see issue #35 from flightdeck-for-11ty(esbuild version)](https://github.com/edheltzel/flightdeck-for-11ty/issues/35)
 
 ### Changed
 
