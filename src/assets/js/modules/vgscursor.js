@@ -10,7 +10,7 @@ export default function VGSCursor() {
    * The cursor element.
    * @type {HTMLElement}
    */
-  const cursorElement = document.querySelector(".mouse-cursor");
+  const cursorElement = document.querySelector(".vgs-cursor");
 
   if (cursorElement) {
 
