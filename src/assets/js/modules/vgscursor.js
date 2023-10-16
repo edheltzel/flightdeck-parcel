@@ -4,8 +4,7 @@
  * @function VGSCursor
  * @returns {void}
  */
-export default function VGSCursor() {
-
+export function VGSCursor() {
   /**
    * The cursor element.
    * @type {HTMLElement}
@@ -13,7 +12,6 @@ export default function VGSCursor() {
   const cursorElement = document.querySelector(".vgs-cursor");
 
   if (cursorElement) {
-
     /**
      * The inner cursor element.
      * @type {HTMLElement}
@@ -80,7 +78,10 @@ export default function VGSCursor() {
      * @returns {void}
      */
     function handleMouseOut(event) {
-      if (!event.target.matches("a, .cursor-pointer") && (!event.relatedTarget || !event.relatedTarget.matches("a, .cursor-pointer"))) {
+      if (
+        !event.target.matches("a, .cursor-pointer") &&
+        (!event.relatedTarget || !event.relatedTarget.matches("a, .cursor-pointer"))
+      ) {
         innerCursor.classList.remove("cursor-hover");
         outerCursor.classList.remove("cursor-hover");
         isHovering = false;
@@ -95,5 +96,3 @@ export default function VGSCursor() {
     outerCursor.style.visibility = "visible";
   }
 }
-
-VGSCursor();

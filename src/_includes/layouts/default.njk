@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="">
   <head>
     {%- include "partials/meta.njk" -%}
   </head>
@@ -10,9 +10,9 @@
     {% include "partials/navigation.njk" %}
     <!-- Main-->
     <main class="container" aria-label="Content">
-      {% block main %}{% endblock %}
 
-      {% include "components/button-themeSwitcher.njk" %}
+      {%- block main %}{% endblock -%}
+
       {% include "partials/footer.njk" %}
     </main>
     <!-- End Main -->

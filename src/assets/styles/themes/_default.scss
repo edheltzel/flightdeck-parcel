@@ -16,6 +16,7 @@
 // Dark theme (Auto)
 // Automatically enabled if user has Dark mode enabled
 @import "default/dark";
+
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     @include dark;
@@ -26,6 +27,16 @@
 // Enabled if forced with data-theme="dark"
 [data-theme="dark"] {
   @include dark;
+
+  a#mode {
+    .mode-moon {
+      display: none;
+    }
+
+    .mode-sunny {
+      display: block;
+    }
+  }
 }
 
 // Accent-color
@@ -34,4 +45,18 @@ progress,
 [type="radio"],
 [type="range"] {
   accent-color: var(--primary);
+}
+
+.h1 {
+  font-size: clamp(1rem, -6.7586rem + 24.8276vw, 10rem);
+  color: transparent;
+  font-weight: bold;
+  position: relative;
+  background-image: linear-gradient(90deg, var(--clip-text-color-1), var(--clip-text-color-2), var(--clip-text-color-3));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.logo {
+  background: image-set(url(../images/logo.png) 2x, url(../images/logo.png) 1x);
 }

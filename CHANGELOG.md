@@ -7,22 +7,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [0.2.0] - 2023-10-14
 
 ### Added
+- Package updates: Parcel v2.10.0
 - bun as a package manager support
+  - `sharp` added a `trustedDependancies` so Bun will work as a package manager
+    - [see issue #35 from flightdeck-for-11ty(esbuild version)](https://github.com/edheltzel/flightdeck-for-11ty/issues/35)
+  - includes `bun.lockb` and `pnpm-lock.yaml`
+- includes visual guidance system (VGS) modules
+  - follow cursor
+  - theme toggle
 
 ### Changed
 - Updated node to version 18.17.1 LTS
 - Updated dependencies
 - To keep things simple 11ty config uses default `.eleventy.js`
 - npm script: `purge` updated to include `bun.lockb`
-- includes `bun.lockb` and `pnpm-lock.yaml`
-- `sharp` added a `trustedDependancies` so Bun will work as a package manager
-  - [see issue #35 from flightdeck-for-11ty(esbuild version)](https://github.com/edheltzel/flightdeck-for-11ty/issues/35)
+- keeps flightdeck versions in sync: primary project: [flightdeck for 11ty esbuild version](https://github.com/edheltzel/flightdeck-for-11ty-esbuild).
 
+
+## [0.1.20] - 2023-08-02
 ### Changed
 
 - Readme Updates
 - blockquote shortcode
 - local dictonary changes
+
+## [0.1.17] - 2023-07-02
 
 ## Adds
 
@@ -31,6 +40,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Package updates - Parcel v2.9.1
+
+
 ## [0.1.16] - 2023-05-22
 
 ### Changed

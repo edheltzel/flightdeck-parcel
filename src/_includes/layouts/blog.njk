@@ -8,14 +8,17 @@
       <a href="{{ post.url }}">
         <picture>
           <source src="{{ post.data.featured_image }}?as=webp" type="image/webp">
-          <img class="featured__image" src="{{ post.data.featured_image | default('/assets/images/spacex/testing.jpeg', true) }}" alt="{{ post.data.title }} post featured_image">
+          <img class="featured__image"
+        src="{{ post.data.featured_image | default('/assets/images/spacex/testing.jpeg', true) }}"
+        alt="{{ post.data.title }} post featured_image">
         </picture>
       </a>
       <h2>{{ post.data.title }}</h2>
       <p>
         {% if post.data.description %}
           {{ post.data.description }}
-        {% else %}{{ post.templateContent | excerpt }}
+        {% else %}
+          {{ post.templateContent | excerpt | safe }}
         {% endif %}
       </p>
       <footer>
