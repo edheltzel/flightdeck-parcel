@@ -6,9 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [0.2.1] - 2023-11-05
 
-### Changed
-
-- Package Updates
+### Chore
+- 🧹 Package updates
 
 ## [0.2.0] - 2023-10-14
 
