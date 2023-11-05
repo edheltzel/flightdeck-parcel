@@ -5,7 +5,6 @@
     ".parcel-cache": true,
     ".cache/": true,
     ".vscode/**": false,
-    "CHANGELOG.md": true
   },
   "cSpell.words": [
     "awsm",
