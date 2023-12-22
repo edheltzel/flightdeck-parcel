@@ -12,5 +12,8 @@
     "jeromecoupe",
     "sakura",
     "vgscursor"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#F87171"
+  }
 }
