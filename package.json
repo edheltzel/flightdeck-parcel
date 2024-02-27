@@ -36,7 +36,7 @@
     "start": "pnpm run dev:parcel & pnpm run dev:11ty",
     "dev:11ty": "eleventy --serve",
     "dev:parcel": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
-    "build": "pnpm run clean && pnpm run && build:11ty && pnpm run build:parcel",
+    "build": "pnpm run clean && pnpm run build:parcel && pnpm run build:11ty",
     "build:11ty": "cross-env ENV=production eleventy",
     "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
     "clean": "del-cli $npm_package_config_devFiles && echo $npm_package_config_echoClean",
