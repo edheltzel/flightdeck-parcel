@@ -2,7 +2,7 @@
 
 // Default: Dark theme
 @mixin dark {
-  --background-color: #{mix($black, $grey-900, 40%)};
+  --background-color: #{mix($black, $grey-900, 80%)};
 
   // Texts colors
   --color: #{$grey-200};
@@ -12,8 +12,8 @@
   --h4-color: #{mix($grey-200, $grey-100)};
   --h5-color: #{$grey-200};
   --h6-color: #{mix($grey-300, $grey-200)};
-  --clip-text-color-1: palevioletred;
-  --clip-text-color-2: papayawhip;
+  --clip-text-color-1: pink;
+  --clip-text-color-2: palegoldenrod;
   --clip-text-color-3: crimson;
   // Muted colors
   --muted-color: #{$grey-300};

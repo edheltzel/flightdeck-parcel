@@ -10,7 +10,7 @@ $enable-semantic-container: false !default;
 // Enable .container and .container-fluid
 $enable-class-container: true !default;
 
-// Enable a centered viewport for <header>, <main>, <footer> inside $enable-semantic-container 
+// Enable a centered viewport for <header>, <main>, <footer> inside $enable-semantic-container
 // Fluid layout if disabled
 $enable-viewport: true !default;
 
@@ -57,7 +57,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-) !default;
+  ) !default;
 
 // Viewports
 $viewports: (
@@ -65,5 +65,4 @@ $viewports: (
   sm: 510px,
   md: 700px,
   lg: 920px,
-  xl: 1130px
-) !default;
+  xl: 1130px) !default;
