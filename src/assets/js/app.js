@@ -1,12 +1,18 @@
 /**
- * @file This is the main entry point for the application. It imports and initializes all the modules and components including AlpineJS
+ * @file This is the main entry point for the application. It imports and initializes Alpine.js and VGSCursor.
+ * @requires module:alpinejs
  */
-import { initTheme } from "./modules/vgsThemeSwitcher.js";
 
+import { initTheme } from "./modules/vgsThemeSwitcher.js";
 initTheme("light");
 
-console.log(initTheme);
-const test = "test";
-console.log(
-	`That's one small step for man, and one giant leap for mankind with a ${test}`,
-);
+import Alpine from "alpinejs";
+
+// Assigning Alpine to the global window object
+window.Alpine = Alpine;
+
+/**
+ * Starts Alpine.js
+ * @see {@link https://github.com/alpinejs/alpine#start|Alpine.start}
+ */
+Alpine.start();

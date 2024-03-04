@@ -2,6 +2,9 @@
 title: Style Guide 💅 🎨
 tagline: Semantic HTML with very minimal use of classes
 ---
+<div x-data="{ dialogOpen: false }"
+x-init="init()"
+>
 <!-- Typography-->
 
 ## Typography {.h1}
@@ -327,7 +330,7 @@ This image uses the markdown.
   <!-- Modal -->
   <section id="modal">
     <h2>Modal</h2>
-    <button class="contrast" data-target="modal-example" onclick="toggleModal(event)">Launch demo modal</button>
+    <button class="contrast" @click="dialogOpen = !dialogOpen">Launch demo modal</button>
   </section><!-- End Modal -->
 
   <!-- Accordions -->
@@ -368,3 +371,22 @@ This image uses the markdown.
     <article aria-busy="true"></article>
     <button aria-busy="true">Please wait…</button>
   </section><!-- End Loading -->
+ <!-- Modal example with AlpineJS -->
+
+  <dialog x-bind:open="dialogOpen" @close="dialogOpen = false" @keydown.window.escape="dialogOpen = false">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" @click="dialogOpen = false"></button>
+        <h3>Confirm your action!</h3>
+      </header>
+      <p>
+        Cras sit amet maximus risus. Pellentesque sodales odio sit amet augue finibuspellentesque. Nullam finibus risus non semper euismod.
+      </p>
+      <footer>
+        <button role="button" class="secondary" @click="dialogOpen = false">Cancel</button>
+        <button autofocus @click="dialogOpen = false">Confirm</button>
+      </footer>
+    </article>
+  </dialog>
+  <!-- ./ Modal example -->
+</div>
