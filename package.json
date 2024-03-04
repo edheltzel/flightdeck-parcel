@@ -7,7 +7,9 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@biomejs/biome": "^1.5.3",
     "@parcel/config-default": "^2.11.0",
     "@parcel/core": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
@@ -22,6 +24,10 @@
     "parcel": "^2.11.0",
     "sass": "^1.71.1",
     "sharp": "^0.31.1"
+  },
+  "dependencies": {
+    "@alpinejs/persist": "^3.13.5",
+    "alpinejs": "^3.13.5"
   },
   "trustedDependencies": [
     "sharp"
