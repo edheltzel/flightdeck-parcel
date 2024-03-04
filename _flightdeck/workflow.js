@@ -10,9 +10,9 @@ module.exports = (config) => {
 		 * @see https://www.11ty.dev/docs/dev-server/
 		 * @description local dev server runs on port 8080 by default-> http://localhost:8080
 		 */
+		port: 4000, // old habits die hard - 4000 is the default port for Jekyll
 		showVersion: true, // show the server version number on the command line
 		showAllHosts: false, // show local network IP address for device testing
-		injectedScriptsFolder: ".flightdeck",
 	});
 
 	// Watch Targets
