@@ -1,8 +1,9 @@
+/**
+ * @file This is the main entry point for the application. It imports and initializes all the modules and components including AlpineJS
+ */
 import { initTheme } from "./modules/vgsThemeSwitcher.js";
-import { VGSCursor } from "./modules/vgsCursor.js";
 
 initTheme("light");
-VGSCursor();
 
 console.log(initTheme);
 const test = "test";
