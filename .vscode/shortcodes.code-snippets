@@ -29,7 +29,6 @@
     ],
     "description": "adds the package.json version number",
     "scope": "markdown,html,liquid,nunjucks,webc"
-
   },
   "Component: Blockquote with citation": {
     "prefix": [
@@ -40,7 +39,6 @@
     ],
     "description": "adds a blockquote with citation using the {% blockquote %} shortcode",
     "scope": "markdown,html,liquid,nunjucks,webc"
-
   },
   "Component: Button for links": {
     "prefix": [
@@ -51,6 +49,15 @@
     ],
     "description": "adds a button that links to internal/external urls using the {% button %} shortcode",
     "scope": "markdown,html,liquid,nunjucks,webc"
-
+  },
+  "Component: Image with alt text": {
+    "prefix": [
+      "Image"
+    ],
+    "body": [
+      "{% Image \"${1:Image URL}\", \"${2:Alt Text}\" %}"
+    ],
+    "description": "adds an with alt text using the {% Image %} shortcode",
+    "scope": "markdown,html,liquid,nunjucks,webc"
   },
 }
