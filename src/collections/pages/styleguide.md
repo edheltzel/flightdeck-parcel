@@ -110,12 +110,15 @@ Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt n
 
   <!-- Media-->
 
-![SpaceX Launch](https://source.unsplash.com/TV2gg2kZD1o)
-A reference to the [image](#image).
+![SpaceX Launch](/assets/images/flighdeck.jpeg)
+This image uses the markdown.
+
 
 <figure>
- <img src="https://source.unsplash.com/TV2gg2kZD1o" alt="Space X Launch">
-  <figcaption>Image from <a href="https://unsplash.com">unsplash.com</a></figcaption>
+  {% Image "/assets/images/flighdeck.jpeg", "Flightdeck of a plane" %}
+  <figcaption>Image from <a href="https://unsplash.com/photos/black-and-gray-audio-mixer-lq1KA7HAdH0">unsplash.com</a><br>
+  <em>This image is more of a card - but uses the Image shortcode and figure tag</em>
+  </figcaption>
 </figure>
 
 </section><!-- End Typography-->

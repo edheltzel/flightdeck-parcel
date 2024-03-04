@@ -2,7 +2,7 @@
 
 // Default: Dark theme
 @mixin dark {
-  --background-color: #{mix($black, $grey-900, 80%)};
+  --background-color: #{mix($black, $grey-900, 20%)};
 
   // Texts colors
   --color: #{$grey-200};
