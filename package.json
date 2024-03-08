@@ -9,7 +9,7 @@
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@biomejs/biome": "^1.5.3",
+    "@biomejs/biome": "^1.6.0",
     "@parcel/config-default": "^2.12.0",
     "@parcel/core": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
@@ -22,12 +22,11 @@
     "markdown-it": "^14.0.0",
     "markdown-it-attrs": "^4.1.6",
     "parcel": "^2.12.0",
-    "sass": "^1.71.1",
-    "sharp": "^0.31.1"
+    "sass": "^1.71.1"
   },
   "dependencies": {
-    "@alpinejs/persist": "^3.13.6",
-    "alpinejs": "^3.13.6"
+    "@alpinejs/persist": "^3.13.7",
+    "alpinejs": "^3.13.7"
   },
   "trustedDependencies": [
     "sharp"
