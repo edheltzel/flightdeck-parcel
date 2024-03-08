@@ -4,7 +4,20 @@ All notable changes to Flightdeck for 11ty will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.6] -
+
+**Full Changelog**: https://github.com/edheltzel/flightdeck-for-11ty-parcel/compare/v0.2.5...v0.2.6
+
+### Changed
+
+- package updates:
+  - @aplinejs v3.13.7
+  - @aplinejs/persist v3.13.7
+  - @biomejs/biome v1.6.0
+
+
 ## [0.2.5] - 2024-03-04
+
 **Full Changelog**: https://github.com/edheltzel/flightdeck-for-11ty-parcel/compare/v0.2.4...v0.2.5
 
 ### Adds
