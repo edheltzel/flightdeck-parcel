@@ -23,7 +23,7 @@
     "markdown-it-attrs": "^4.1.6",
     "parcel": "^2.12.0",
     "sass": "^1.77.0",
-    "sharp": "^0.33.3"
+    "sharp": "^0.31.1"
   },
   "dependencies": {
     "@alpinejs/persist": "^3.13.10",
@@ -37,7 +37,7 @@
     "sharp"
   ],
   "scripts": {
-    "start": "bun run build:parcel && dev:parcel & bun run dev:11ty",
+    "start": "bun run build:parcel && bun run dev:parcel & bun run dev:11ty",
     "dev:11ty": "eleventy --serve",
     "dev:parcel": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
     "build": "bun run clean && bun run build:parcel && bun run build:11ty",
