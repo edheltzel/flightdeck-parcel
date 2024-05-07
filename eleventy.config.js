@@ -6,18 +6,18 @@ const addPlugins = require("./_flightdeck/plugins");
 const addComponents = require("./_flightdeck/components");
 
 module.exports = (config) => {
-	addWorkflow(config); // dev server, layout aliases, watch, passthrough copy
-	addFilters(config); // universal filters
-	addTransforms(config); // htmlmin
-	addShortcodes(config); // copyright year, youtube embeds, etc.
-	addPlugins(config); // eleventy plugins
-	addComponents(config); // custom components for Flightdeck Autopilot
-	return {
-		dir: {
-			input: "src",
-			output: "dist",
-			data: "_includes/data",
-		},
-		markdownTemplateEngine: "njk",
-	};
+  addWorkflow(config); // dev server, layout aliases, watch, passthrough copy
+  addFilters(config); // universal filters
+  addTransforms(config); // htmlmin
+  addShortcodes(config); // copyright year, youtube embeds, etc.
+  addPlugins(config); // eleventy plugins
+  addComponents(config); // custom components for Flightdeck Autopilot
+  return {
+    dir: {
+      input: "src",
+      output: "dist",
+      data: "_includes/data",
+    },
+    markdownTemplateEngine: "njk",
+  };
 };
