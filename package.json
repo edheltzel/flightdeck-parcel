@@ -9,7 +9,7 @@
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@biomejs/biome": "^1.6.0",
+    "@biomejs/biome": "^1.7.3",
     "@parcel/config-default": "^2.12.0",
     "@parcel/core": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
@@ -19,32 +19,32 @@
     "eleventy-plugin-embed-everything": "^1.18.2",
     "html-minifier": "^4.0.0",
     "luxon": "^3.4.4",
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.1.6",
     "parcel": "^2.12.0",
-    "sass": "^1.71.1"
+    "sass": "^1.77.0",
+    "sharp": "^0.33.3"
   },
   "dependencies": {
-    "@alpinejs/persist": "^3.13.7",
-    "alpinejs": "^3.13.7"
+    "@alpinejs/persist": "^3.13.10",
+    "alpinejs": "^3.13.10"
   },
   "trustedDependencies": [
+    "@biomejs/biome",
+    "@swc/core",
+    "lmdb",
+    "msgpackr-extract",
     "sharp"
   ],
-  "config": {
-    "echoClean": "🧼 Scrubbed dist/ & all cache directories ✨",
-    "echoPurge": "🧹 All Clean ✨ Run `pnpm install` to start fresh ✨",
-    "lockFiles": "pnpm-lock.yaml node_modules/",
-    "devFiles": "dist/ .cache/ .parcel-cache/ *.log"
-  },
   "scripts": {
-    "start": "pnpm run dev:parcel & pnpm run dev:11ty",
+    "start": "bun run build:parcel && dev:parcel & bun run dev:11ty",
     "dev:11ty": "eleventy --serve",
     "dev:parcel": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
-    "build": "pnpm run clean && pnpm run build:parcel && pnpm run build:11ty",
+    "build": "bun run clean && bun run build:parcel && bun run build:11ty",
     "build:11ty": "cross-env ENV=production eleventy",
     "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
-    "clean": "del-cli $npm_package_config_devFiles && echo $npm_package_config_echoClean",
-    "purge": "del-cli $npm_package_config_devFiles && del-cli $npm_package_config_lockFiles && echo $npm_package_config_echoPurge"
+    "clean": "./.scrub.sh site",
+    "purge": "./.scrub.sh purge",
+    "upgrade": "bunx npm-check-updates -ui"
   }
 }
