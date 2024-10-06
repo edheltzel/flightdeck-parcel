@@ -1,15 +1,16 @@
 <div id="top" align="center">
 <!-- PROJECT LOGO -->
-  <a href="https://github.com/flight-deck"><img src="https://rdm.sfo2.digitaloceanspaces.com/flightdeck/v3-flightdeck__logo--purple-haze-600x528.png" alt="Flightdeck Logo" width="400"></a>
-  <h1>Flightdeck 🚀</h1>
-  <h4 style="padding-bottom: .5em">An opinionaated starter project for <a href="https://www.11ty.dev/">Eleventy 🎈</a></h4>
+  <a href="https://github.com/edheltzel"><img src="https://files.inthera.in/flightdeck/v3-flightdeck__logo--purple-haze-600x528.png" alt="flightdeck Logo" width="400"></a>
+  <h1>flightdeck</h1>
+  <h4 style="padding-bottom: .5em">An opinionated starter project for <a href="https://www.11ty.dev/">Eleventy 🎈</a>.</h4>
 <!-- PROJECT SHIELDS -->
 
-[![release](https://img.shields.io/github/release/flight-deck/flightdeck-for-eleventy.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-for-eleventy/releases/latest) [![eleventy](https://img.shields.io/badge/Eleventy-v1.0.0+-373277.svg?style=for-the-badge&logo=eleventy&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-WTFPL-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/flight-deck/flightdeck-for-eleventy-and-parcel/blob/master/LICENSE)
+[![release](https://img.shields.io/github/release/edheltzel/flightdeck.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/edheltzel/flightdeck/releases/latest) [![eleventy](https://img.shields.io/badge/Eleventy-v1.0.0+-373277.svg?style=for-the-badge&logo=eleventy&logoColor=white&colorA=101119&colorB=7273D6)](https://github.com/11ty/eleventy/releases/latest) [![license](https://img.shields.io/badge/License-MIT-373277.svg?style=for-the-badge&l&logoColor=white&colorA=101119&colorB=42557B)](https://github.com/edheltzel/flightdeck/blob/master/LICENSE)
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
+<!-- #region TABLE OF CONTENTS -->
+
 <details open>
   <summary>📔 Table of Contents</summary>
   <ol>
