@@ -1,6 +1,6 @@
 {
   "name": "flightdeck-for-eleventy-and-parcel",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "An opinionated Jamstack starter project for Eleventy with ParcelJS.",
   "author": "Ed Heltzel",
   "license": "WTFPL",
