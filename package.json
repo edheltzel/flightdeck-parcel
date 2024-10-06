@@ -20,16 +20,16 @@
     }
   },
   "scripts": {
-    "start": "bun run build:images && bun run dev:11ty & bun run dev:parcel",
+    "start": "pnpm run build:images && pnpm run dev:11ty & pnpm run dev:parcel",
     "dev:11ty": "eleventy --serve --incremental",
     "dev:parcel": "parcel watch --no-cache --no-hmr",
-    "build": "bun run clean && bun run build:parcel && bun run build:images && bun run build:11ty",
+    "build": "pnpm run clean && pnpm run build:parcel && pnpm run build:images && pnpm run build:11ty",
     "build:11ty": "cross-env ENV=production eleventy",
     "build:parcel": "parcel build --no-cache",
     "build:images": "parcel build 'src/assets/images/**/*.*' --target images",
     "clean": "./.scrub.sh site",
     "purge": "./.scrub.sh purge",
-    "upgrade": "bunx npm-check-updates -ui"
+    "upgrade": "pnpx npm-check-updates -ui"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
