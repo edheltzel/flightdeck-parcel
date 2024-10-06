@@ -1,4 +1,3 @@
-const fs = require("fs");
 
 const isProd = process.env.ENV === "production";
 

@@ -1,7 +1,6 @@
 ---
 title: Post 1
 description: ""
-featured_image: /assets/images/taiki-ishikawa-lq1KA7HAdH0-unsplash.jpeg
 categories: [""]
 ---
 

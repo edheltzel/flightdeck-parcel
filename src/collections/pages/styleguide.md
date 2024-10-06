@@ -113,12 +113,12 @@ Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt n
 
   <!-- Media-->
 
-![SpaceX Launch](/assets/images/flighdeck.jpeg)
+![SpaceX Launch](/assets/images/flighdeck.jpg)
 This image uses the markdown.
 
 
 <figure>
-  {% Image "/assets/images/flighdeck.jpeg", "Flightdeck of a plane" %}
+  {% Image "/assets/images/flighdeck.jpg", "Flightdeck of a plane" %}
   <figcaption>Image from <a href="https://unsplash.com/photos/black-and-gray-audio-mixer-lq1KA7HAdH0">unsplash.com</a><br>
   <em>This image is more of a card - but uses the Image shortcode and figure tag</em>
   </figcaption>

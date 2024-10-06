@@ -5,24 +5,50 @@
   "author": "Ed Heltzel",
   "license": "WTFPL",
   "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": [
+    "src/assets/js/app.js",
+    "src/assets/styles/style.scss"
+  ],
+  "targets": {
+    "default": {
+      "distDir": "dist/assets",
+      "sourceMap": false
+    },
+    "images": {
+      "distDir": "dist/assets/images",
+      "sourceMap": false
+    }
+  },
+  "scripts": {
+    "start": "bun run build:images && bun run dev:11ty & bun run dev:parcel",
+    "dev:11ty": "eleventy --serve --incremental",
+    "dev:parcel": "parcel watch --no-cache --no-hmr",
+    "build": "bun run clean && bun run build:parcel && bun run build:images && bun run build:11ty",
+    "build:11ty": "cross-env ENV=production eleventy",
+    "build:parcel": "parcel build --no-cache",
+    "build:images": "parcel build 'src/assets/images/**/*.*' --target images",
+    "clean": "./.scrub.sh site",
+    "purge": "./.scrub.sh purge",
+    "upgrade": "bunx npm-check-updates -ui"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
-    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@biomejs/biome": "^1.8.1",
+    "@biomejs/biome": "^1.9.3",
     "@parcel/config-default": "^2.12.0",
     "@parcel/core": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
     "browserlist": "^1.0.1",
     "cross-env": "^7.0.3",
     "del-cli": "^5.1.0",
-    "eleventy-plugin-embed-everything": "^1.18.2",
+    "eleventy-plugin-embed-everything": "^1.19.0",
     "html-minifier": "^4.0.0",
-    "luxon": "^3.4.4",
+    "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
-    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-attrs": "^4.2.0",
     "parcel": "^2.12.0",
-    "sass": "^1.77.6",
+    "sass": "^1.79.4",
     "sharp": "^0.31.1"
   },
   "dependencies": {
@@ -32,19 +58,7 @@
   "trustedDependencies": [
     "@biomejs/biome",
     "@swc/core",
-    "lmdb",
-    "msgpackr-extract",
     "sharp"
   ],
-  "scripts": {
-    "start": "bun run build:parcel && bun run dev:parcel & bun run dev:11ty",
-    "dev:11ty": "eleventy --serve",
-    "dev:parcel": "parcel watch './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
-    "build": "bun run clean && bun run build:parcel && bun run build:11ty",
-    "build:11ty": "cross-env ENV=production eleventy",
-    "build:parcel": "parcel build './src/assets/images/**/*.*' ./src/assets/js/app.js ./src/assets/styles/style.scss --dist-dir ./dist/assets",
-    "clean": "./.scrub.sh site",
-    "purge": "./.scrub.sh purge",
-    "upgrade": "bunx npm-check-updates -ui"
-  }
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
