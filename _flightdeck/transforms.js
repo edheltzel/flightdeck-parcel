@@ -14,7 +14,7 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 module.exports = (config) => {
   config.setLibrary("md", markdownLib);
 
-  if (isProd) {
-    config.addPlugin(minifyHtml);
-  }
+  // if (isProd) {
+  //   config.addPlugin(minifyHtml);
+  // }
 };
